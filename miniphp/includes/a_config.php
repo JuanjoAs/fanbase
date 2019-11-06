@@ -10,6 +10,6 @@
 			break;
 		default:
 			$CURRENT_PAGE = "Inicio";
-			$PAGE_TITLE = "FanBase";
+			$PAGE_TITLE = "FanBase - Home";
 	}
 ?>
