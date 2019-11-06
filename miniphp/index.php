@@ -13,7 +13,7 @@
 <main>
 
   <!--==========================
-    Intro Section
+    Home Section
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
@@ -24,7 +24,6 @@
     </div>
   </section>
 
-  <main id="main">
 </main>
 
 <?php include("includes/footer.php");?>
