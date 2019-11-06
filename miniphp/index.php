@@ -21,7 +21,7 @@
       <p class="mb-4 pb-0">Proyecto Interfaces web</p>
       <a href="https://www.youtube.com/watch?v=vzHrjOMfHPY" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
-      <a href="#about" class="about-btn scrollto">Sobre nosotros</a>
+      <a href="#about" class="about-btn scrollto">Sobre nosotros prueba</a>
     </div>
   </section>
 
