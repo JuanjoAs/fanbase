@@ -9,7 +9,7 @@
 			$PAGE_TITLE = "Contact Us";
 			break;
 		default:
-			$CURRENT_PAGE = "Index";
-			$PAGE_TITLE = "Welcome to my homepage!";
+			$CURRENT_PAGE = "Inicio";
+			$PAGE_TITLE = "FanBase";
 	}
 ?>
