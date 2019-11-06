@@ -13,7 +13,7 @@
 <main>
 
   <!--==========================
-    Intro Section
+    Home Section
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
