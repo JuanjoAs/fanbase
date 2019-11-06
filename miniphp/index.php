@@ -24,7 +24,6 @@
     </div>
   </section>
 
-  <main id="main">
 </main>
 
 <?php include("includes/footer.php");?>
