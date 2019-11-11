@@ -970,6 +970,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
+#hotels .hotel-caption {
+  padding-top: 15px;
+  background: #4ABD9C;
+  height:100%;
+}
+
 #hotels .hotel:hover .hotel-img img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -977,7 +983,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #hotels .hotel-img {
   overflow: hidden;
-  margin-bottom: 15px;
 }
 
 #hotels .hotel-img img {
@@ -1010,7 +1015,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #hotels p {
   padding: 0 20px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   color: #060c22;
   font-style: italic;
   font-size: 15px;
