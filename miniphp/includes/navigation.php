@@ -1,8 +1,8 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header">
-    <div class="container">
+  <header id="header" style="background:#0D1223;">
+    <div class="container" >
 
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
@@ -12,10 +12,10 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Inicio</a></li>
+          <li class="menu-active"><a href="./index.php">Inicio</a></li>
           <li class="dropdown"><a href="">Juegos</a>
                <ul class="dropdown-menu" role="menu">
-                <li><a href="#speakers">Tráilers</a></li>
+                <li><a href="#speakers">Personajes</a></li>
                </ul>
              </li>
           <li><a href="#speakers">Tráilers</a></li>
