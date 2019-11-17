@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Estilos para el footer
+--------------------------------------------------------------*/
+
+.footer {
+    .logo {
+        max-height: 40px;
+    }
+
+    .footer-links {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+.credits {
+    background-color: $gray-850;
+}

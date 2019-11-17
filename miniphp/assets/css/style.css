@@ -972,7 +972,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #hotels .hotel-caption {
   padding-top: 15px;
-  background: #4ABD9C;
+  background: #0D1223;
   height:100%;
 }
 
@@ -997,26 +997,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #hotels a {
-  color: #152b79;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
 }
 
 #hotels a:hover {
   color: #4ABD9C;
 }
 
-#hotels .stars {
-  padding: 0 20px;
-  margin-bottom: 5px;
-}
-
-#hotels .stars i {
-  color: #ffc31d;
-}
-
 #hotels p {
   padding: 0 20px;
   padding-bottom: 20px;
-  color: #060c22;
+  color: #9195a2;
   font-style: italic;
   font-size: 15px;
 }

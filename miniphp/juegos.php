@@ -13,14 +13,15 @@
 <main>
 
   <!--==========================
-      Hotels Section
+      Sección de Juegos
     ============================-->
     <section id="hotels" class="section-with-bg wow fadeInUp mt-5">
 
       <div class="container">
         <div class="section-header">
           <h2>Juegos</h2>
-          <p>Titulos que tienen cabida en el corazón de cualquier fan.</p>
+          <!--<p>Titulos que tienen cabida en el corazón de cualquier fan.</p>-->
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
         <div class="row">

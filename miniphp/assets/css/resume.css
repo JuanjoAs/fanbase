@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+# Estilos generales
+--------------------------------------------------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #2f3138;
+}
+
+a {
+  color: #2ab09c;
+  transition: 0.5s;
+}
+a:hover, a:focus, a:active {
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #0d1223;
+}
+
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #2f3138;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  background: #4ABD9C;
+  color: #fff;
+}
+
+.bg-primary {
+  background-color: #2ab09c !important;
+}
+
+.bg-secondary {
+  background-color: #0d1223 !important;
+}
+
+.text-primary {
+  color: #2ab09c !important;
+}
+
+.text-secondary {
+  color: #0d1223 !important;
+}
+
+.border-primary {
+  border-color: #2ab09c !important;
+}
+
+a {
+  color: #fff;
+}
+a:hover, a:focus, a:active {
+  color: #2ab09c;
+}
+
+.btn-success {
+  background-color: #2ab09c;
+}
+.btn-success:hover {
+  background-color: #101522;
+  border-color: #2ab09c;
+  color: #2ab09c;
+}
+
+/*--------------------------------------------------------------
+# Estilos para barra de navegación
+--------------------------------------------------------------*/
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.active {
+  border-bottom: 2px solid #2ab09c;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+.dropdown-item:hover {
+  color: #2ab09c;
+}
+
+/*--------------------------------------------------------------
+# Estilos para el footer
+--------------------------------------------------------------*/
+.footer .logo {
+  max-height: 40px;
+}
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credits {
+  background-color: #2f3138;
+}
+
+/*# sourceMappingURL=resume.css.map */
