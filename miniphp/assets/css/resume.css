@@ -104,6 +104,10 @@ a:hover, a:focus, a:active {
   color: #2ab09c;
 }
 
+.nav-item {
+  font-weight: 600;
+}
+
 /*--------------------------------------------------------------
 # Estilos para el footer
 --------------------------------------------------------------*/
@@ -117,7 +121,7 @@ a:hover, a:focus, a:active {
 }
 
 .credits {
-  background-color: #2f3138;
+  background-color: #101522;
 }
 
 /*# sourceMappingURL=resume.css.map */
