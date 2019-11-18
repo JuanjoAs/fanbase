@@ -1,12 +1,12 @@
 <?php
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/php-template/about.php":
+		case "/gitfanbase/fanbase/miniphp/about.php":
 			$CURRENT_PAGE = "About"; 
 			$PAGE_TITLE = "About Us";
 			break;
-		case "/php-template/contact.php":
-			$CURRENT_PAGE = "Contact"; 
-			$PAGE_TITLE = "Contact Us";
+		case "/gitfanbase/fanbase/miniphp/recomendaciones.php":
+			$CURRENT_PAGE = "Recomendaciones"; 
+			$PAGE_TITLE = "FanBase - Recomendaciones";
 			break;
 		default:
 			$CURRENT_PAGE = "Inicio";
