@@ -10,7 +10,9 @@
     <?php include("includes/design-top.php");?>
     <?php include("includes/navigation.php");?>
 
-    <section id="video" class="container">
+    <main class="mt-5">
+<?php print $_SERVER["SCRIPT_NAME"];?>
+    <section id="video" class="container mt-5">
 
 <div class="row">
     <div class="col-lg-8 col-12">
@@ -227,7 +229,7 @@
     </div>
 </div>
 </section>
-
+</main>
    
 
 <?php include("includes/footer.php");?>
