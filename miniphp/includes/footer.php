@@ -60,7 +60,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+        &copy; Copyright <strong>Grupo FanBase</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -69,7 +69,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Based on TheEvent. Created by <a href="./nosotros.php">Grupo FanBase</a>
       </div>
     </div>
   </footer><!-- #footer -->
