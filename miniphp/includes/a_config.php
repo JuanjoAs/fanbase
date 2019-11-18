@@ -1,15 +1,16 @@
 <?php
+
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/php-template/about.php":
-			$CURRENT_PAGE = "About"; 
-			$PAGE_TITLE = "About Us";
+		
+		case "/DIW/fanbase/miniphp/registro.php":
+			$CURRENT_PAGE = "Registro"; 
+			$PAGE_TITLE = "FanBase - Registro";
 			break;
-		case "/php-template/contact.php":
-			$CURRENT_PAGE = "Contact"; 
-			$PAGE_TITLE = "Contact Us";
+		case "/DIW/fanbase/miniphp/contactar.php":
+			$CURRENT_PAGE = "Contactar"; 
+			$PAGE_TITLE = "FanBase - Contáctanos";
 			break;
 		default:
 			$CURRENT_PAGE = "Inicio";
 			$PAGE_TITLE = "FanBase - Home";
 	}
-?>

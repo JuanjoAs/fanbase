@@ -777,14 +777,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 9px;
 }
 
+
 #speakers-details .details .social a:hover {
   background: #4ABD9C;
   color: #fff;
 }
 
-#speakers-details .details .social a i {
-  font-size: 18px;
-}
+
 
 #speakers-details .details p {
   color: #112363;
