@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Sección Juegos
+--------------------------------------------------------------*/
+
+#seccio-juegos {
+    padding: 60px 0;
+
+    .juego {
+        border: 1px solid #e0e5fa;
+        background: #fff;
+        margin-bottom: 30px;
+    }
+
+    .juego-caption {
+        padding-top: 15px;
+        background: #0D1223;
+        height:100%;
+    }
+}
+
+#hotels {
+    padding: 60px 0;
+  }
+  
+  #hotels .hotel {
+    border: 1px solid #e0e5fa;
+    background: #fff;
+    margin-bottom: 30px;
+  }
+  
+  #hotels .hotel-caption {
+    padding-top: 15px;
+    background: #0D1223;
+    height:100%;
+  }
+  
+  #hotels .hotel:hover .hotel-img img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  #hotels .hotel-img {
+    overflow: hidden;
+  }
+  
+  #hotels .hotel-img img {
+    transition: 0.3s ease-in-out;
+  }
+  
+  #hotels h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 0 20px;
+  }
+  
+  #hotels a {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+  }
+  
+  #hotels a:hover {
+    color: #4ABD9C;
+  }
+  
+  #hotels p {
+    padding: 0 20px;
+    padding-bottom: 20px;
+    color: #9195a2;
+    font-style: italic;
+    font-size: 15px;
+  }

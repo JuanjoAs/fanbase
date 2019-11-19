@@ -1,7 +1,7 @@
   <!--==========================
     Header
   ============================-->
-  <header id="header" style="background:#0D1223;">
+  <header id="header bg-secondary">
     <div class="container" >
 
       <div id="logo" class="pull-left">

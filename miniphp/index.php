@@ -8,6 +8,7 @@
 
 <?php include("includes/design-top.php");?>
 <?php include("includes/navigation.php");?>
+<?php include("includes/navbar.php");?>
 
 
 <main>
@@ -50,7 +51,8 @@
     </section>
 </main>
 
-<?php include("includes/footer.php");?>
 
+<?php include("includes/footer1.php"); ?>
+<?php include("includes/scripts.php"); ?>
 </body>
 </html>
