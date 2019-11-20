@@ -48,3 +48,4 @@
 <div class="text-center text-white credits p-3">
     Diseñada por Fanbase Group
 </div>
+<?php include("includes/scripts.php"); ?>

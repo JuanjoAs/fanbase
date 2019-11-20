@@ -7,12 +7,10 @@
 <body>
 
 <?php include("includes/design-top.php");?>
-<?php include("includes/navigation.php");?>
 <?php include("includes/navbar.php");?>
 
 
 <main>
-<?php print $_SERVER["SCRIPT_NAME"];?>
   <!--==========================
     Index
   ============================-->
@@ -53,6 +51,5 @@
 
 
 <?php include("includes/footer1.php"); ?>
-<?php include("includes/scripts.php"); ?>
 </body>
 </html>

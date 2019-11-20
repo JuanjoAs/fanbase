@@ -14,15 +14,8 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Juegos
-        </a>
-        <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Pokemon</a>
-          <a class="dropdown-item" href="#">League of Legends</a>
-          <a class="dropdown-item" href="#">The Witcher</a>
-        </div>
+      <li class="nav-item">
+       <a class="nav-link" href="#">Juegos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Tráilers</a>
@@ -33,8 +26,13 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Recomendaciones</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sobre nosotros</a>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contacto
+        </a>
+        <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sobre nosotros</a>
+        </div>      
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
