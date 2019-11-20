@@ -8,7 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+main{
+  margin-top:50px;
+}
 body {
   background: #fff;
   color: #2f3138;
@@ -777,14 +779,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 9px;
 }
 
+
 #speakers-details .details .social a:hover {
   background: #4ABD9C;
   color: #fff;
 }
 
-#speakers-details .details .social a i {
-  font-size: 18px;
-}
+
 
 #speakers-details .details p {
   color: #112363;
@@ -1101,7 +1102,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
-# F.A.Q Section
+# Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
 
 #faq {
@@ -1115,6 +1116,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #faq #faq-list li {
   border-bottom: 1px solid #ddd;
+  padding-left: 25px;
 }
 
 #faq #faq-list a {
@@ -1132,6 +1134,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 24px;
   position: absolute;
   right: 0;
+  padding-right: 20px;
   top: 16px;
 }
 
@@ -1534,6 +1537,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 13px;
   color: #ddd;
 }
+
+
 
 /*--------------------------------------------------------------
 # Responsive Media Queries

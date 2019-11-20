@@ -20,7 +20,7 @@
              </li>
           <li><a href="#speakers">Tráilers</a></li>
           <li><a href="#schedule">Zona interactiva</a></li>
-          <li><a href="#venue">Recomendaciones</a></li>
+          <li><a href="./recomendaciones.php">Recomendaciones</a></li>
           <li><a href="#gallery">Sobre nosotros</a></li>
          <!-- <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>-->
