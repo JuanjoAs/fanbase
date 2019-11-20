@@ -50,10 +50,6 @@
     </section>
 </main>
 
-<<<<<<< HEAD
-<?php include("includes/footer1.php");?>
-=======
->>>>>>> origin/master
 
 <?php include("includes/footer1.php"); ?>
 <?php include("includes/scripts.php"); ?>
