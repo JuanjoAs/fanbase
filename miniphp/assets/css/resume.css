@@ -124,4 +124,60 @@ a:hover, a:focus, a:active {
   background-color: #101522;
 }
 
+/*--------------------------------------------------------------
+# Seccion Recomendaciones Juegos y Series
+--------------------------------------------------------------*/
+.mainpadding {
+  padding-top: 70px;
+}
+
+#faq #faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+#faq #faq-list li {
+  border-bottom: 1px solid #ddd;
+  padding-left: 25px;
+}
+
+#faq #faq-list a {
+  margin: 18px 0;
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: #101522;
+}
+#faq #faq-list a:hover {
+  color: #2ab09c;
+}
+
+#faq #faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+  top: 16px;
+}
+
+#faq #faq-list p {
+  margin-bottom: 20px;
+}
+
+#faq #faq-list a.collapse {
+  color: #4ABD9C;
+}
+
+#faq #faq-list a.collapsed {
+  color: #000;
+}
+
+#faq #faq-list a.collapsed i::before {
+  content: "" !important;
+}
+
 /*# sourceMappingURL=resume.css.map */

@@ -7,28 +7,27 @@
 <body>
 
 <?php include("includes/design-top.php");?>
-<?php include("includes/navigation.php");?>
+<?php include("includes/navbar.php");?>
 
 
-<main>
+<main class="container mainpadding">
 
 <!--==========================
       Juegos
     ============================-->
     <section id="faq" class="wow fadeInUp">
-      <div class="container">
         <div class="section-header">
-          <h2>Juegos </h2>
+          <h2>Juegos</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">
               <ul id="faq-list">
                 <li class="border">
                   <a data-toggle="collapse" href="#juegos1" class="collapsed">League of Legends <i class="fa fa-minus-circle"></i></a>
-                  <div id="juegos1" class="collapse" data-parent="#faq-list">
+                  <div id="juegos1" class="collapse">
                     <div class="row">
                       <div class="col-lg-3">
-                        <img src="img/kaynicon.jpg" style="width:170px;">
+                        <img src="assets/img/recomendaciones/kaynicon.jpg" style="width:170px;">
                       </div>
                       <div class="col-lg-6">
                         <p>
@@ -37,12 +36,12 @@
                         </p>
                       </div>
                       <div class="col-lg-3">
-                        <div class="row">
+                        <div class="row colbotones">
                           <div class="col-lg-12">
-                            <a href="https://play.google.com/store/apps/details?id=com.riotgames.league.wildrift&hl=es"><img src="img/recomendaciones/disponiblegoogle.png" style="width:200px;border-bottom:solid 1px #DDDDDD;"></a>
+                            <a  href="https://play.google.com/store/apps/details?id=com.riotgames.league.wildrift&hl=es"><img class="m-0 p-0" src="assets/img/recomendaciones/disponiblegoogle.png" style="width:200px;border-bottom:solid 1px #DDDDDD;"></a>
                           </div>
                           <div class="col-lg-12">
-                            <img src="img/recomendaciones/disponibleappstore.png" style="width:200px;">
+                           <a href="www.apple.com" ><img src="assets/img/recomendaciones/disponibleappstore.png" style="width:200px;"></a>
                           </div>
                         </div>
                       </div>
@@ -60,7 +59,6 @@
               </ul>
           </div>
         </div>
-      </div>
     </section>
 
 <!--==========================
@@ -82,7 +80,7 @@
     </section>
 </main>
 
-<?php include("includes/footer.php");?>
+<?php include("includes/footer1.php");?>  
 
 </body>
 </html>
