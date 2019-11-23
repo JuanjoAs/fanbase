@@ -9,11 +9,11 @@ body {
 }
 
 a {
-  color: #2ab09c;
+  color: #101522;
   transition: 0.5s;
 }
 a:hover, a:focus, a:active {
-  color: #fff;
+  color: #2ab09c;
   outline: none;
   text-decoration: none;
 }
@@ -161,7 +161,6 @@ a:hover, a:focus, a:active {
   position: absolute;
   right: 0;
   padding-right: 20px;
-  top: 16px;
 }
 
 #faq #faq-list p {
@@ -178,6 +177,18 @@ a:hover, a:focus, a:active {
 
 #faq #faq-list a.collapsed i::before {
   content: "" !important;
+}
+
+.storesbotones img {
+  width: 200px;
+  margin-top: -30px !important;
+  margin-bottom: -20px;
+}
+
+.cartelrecos {
+  width: 240px;
+  max-height: 290px;
+  border: 3px solid #2AB09C !important;
 }
 
 /*# sourceMappingURL=resume.css.map */

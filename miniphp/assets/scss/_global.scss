@@ -9,12 +9,12 @@ body {
 }
 
 a {
-    color: $primary;
+    color: $darken;
     transition: 0.5s;
     &:hover,
     &:focus,
     &:active {
-        color: $white;
+        color: $primary;
         outline: none;
         text-decoration: none;
     }

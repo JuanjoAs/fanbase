@@ -46,6 +46,16 @@
     </div>
 </footer>  
 <div class="text-center text-white credits p-3">
-    Diseñada por Fanbase Group
+    Created by <a href="./nosotros.php">Grupo FanBase</a>
+    <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form.
+        -->
+        Some assets taken from <a href="https://bootstrapmade.com/">BootstrapMade</a>. 
+      </div>
 </div>
+
 <?php include("includes/scripts.php"); ?>
