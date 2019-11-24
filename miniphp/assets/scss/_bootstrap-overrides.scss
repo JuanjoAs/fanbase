@@ -35,3 +35,32 @@ a {
         color: $primary;
     }
 }
+
+.figure {
+    padding: 0;
+    .figure-content-img {
+        overflow: hidden;
+    }
+
+    img {
+        margin: 0;
+        transition: 0.3s ease-in-out; 
+    }
+    
+    img:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .figure-caption {
+        background-color: $secondary !important;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            @include title-font;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

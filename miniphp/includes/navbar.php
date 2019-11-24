@@ -15,7 +15,7 @@
         <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-       <a class="nav-link" href="#">Juegos</a>
+       <a class="nav-link" href="juegos.php">Juegos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Tráilers</a>
