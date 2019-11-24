@@ -15,13 +15,13 @@
 <!--==========================
       Juegos
     ============================-->
-    <section id="faq" class="wow fadeInUp">
+    <section class="recomendaciones wow fadeInUp">
         <div class="section-header mt-3">
           <h2>Juegos</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">
-              <ul id="faq-list">
+              <ul class="recomendaciones-list">
                 <li class="border">
                   <a data-toggle="collapse" href="#juegos1" class="collapsed cajaenlace">League of Legends <i class="fa fa-minus-circle"></i></a>
                   <div id="juegos1" class="collapse">
@@ -88,14 +88,14 @@
 <!--==========================
       Series
     ============================-->
-    <section id="faq" class="wow fadeInUp">
+    <section class="recomendaciones wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>Series y Películas </h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">
-              <ul id="faq-list">
+              <ul class="recomendaciones-list">
                
               </ul>
           </div>
