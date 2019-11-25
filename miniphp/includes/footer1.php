@@ -27,11 +27,11 @@
             <div class="col-lg-3 col-md-6">
             <h4 class="text-white border-bottom border-primary pb-2">¿Hablamos?</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Córdoba <br>
+              Andalucía<br>
+              España <br>
+              <strong>Teléfono:</strong> +34 689 488 855<br>
+              <strong>Email:</strong> info@fanbase.com<br>
             </p>
 
             <div class="social-links">
