@@ -90,14 +90,14 @@
     ============================-->
     <section class="recomendaciones wow fadeInUp">
         <div class="section-header mt-3">
-          <h2>Juegos</h2>
+          <h2>Series y Películas</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">
               <ul class="recomendaciones-list">
                 <li class="border">
                   <a data-toggle="collapse" href="#series1" class="collapsed cajaenlace">Ataque a los Titanes <i class="fa fa-minus-circle"></i></a>
-                  <div id="seriess1" class="collapse">
+                  <div id="series1" class="collapse">
                     <div class="row">
                       <div class="col-lg-3">
                         <img class="border cartelrecos" src="assets/img/recomendaciones/kaynicon.jpg">
