@@ -34,13 +34,11 @@
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="nosotros.php">Sobre nosotros</a>
           <a class="dropdown-item" href="contactar.php">Contactanos</a>
-
-
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Iniciar sesión</button>
+    <form action="registro.php" class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button>
     </form>
   </nav>
 </header>
