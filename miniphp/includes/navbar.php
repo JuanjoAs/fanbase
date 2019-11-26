@@ -6,7 +6,8 @@
     <img src="assets/img/logo.png" alt="Logo Fanbase">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">    <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+</span>
   </button>
 
   <nav class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -18,13 +19,13 @@
        <a class="nav-link" href="juegos.php">Juegos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Tráilers</a>
+        <a class="nav-link" href="trailers.php">Tráilers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Zona Interactiva</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Recomendaciones</a>
+        <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
       </li>
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

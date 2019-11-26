@@ -9,11 +9,11 @@ body {
 }
 
 a {
-  color: #2ab09c;
+  color: #101522;
   transition: 0.5s;
 }
 a:hover, a:focus, a:active {
-  color: #fff;
+  color: #2ab09c;
   outline: none;
   text-decoration: none;
 }
@@ -48,6 +48,43 @@ h6 {
 .social-links a:hover {
   background: #4ABD9C;
   color: #fff;
+}
+
+/* Sections Header Generales
+--------------------------------*/
+.section-header {
+  margin-bottom: 35px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.section-header :before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #4ABD9C;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
 }
 
 .bg-primary {
@@ -176,6 +213,73 @@ a:hover, a:focus, a:active {
 
 .credits {
   background-color: #101522;
+}
+
+/*--------------------------------------------------------------
+# Seccion Recomendaciones Juegos y Series
+--------------------------------------------------------------*/
+.mainpadding {
+  padding-top: 70px;
+}
+
+.recomendaciones .recomendaciones-list {
+  padding: 0;
+  list-style: none;
+}
+
+.recomendaciones .recomendaciones-list li {
+  border-bottom: 1px solid #ddd;
+  padding-left: 25px;
+}
+
+.recomendaciones .recomendaciones-list a {
+  margin: 18px 0;
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: #101522;
+}
+.recomendaciones .recomendaciones-list a:hover {
+  color: #2ab09c;
+}
+
+.recomendaciones .recomendaciones-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
+
+.recomendaciones .recomendaciones-list p {
+  margin-bottom: 20px;
+}
+
+.recomendaciones .recomendaciones-list a.collapse {
+  color: #4ABD9C;
+}
+
+.recomendaciones .recomendaciones-list a.collapsed {
+  color: #000;
+}
+
+.recomendaciones .recomendaciones-list a.collapsed i::before {
+  content: "" !important;
+}
+
+.storesbotones img {
+  width: 200px;
+  margin-top: -30px !important;
+  margin-bottom: -20px;
+}
+
+.cartelrecos {
+  width: 240px;
+  max-height: 290px;
+  border: 3px solid #2AB09C !important;
 }
 
 /*# sourceMappingURL=resume.css.map */
