@@ -46,7 +46,7 @@ h6 {
   transition: 0.3s;
 }
 .social-links a:hover {
-  background: #4ABD9C;
+  background: #2ab09c;
   color: #fff;
 }
 
@@ -63,7 +63,7 @@ h6 {
   display: block;
   width: 60px;
   height: 5px;
-  background: #4ABD9C;
+  background: #2ab09c;
   bottom: 0;
   left: calc(50% - 25px);
 }
