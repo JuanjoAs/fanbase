@@ -48,7 +48,7 @@ h6 {
         height: 36px;
         transition: 0.3s;
         &:hover {
-            background: #4ABD9C;
+            background: $primary;
             color: #fff;
         }
     }
@@ -68,7 +68,7 @@ h6 {
     display: block;
     width: 60px;
     height: 5px;
-    background: #4ABD9C;
+    background: $primary;
     bottom: 0;
     left: calc(50% - 25px);
   }
@@ -95,5 +95,14 @@ h6 {
 
 .section-with-bg {
     background-color: #f6f7fd;
-  }
+}
   
+.decorator-section {
+    height: 400px;
+    background-color: $primary !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6vw;
+    transform: skewY(-5deg);
+}

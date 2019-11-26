@@ -13,10 +13,10 @@
   <nav class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-3 mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-       <a class="nav-link" href="#">Juegos</a>
+       <a class="nav-link" href="juegos.php">Juegos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="trailers.php">Tráilers</a>
@@ -28,12 +28,15 @@
         <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
       </li>
       <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Contacto
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Sobre nosotros</a>
-        </div>      
+          <a class="dropdown-item" href="nosotros.php">Sobre nosotros</a>
+          <a class="dropdown-item" href="contactar.php">Contactanos</a>
+
+
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
