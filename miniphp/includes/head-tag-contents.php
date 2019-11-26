@@ -29,7 +29,6 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/resume.css" rel="stylesheet">
 
 
