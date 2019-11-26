@@ -14,7 +14,7 @@
   <!--==========================
     Index
   ============================-->
-  <section id="intro">
+  <section class="intro">
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0">DONDE SE INFORMAN<br><span>LOS FANS</span> DE VERDAD</h1>
 
@@ -27,7 +27,7 @@
    <!--==========================
       Extra index
     ============================-->
-    <section id="about">
+    <section class="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
