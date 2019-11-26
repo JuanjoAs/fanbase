@@ -152,6 +152,17 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
+# Estilos para la sección de información de juego
+--------------------------------------------------------------*/
+.carousel-inner {
+  height: 460px;
+}
+.carousel-inner img {
+  width: 100%;
+  max-height: 460px;
+}
+
+/*--------------------------------------------------------------
 # Estilos para el footer
 --------------------------------------------------------------*/
 .footer .logo {
