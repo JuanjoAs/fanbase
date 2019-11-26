@@ -15,7 +15,7 @@
         <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-       <a class="nav-link" href="#">Juegos</a>
+        <a class="nav-link" href="#">Juegos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Tráilers</a>
@@ -27,12 +27,15 @@
         <a class="nav-link" href="#">Recomendaciones</a>
       </li>
       <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Contacto
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Sobre nosotros</a>
-        </div>      
+          <a class="dropdown-item" href="nosotros.php">Sobre nosotros</a>
+          <a class="dropdown-item" href="contactar.php">Contactanos</a>
+
+
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

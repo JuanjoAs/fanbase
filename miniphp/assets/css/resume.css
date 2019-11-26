@@ -124,4 +124,126 @@ a:hover, a:focus, a:active {
   background-color: #101522;
 }
 
+/*--------------------------------------------------------------
+# Seccion Sobre nosotros
+--------------------------------------------------------------*/
+.nosotros {
+  padding: 60px 0 30px 0;
+}
+.nosotros .personal {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.nosotros .personal .detalles {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.nosotros .personal .detalles h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.nosotros .personal .detalles p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.nosotros .personal .detalles .social {
+  height: 30px;
+}
+.nosotros .personal .detalles a {
+  color: #fff;
+}
+.nosotros .personal .detalles a:hover {
+  color: #2ab09c;
+}
+.nosotros .personal:hover .detalles {
+  bottom: 0;
+}
+.nosotros ul li a {
+  color: #000;
+}
+.nosotros ul li a:hover {
+  color: #2ab09c;
+  transition: 0.5s;
+}
+
+/*--------------------------------------------------------------
+# contacto Section
+--------------------------------------------------------------*/
+.contacto {
+  padding: 60px 0;
+}
+.contacto .form input,
+.contacto .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+.contacto .form button {
+  background: #2ab09c;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.contacto .form button:hover {
+  background: #0d1223;
+}
+.contacto .info {
+  width: 18rem !important;
+}
+.contacto ul li a {
+  color: #000;
+}
+.contacto ul li a:hover {
+  color: #2ab09c;
+  transition: 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Seccion de registro
+--------------------------------------------------------------*/
+.registro {
+  padding: 60px 0;
+}
+.registro .form input,
+.registro .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+.registro .form button {
+  background: #2ab09c;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.registro .form button:hover {
+  background: #0d1223;
+}
+.registro ul li a {
+  color: #000;
+}
+.registro ul li a:hover {
+  color: #2ab09c;
+  transition: 0.5s;
+}
+
 /*# sourceMappingURL=resume.css.map */
