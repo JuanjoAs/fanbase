@@ -27,11 +27,11 @@
             <div class="col-lg-3 col-md-6">
             <h4 class="text-white border-bottom border-primary pb-2">¿Hablamos?</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Córdoba <br>
+              Andalucía<br>
+              España <br>
+              <strong>Teléfono:</strong> +34 689 488 855<br>
+              <strong>Email:</strong> info@fanbase.com<br>
             </p>
 
             <div class="social-links">
@@ -46,6 +46,16 @@
     </div>
 </footer>  
 <div class="text-center text-white credits p-3">
-    Diseñada por Fanbase Group
+    Created by <a href="./nosotros.php">Grupo FanBase</a>
+    <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form.
+        -->
+        Some assets taken from <a href="https://bootstrapmade.com/">BootstrapMade</a>. 
+      </div>
 </div>
+
 <?php include("includes/scripts.php"); ?>
