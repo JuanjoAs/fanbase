@@ -1,94 +1,60 @@
+<footer class="footer bg-secondary text-white p-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6">
+        <img src="assets/img/logo.png" class="logo" alt="Logo Fanbase">
+        <p>
+          In alias aperiam. Placeat tempore facere. Officiis voluptate
+          ipsam vel eveniet est dolor et totam porro. Perspiciatis ad
+          omnis fugit molestiae recusandae possimus. Aut consectetur id
+          quis. In inventore consequatur ad voluptate cupiditate debitis
+          accusamus repellat cumque.
+        </p>
+      </div>
 
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 class="text-white border-bottom border-primary pb-2">Enlaces de utilidad</h4>
+        <ul>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Inicio</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Juegos</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Tráilers</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Zona Interactiva</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Recomendaciones</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Sobre Nosotros</a></li>
+        </ul>
+      </div>
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <img src="assets/img/logo.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div>
-
-        </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white border-bottom border-primary pb-2">¿Hablamos?</h4>
+        <p>
+          Córdoba <br>
+          Andalucía<br>
+          España <br>
+          <strong>Teléfono:</strong> +34 689 488 855<br>
+          <strong>Email:</strong> info@fanbase.com<br>
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 social-links">
+        <h4 class="text-white border-bottom border-primary pb-2">Redes Sociales</h4>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
       </div>
     </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Grupo FanBase</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
+  </div>
+</footer>
+<div class="text-center text-white credits p-3">
+  Created by <a href="./nosotros.php">Grupo FanBase</a>
+  <div class="credits">
+    <!--
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.
           Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+          Purchase the pro version with working PHP/AJAX contact form.
         -->
-        Based on TheEvent. Created by <a href="./nosotros.php">Grupo FanBase</a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
+    Some assets taken from <a href="https://bootstrapmade.com/">BootstrapMade</a>.
+  </div>
+</div>
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+<?php include("includes/scripts.php"); ?>
