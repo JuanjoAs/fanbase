@@ -87,6 +87,16 @@ h6 {
   background-color: #f6f7fd;
 }
 
+.decorator-section {
+  height: 400px;
+  background-color: #2ab09c !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -6vw;
+  transform: skewY(-5deg);
+}
+
 .bg-primary {
   background-color: #2ab09c !important;
 }
@@ -123,6 +133,32 @@ a:hover, a:focus, a:active {
   color: #2ab09c;
 }
 
+.figure {
+  padding: 0;
+}
+.figure .figure-content-img {
+  overflow: hidden;
+}
+.figure img {
+  margin: 0;
+  transition: 0.3s ease-in-out;
+}
+.figure img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.figure .figure-caption {
+  background-color: #0d1223 !important;
+}
+.figure .figure-caption h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "Raleway", sans-serif;
+}
+.figure .figure-caption p {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Estilos para barra de navegación
 --------------------------------------------------------------*/
@@ -143,6 +179,24 @@ a:hover, a:focus, a:active {
 
 .nav-item {
   font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Estilos para la sección Juegos
+--------------------------------------------------------------*/
+.section-games .row {
+  margin-top: 100px;
+}
+
+/*--------------------------------------------------------------
+# Estilos para la sección de información de juego
+--------------------------------------------------------------*/
+.carousel-inner {
+  height: 460px;
+}
+.carousel-inner img {
+  width: 100%;
+  max-height: 460px;
 }
 
 /*--------------------------------------------------------------
