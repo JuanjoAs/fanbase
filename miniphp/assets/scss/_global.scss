@@ -95,5 +95,14 @@ h6 {
 
 .section-with-bg {
     background-color: #f6f7fd;
-  }
+}
   
+.decorator-section {
+    height: 400px;
+    background-color: $primary !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6vw;
+    transform: skewY(-5deg);
+}
