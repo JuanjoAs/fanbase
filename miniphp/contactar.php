@@ -13,7 +13,7 @@
 
   <main class="container"> 
 
-    <section id="contact" class="section-bg wow fadeInUp">
+    <section id="contact" class="section-bg fadeInUp">
   
       <div class="section-header mt-5">
         <h2>Contacto</h2>

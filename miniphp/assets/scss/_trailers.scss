@@ -1,0 +1,23 @@
+/************************************
+Seccion Trailer
+************************************/
+
+.trailers{
+    margin-top: 10px;
+}
+
+.tarjeta-trailers:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  
+  .tarjeta-trailers {
+    transition: 0.3s ease-in-out;
+  }
+
+  @media (min-width: 1600px){
+    .trailers .container {
+        max-width: 1580px;
+    }
+  }
