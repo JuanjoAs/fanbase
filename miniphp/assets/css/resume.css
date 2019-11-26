@@ -182,24 +182,6 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-# Estilos para la sección Juegos
---------------------------------------------------------------*/
-.section-games .row {
-  margin-top: 100px;
-}
-
-/*--------------------------------------------------------------
-# Estilos para la sección de información de juego
---------------------------------------------------------------*/
-.carousel-inner {
-  height: 460px;
-}
-.carousel-inner img {
-  width: 100%;
-  max-height: 460px;
-}
-
-/*--------------------------------------------------------------
 # Estilos para el footer
 --------------------------------------------------------------*/
 .footer .logo {
@@ -215,6 +197,48 @@ a:hover, a:focus, a:active {
   background-color: #101522;
 }
 
+/************************************
+Seccion Trailer
+************************************/
+.trailers {
+  margin-top: 100px;
+}
+
+.tarjeta-trailers:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.tarjeta-trailers {
+  transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 1600px) {
+  .trailers .container {
+    max-width: 1580px;
+  }
+}
+/************************************
+Seccion Video
+************************************/
+.video {
+  margin-top: 100px;
+}
+
+.tarjeta-video:hover {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.tarjeta-video {
+  transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 1600px) {
+  .video .container {
+    max-width: 1580px;
+  }
+}
 /*--------------------------------------------------------------
 # Seccion Sobre nosotros
 --------------------------------------------------------------*/
@@ -336,7 +360,43 @@ a:hover, a:focus, a:active {
   color: #2ab09c;
   transition: 0.5s;
 }
-/*# Seccion Recomendaciones Juegos y Series
+
+/*--------------------------------------------------------------
+# Estilos para la sección Juegos
+--------------------------------------------------------------*/
+.section-games .row {
+  margin-top: 100px;
+}
+
+/*--------------------------------------------------------------
+# Estilos para la sección de información de juego
+--------------------------------------------------------------*/
+.carousel-inner {
+  height: 460px;
+}
+.carousel-inner img {
+  width: 100%;
+  max-height: 460px;
+}
+
+/*--------------------------------------------------------------
+# Estilos para el footer
+--------------------------------------------------------------*/
+.footer .logo {
+  max-height: 40px;
+}
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credits {
+  background-color: #101522;
+}
+
+/*--------------------------------------------------------------
+# Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
 .mainpadding {
   padding-top: 70px;

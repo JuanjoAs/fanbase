@@ -1,6 +1,8 @@
 <?php
 
-	switch ($_SERVER["SCRIPT_NAME"]) {
+echo "-----------------------------------------------------------------------------------------------".$_SERVER["REQUEST_URI"];
+
+	switch ($_SERVER["REQUEST_URI"]) {
 		case "/gitfanbase/fanbase/miniphp/registro.php":
 			$CURRENT_PAGE = "Registro"; 
 			$PAGE_TITLE = "FanBase - Registro";
