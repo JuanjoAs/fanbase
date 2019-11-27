@@ -40,7 +40,7 @@
       </li>
     </ul>
     <form action="registro.php" class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Iniciar sesión</button>
     </form>
   </nav>
 </header>
