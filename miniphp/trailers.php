@@ -30,7 +30,7 @@
 
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
                             <a href="video.php">
-                                <div class="card tarjeta-trailers">
+                                <div class="card">
                                     <img src="assets/img/trailer/PlanetZoo.png" class="card-img-top trailer-Imagen"
                                         alt="Tráiler Planet Zoo" title="Tráiler Planet Zoo">
                                     <div class="card-body">
@@ -39,7 +39,7 @@
                                 </div>
                             </a>
                         </div>
-
+<!--
                         <div class="col-xl-3 col-lg-4 col-md-6 mb-3"><a href="video.php">
                                 <div class="card tarjeta-trailers">
                                     <img src="assets/img/trailer/Primer tráiler gameplay de Overwatch 2 (PC, Mac, PS4, XOne).png"
@@ -180,6 +180,7 @@
                                 </div>
                             </a>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
