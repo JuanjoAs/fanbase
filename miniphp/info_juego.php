@@ -41,9 +41,10 @@
   <?php include("includes/design-top.php");?>
   <?php include("includes/navbar.php");?>
 
+  <div class="decorator-section"></div>
+
   <main class="container">
     <section class="wow fadeInUp mt-5">
-        <div class="decorator-section"></div>
         <div class="section-header mb-5 text-center mt-5 pt-5">
             <h2><?php echo $title_game; ?></h2>
             <p class="text-secondary"><?php echo $description_game; ?>
@@ -85,28 +86,34 @@
             </div>
 
             <div class="row mb-3 justify-content-around">
-                <div class="card col-lg-3 col-md-6">
-                    <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card ">
+                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-6">
-                    <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card ">
+                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-6">
-                    <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card ">
+                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
             </div>
