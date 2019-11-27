@@ -11,9 +11,10 @@
   <?php include("includes/design-top.php");?>
   <?php include("includes/navbar.php");?>
 
+  <div class="decorator-section"></div>
+
   <main class="container">
     <section class="wow fadeInUp mt-5">
-      <div class="decorator-section"></div>
       <div class="section-header mb-5 text-center mt-5 pt-5">
         <h2>Juegos</h2>
         <p class="text-secondary">Titulos que tienen cabida en el corazón de cualquier fan</p>
