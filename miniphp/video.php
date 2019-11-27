@@ -49,7 +49,7 @@
                                         <div class="col-1">
                                             <div class="card">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top" title="usename">
+                                                    class="card-img-top h-100" title="usename">
                                             </div>
                                         </div>
 
@@ -77,7 +77,7 @@
                                         <div class="col-1">
                                             <div class="card">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top" title="usename">
+                                                    class="card-img-top h-100" title="usename">
                                             </div>
                                         </div>
 
@@ -104,7 +104,7 @@
                                         <div class="col-1">
                                             <div class="card">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top" title="usename">
+                                                    class="card-img-top h-100" title="usename">
                                             </div>
                                         </div>
 
@@ -131,7 +131,7 @@
                                         <div class="col-1">
                                             <div class="card">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top" title="usename">
+                                                    class="card-img-top h-100" title="usename">
                                             </div>
                                         </div>
 
@@ -158,7 +158,7 @@
                                         <div class="col-1">
                                             <div class="card">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top" title="usename">
+                                                    class="card-img-top h-100" title="usename">
                                             </div>
                                         </div>
 
@@ -186,7 +186,7 @@
                     <div class="row mb-3 tarjeta-video border p-2 border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/PlanetZoo.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/PlanetZoo.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -198,7 +198,7 @@
                         <div class="col-5">
                             <div class="row">
                                 <img src="assets/img/trailer/Primer tráiler gameplay de Overwatch 2 (PC, Mac, PS4, XOne).png"
-                                    class="img-fluid" title="usename">
+                                    class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -210,7 +210,7 @@
                         <div class="col-5">
                             <div class="row">
                                 <img src="assets/img/trailer/Riverbond fecha con un tráiler su lanzamiento en Nintendo Switch y presenta nuevo mundo (PC, PS.png"
-                                    class="img-fluid" title="usename">
+                                    class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -221,7 +221,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Todo lo que has de saber de Pokémon Espada y Pokémon.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Todo lo que has de saber de Pokémon Espada y Pokémon.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -233,7 +233,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/TrailerKickstarterdeTheHive.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/TrailerKickstarterdeTheHive.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -244,7 +244,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/TrailerPersona5Scramble.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/TrailerPersona5Scramble.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -255,7 +255,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Tráiler cinemático de anuncio de Diablo.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Tráiler cinemático de anuncio de Diablo.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -267,7 +267,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Tráiler cinemático de anuncio World of Warcraft Shadowlands.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Tráiler cinemático de anuncio World of Warcraft Shadowlands.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -278,7 +278,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Tráiler de anuncio de IGI Origins.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Tráiler de anuncio de IGI Origins.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -289,7 +289,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Tráiler de anuncio de Vaporum Lockdown, un dungeon crawler con estética steampunk.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Tráiler de anuncio de Vaporum Lockdown, un dungeon crawler con estética steampunk.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
@@ -300,7 +300,7 @@
                     <div class="row mb-3 tarjeta-video border p-2">
                         <div class="col-5">
                             <div class="row">
-                                <img src="assets/img/trailer/Tráiler de Soul Calibur VI que presenta a Hilde, su nueva luchadora.png" class="img-fluid" title="usename">
+                                <img src="assets/img/trailer/Tráiler de Soul Calibur VI que presenta a Hilde, su nueva luchadora.png" class="img-fluid w-100" title="usename">
                             </div>
                         </div>
                         <div class="col-7">
