@@ -133,6 +133,16 @@ a:hover, a:focus, a:active {
   color: #2ab09c;
 }
 
+.btn-outline-success {
+  color: #2ab09c;
+  border-color: #2ab09c;
+}
+.btn-outline-success:hover {
+  background-color: #2ab09c;
+  border-color: #2ab09c;
+  color: white;
+}
+
 .figure {
   padding: 0;
 }
