@@ -186,8 +186,8 @@
             </div>
         </section>
     </main>
+<?php include("includes/footer.php");?>
 
-    <?php include("includes/footer1.php");?>
 
 </body>
 

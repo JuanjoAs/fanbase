@@ -159,7 +159,7 @@
     </section>
 </main>
 
-<?php include("includes/footer1.php");?>  
+<?php include("includes/footer.php");?>  
 
 </body>
 </html>
