@@ -15,21 +15,26 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4 class="text-white border-bottom border-primary pb-2">Enlaces de utilidad</h4>
         <ul>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Inicio</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Juegos</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Tráilers</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="index.php">Inicio</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="juegos.php">Juegos</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="trailers.php">Tráilers</a></li>
           <li><i class="fa fa-angle-right"></i> <a href="#">Zona Interactiva</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Recomendaciones</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Sobre Nosotros</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="recomendaciones.php">Recomendaciones</a></li>
+          <li><ul>
+              <li><i class="fa fa-angle-right"></i> <a href="nosotros.php">Sobre Nosotros</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="contactar.php">Contáctanos</a></li>
+          </ul></li>
+
+          <li><i class="fa fa-angle-right"></i> <a href="registro.php">Regístrate</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-6">
         <h4 class="text-white border-bottom border-primary pb-2">¿Hablamos?</h4>
         <p>
-          Córdoba <br>
+          Córdoba<br>
           Andalucía<br>
-          España <br>
+          España<br>
           <strong>Teléfono:</strong> +34 689 488 855<br>
           <strong>Email:</strong> info@fanbase.com<br>
         </p>

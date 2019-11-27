@@ -36,6 +36,16 @@ a {
     }
 }
 
+.btn-outline-success{
+    color:$primary;
+    border-color: $primary;
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: white;
+    }
+}
+
 .figure {
     padding: 0;
     .figure-content-img {
