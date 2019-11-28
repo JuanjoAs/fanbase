@@ -222,6 +222,8 @@ Seccion Trailer
 
 .tarjeta-trailers {
   transition: 0.3s ease-in-out;
+  width: auto;
+  height: auto;
 }
 
 @media (min-width: 1600px) {
