@@ -56,8 +56,7 @@
                                         <div class="col-11">
                                             <div class="row">
                                                 <form class="col-12"> 
-                                                    <textarea class="form-control">
-                                                    </textarea>
+                                                    <textarea class="form-control"></textarea>
                                                     <button type="submit" class="btn btn-success mt-2" >Comentar</button>
                                                 </form>
                                             </div>
