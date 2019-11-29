@@ -47,7 +47,7 @@
             </div>
             <div class="col-xs-12"> 
               <div class="info card">
-                <img src="assets/img/gallery/8.jpg" class="card-img-top">
+                <img src="assets/img/gallery/8.jpg" class="card-img-top h-100">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <h5>Email</h5>
