@@ -56,8 +56,7 @@
                                         <div class="col-11">
                                             <div class="row">
                                                 <form class="col-12"> 
-                                                    <textarea class="form-control">
-                                                    </textarea>
+                                                    <textarea class="form-control"></textarea>
                                                     <button type="submit" class="btn btn-success mt-2" >Comentar</button>
                                                 </form>
                                             </div>
@@ -75,7 +74,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -102,7 +101,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -129,7 +128,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -156,7 +155,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
