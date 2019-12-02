@@ -43,12 +43,17 @@ jQuery(document).ready(function( $ ) {
   });
 
   // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
-    animation: {
-      opacity: 'show'
-    },
-    speed: 400
-  });
+  // $('.nav-menu').superfish({
+  //   animation: {
+  //     opacity: 'show'
+  //   },
+  //   speed: 400
+  // });
+
+  // Primero de recomendaciones esta abierto
+  $("#juegos1").collapse('show');
+  $("#series1").collapse('show')
+
 
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
