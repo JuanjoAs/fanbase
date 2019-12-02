@@ -9,8 +9,6 @@
 <?php include("includes/design-top.php");?>
 <?php include("includes/navbar.php");?>
 
-
-
 <main class="mb-5">
 
     <section class="section-bg video">
@@ -23,7 +21,6 @@
                     
                 </div>
             </div><!-- /row -->
-
 
             <div class="row">
                 <div class="col-lg-8 col-12">
@@ -65,8 +62,6 @@
                                 </div>
                             </div>
 
-
-
                             <!--Incio comentario-->
                             <div class="row p-4 m-4 border">
 
@@ -174,12 +169,10 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-12">
 
                     <div class="row mb-3 tarjeta-video border p-2 border p-2">
@@ -312,7 +305,6 @@
     </section>
 </main>
    
-
 <?php include("includes/footer.php");?>
 
 </body>
