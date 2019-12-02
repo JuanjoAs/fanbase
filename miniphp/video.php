@@ -74,7 +74,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -101,7 +101,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -128,7 +128,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
@@ -155,7 +155,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-1">
-                                            <div class="card">
+                                            <div class="card d-none d-md-block">
                                                 <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
                                                     class="card-img-top h-100" title="usename">
                                             </div>
