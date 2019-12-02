@@ -167,6 +167,7 @@ a:hover, a:focus, a:active {
   font-family: "Raleway", sans-serif;
 }
 .figure .figure-caption p {
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -372,13 +373,6 @@ Seccion Video
 .registro ul li a:hover {
   color: #2ab09c;
   transition: 0.5s;
-}
-
-/*--------------------------------------------------------------
-# Estilos para la sección Juegos
---------------------------------------------------------------*/
-.section-games .row {
-  margin-top: 100px;
 }
 
 /*--------------------------------------------------------------
