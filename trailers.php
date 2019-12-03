@@ -13,7 +13,7 @@
 
     <main class="">
 
-        <section class="section-bg wow fadeInUp trailers">
+        <section class="section-bg wow fadeInUp">
 
             <div class="container">
 

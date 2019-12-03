@@ -8,7 +8,7 @@
 
 <body>
   <?php include("includes/navbar.php"); ?>
-  <main class="container mt-5">
+  <main class="container">
     <section class="registro section-bg wow fadeInUp mt-5 align-items-center">
       <div class="row justify-content-left align-content-center">
         <div class="form col-md-6">
