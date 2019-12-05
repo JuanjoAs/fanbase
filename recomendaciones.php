@@ -89,7 +89,7 @@
     ============================-->
     <section class="recomendaciones wow fadeInUp">
         <div class="section-header">
-          <h2>Series y Películas</h2>
+          <h2>Películas y Series</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">
