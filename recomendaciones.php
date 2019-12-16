@@ -15,7 +15,7 @@
       Juegos
     ============================-->
     <section class="recomendaciones wow fadeInUp">
-        <div class="section-header mt-3">
+        <div class="section-header">
           <h2>Juegos</h2>
         </div>
         <div class="row justify-content-center">
@@ -88,8 +88,8 @@
       Series
     ============================-->
     <section class="recomendaciones wow fadeInUp">
-        <div class="section-header mt-3">
-          <h2>Series y Películas</h2>
+        <div class="section-header">
+          <h2>Películas y Series</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-12">

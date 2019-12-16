@@ -2,10 +2,6 @@
 Seccion Trailer
 ************************************/
 
-.trailers{
-    margin-top: 100px;
-}
-
 .tarjeta-trailers:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -23,3 +19,27 @@ Seccion Trailer
         max-width: 1580px;
     }
   }
+
+  /************************************
+  Seccion Video
+  ************************************/
+
+.video{
+  margin-top: 100px;
+}
+
+.tarjeta-video:hover {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+
+.tarjeta-video {
+  transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 1600px){
+  .video .container {
+      max-width: 1580px;
+  }
+}

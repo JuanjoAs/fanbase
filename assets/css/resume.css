@@ -53,6 +53,7 @@ h6 {
 /* Sections Header Generales
 --------------------------------*/
 .section-header {
+  margin-top: 95px;
   margin-bottom: 35px;
   position: relative;
   padding-bottom: 20px;
@@ -212,10 +213,6 @@ a:hover, a:focus, a:active {
 /************************************
 Seccion Trailer
 ************************************/
-.trailers {
-  margin-top: 100px;
-}
-
 .tarjeta-trailers:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -345,9 +342,6 @@ Seccion Video
 /*--------------------------------------------------------------
 # Seccion de registro
 --------------------------------------------------------------*/
-.registro {
-  padding: 60px 0;
-}
 .registro .form input,
 .registro .form textarea {
   padding: 10px 14px;
@@ -405,10 +399,6 @@ Seccion Video
 /*--------------------------------------------------------------
 # Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
-.mainpadding {
-  padding-top: 70px;
-}
-
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
