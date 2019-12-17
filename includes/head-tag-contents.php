@@ -17,6 +17,9 @@
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
+  <!-- Fontawesome Icons -->
+  <script src="https://kit.fontawesome.com/33a002ef8f.js" crossorigin="anonymous"></script>
+
 
 
   <!-- Bootstrap CSS File -->

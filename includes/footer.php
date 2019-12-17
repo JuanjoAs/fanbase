@@ -15,17 +15,17 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4 class="text-white border-bottom border-primary pb-2">Enlaces de utilidad</h4>
         <ul>
-          <li><i class="fa fa-angle-right"></i> <a href="index.php">Inicio</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="juegos.php">Juegos</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="trailers.php">Tráilers</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Zona Interactiva</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="recomendaciones.php">Recomendaciones</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="index.php">Inicio</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="juegos.php">Juegos</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="trailers.php">Tráilers</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="#">Zona Interactiva</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="recomendaciones.php">Recomendaciones</a></li>
           <li><ul>
-              <li><i class="fa fa-angle-right"></i> <a href="nosotros.php">Sobre Nosotros</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="contactar.php">Contáctanos</a></li>
+              <li><i class="fas fa-angle-right"></i> <a href="nosotros.php">Sobre Nosotros</a></li>
+              <li><i class="fas fa-angle-right"></i> <a href="contactar.php">Contáctanos</a></li>
           </ul></li>
 
-          <li><i class="fa fa-angle-right"></i> <a href="registro.php">Regístrate</a></li>
+          <li><i class="fas fa-angle-right"></i> <a href="registro.php">Regístrate</a></li>
         </ul>
       </div>
 
@@ -41,10 +41,10 @@
       </div>
       <div class="col-lg-3 col-md-6 social-links">
         <h4 class="text-white border-bottom border-primary pb-2">Redes Sociales</h4>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </div>

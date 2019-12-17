@@ -8,7 +8,7 @@
 
 <body>
   <?php include("includes/navbar.php"); ?>
-  <main class="container mt-5">
+  <main class="container">
     <section class="registro section-bg wow fadeInUp mt-5 align-items-center">
       <div class="row justify-content-left align-content-center">
         <div class="form col-md-6">
@@ -54,21 +54,21 @@
             <div class="form col-md-12">
               <h4> ¿Que tiene fanbase que no tienen los demas?
             </div>
-            <div class="col-md-2 d-inline-block"><i class="far fa-comment-dots fa-3x"></i></div>
+            <div class="col-md-2 text-center d-inline-block"><i class="fas fa-star-half-alt fa-4x text-secondary"></i></div>
             <div class="col-md-10 ">
               <h5 class="mt-3">¡Valora tus juegos favoritos!</h5>
             </div>
           </div>
           <hr />
           <div class="row">
-            <div class="col-md-2 d-inline-block"><i class="far fa-comment-dots fa-3x"></i></div>
+            <div class="col-md-2 text-center d-inline-block"><i class="fas fa-comments fa-4x text-primary"></i></div>
             <div class="col-md-10 ">
               <h5 class="mt-3">¡Comenta tus videos favoritos de tus juegos FAVORITOS!</h5>
             </div>
           </div>
           <hr />
           <div class="row">
-            <div class="col-md-2 d-inline-block"><i class="far fa-comment-dots fa-3x"></i></div>
+          <div class="col-md-2 text-center d-inline-block"><i class="fas fa-users fa-4x text-secondary"></i></i></div>
             <div class="col-md-10 ">
               <h5 class="mt-3">¡COMPARTE EL AMOR POR TODO CON LAS DEMAS PERSONAS!</h5>
             </div>

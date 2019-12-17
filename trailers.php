@@ -11,14 +11,11 @@
     <?php include("includes/design-top.php");?>
     <?php include("includes/navbar.php");?>
 
-
-
     <main class="">
 
-        <section class="section-bg wow fadeInUp trailers">
+        <section class="section-bg wow fadeInUp">
 
             <div class="container">
-
 
                 <div class="">
                     <div class="section-header">
@@ -186,7 +183,6 @@
         </section>
     </main>
 <?php include("includes/footer.php");?>
-
 
 </body>
 
