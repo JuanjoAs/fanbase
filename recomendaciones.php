@@ -54,8 +54,8 @@
                   <a data-toggle="collapse" href="#juegos2" class="collapsed cajaenlace">Cyberpunk 2077 <i class="fa fa-minus-circle"></i></a>
                   <div id="juegos2" class="collapse">
                     <div class="row">
-                      <div class="col-lg-3 pb-4">
-                        <img class="border cartelrecos" src="assets/img/recomendaciones/cyberpunk1.jpg">
+                      <div class="col-lg-3">
+                        <img class="border cartelrecos" src="assets/img/recomendaciones/cyberpunk.png">
                       </div>
                       <div class="col-lg-6">
                         <p>
@@ -99,7 +99,7 @@
                   <div id="series1" class="collapse">
                     <div class="row">
                       <div class="col-lg-3">
-                        <img class="border cartelrecos" src="assets/img/recomendaciones/kaynicon.jpg">
+                        <img class="border cartelrecos" src="assets/img/recomendaciones/titanes.png">
                       </div>
                       <div class="col-lg-6">
                         <p>
@@ -127,7 +127,7 @@
                   <a data-toggle="collapse" href="#series2" class="collapsed cajaenlace">Juego de Tronos <i class="fa fa-minus-circle"></i></a>
                   <div id="series2" class="collapse">
                     <div class="row">
-                      <div class="col-lg-3 pb-4">
+                      <div class="col-lg-3">
                         <img class="border cartelrecos" src="assets/img/recomendaciones/cyberpunk1.jpg">
                       </div>
                       <div class="col-lg-6">
