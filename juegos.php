@@ -50,36 +50,6 @@
             <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
           </figcaption>
         </figure>
-        <figure class="figure col-lg-4 col-md-6 border">
-          <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_zelda.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
-          </div>
-          <figcaption class="figure-caption px-3 py-1">
-            <h3><a href="info_juego.php?juego=The Legend of Zelda">The Legend of Zelda</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
-          </figcaption>
-        </figure>
-        <figure class="figure col-lg-4 col-md-6 border">
-          <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_final_fantasy_vii.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
-          </div>
-          <figcaption class="figure-caption px-3 py-1">
-            <h3><a href="info_juego.php?juego=Final Fantasy">Final Fantasy</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
-          </figcaption>
-        </figure>
-        <figure class="figure col-lg-4 col-md-6 border">
-          <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_grand_theft_auto.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
-          </div>
-          <figcaption class="figure-caption px-3 py-1">
-            <h3><a href="info_juego.php?juego=Grand Theft Auto">Grand Theft Auto</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
-          </figcaption>
-        </figure>
       </div>
     </section>
   </main>
