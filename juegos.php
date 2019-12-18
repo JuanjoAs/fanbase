@@ -22,32 +22,32 @@
       <div class="row">
         <figure class="figure col-lg-4 col-md-6 border">
           <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_pokemon.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="assets/img/juegos/logo_pokemon.png" class="figure-img img-fluid"
+              alt="Pokemon">
           </div>
           <figcaption class="figure-caption px-3 py-1">
             <h3><a href="info_juego.php?juego=Pokemon">Pokemon</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="text-primary">Conviertete en un experto pokemon.</p>
           </figcaption>
         </figure>
         <figure class="figure col-lg-4 col-md-6 border">
           <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_league_legends.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="assets/img/juegos/logo_league_legends.png" class="figure-img img-fluid"
+              alt="League of Legends">
           </div>
           <figcaption class="figure-caption px-3 py-1">
             <h3><a href="info_juego.php?juego=League of Legends">League of Legends</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="text-primary">El MOBA más popular.</p>
           </figcaption>
         </figure>
         <figure class="figure col-lg-4 col-md-6 border">
           <div class="figure-content-img">
-            <img src="assets/img/hotels/logo_witcher.png" class="figure-img img-fluid"
-              alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="assets/img/juegos/logo_witcher.png" class="figure-img img-fluid"
+              alt="The Witcher">
           </div>
           <figcaption class="figure-caption px-3 py-1">
             <h3><a href="info_juego.php?juego=The Witcher">The Witcher</a></h3>
-            <p class="text-primary">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="text-primary">Ponte en la piel del brujo.</p>
           </figcaption>
         </figure>
       </div>
