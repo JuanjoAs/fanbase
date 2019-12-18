@@ -13,7 +13,7 @@
 
   <main class="container">
 
-    <section class="wow fadeInUp">
+    <section class="nosotros wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>¿Quienes somos?</h2>
@@ -97,8 +97,7 @@
                 <li class="list-group-item"><a href="mailto:info@fanbase.com" class="card-link">info@fanbase.com</a></li>
                 <li class="list-group-item"><a href="tel:+34 689 488 855" class="card-link">+34 689 488 855</a></li>
                 <li class="list-group-item">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537.535958051929!2d-4.481326319022569!3d37.41008335273653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13417153fad2ce31!2sIES%20Marqu%C3%A9s%20de%20Comares!5e0!3m2!1ses!2ses!4v1576671936753!5m2!1ses!2ses" width="205" height="205" frameborder="0"  >
-                  </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537.535958051929!2d-4.481326319022569!3d37.41008335273653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13417153fad2ce31!2sIES%20Marqu%C3%A9s%20de%20Comares!5e0!3m2!1ses!2ses!4v1576671936753!5m2!1ses!2ses" width="205" height="205" frameborder="0"/>
                 </li>
               </ul>
 
