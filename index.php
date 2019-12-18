@@ -20,7 +20,7 @@
 
       <p class="mb-4 pb-0">Tu web de información referente</p>
 
-      <a href="https://www.youtube.com/watch?v=vzHrjOMfHPY" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+      <button type="button" class="btn play-btn mb-4" data-toggle="modal" data-target="#exampleModalCenter"></button>      
       <a href="./nosotros.php" class="about-btn scrollto">Sobre nosotros</a>
     </div>
   </section>
@@ -48,6 +48,46 @@
       </div>
     </section>
 </main>
+
+<!-- Modal Video -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">FanBase: Tu web referente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="video-container" id="video-container">
+          <!-- Video -->
+          <video id="video"  width="640" height="365">
+            <source src="assets/videos/amanecer.webm" type="video/webm">
+            <source src="assets/videos/amanecer.mp4" type="video/mp4">
+            <p>
+              Tu navegador no soporta video HTML5.
+              <a href="assets/videos/amanecer.mp4">Descargalo</a>
+            </p>
+          </video>
+          <!-- Video Controls -->
+          <div id="video-controls" class="video-controls">
+            <button type="button" class="btn btn-primary" id="play-pause" class="play">Reproducir</button>
+            <input type="range" class="seek-bar" id="seek-bar" value="0">
+            <button type="button" class="btn-primary fas fa-volume-mute" id="mute"></button>
+            <input type="range" class="volume-bar" id="volume-bar" min="0" max="1" step="0.1" value="1">
+            <button type="button" class="full-screen fas fa-expand" id="full-screen"></button>
+          </div>
+        </div>
+
+        <script src="assets/js/script-video.js"></script>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+
 
 <?php include("includes/footer.php"); ?>
 </body>
