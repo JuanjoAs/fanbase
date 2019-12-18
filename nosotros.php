@@ -13,7 +13,7 @@
 
   <main class="container">
 
-    <section class="nosotros wow fadeInUp">
+    <section class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>¿Quienes somos?</h2>
