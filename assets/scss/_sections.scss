@@ -1,0 +1,593 @@
+/*--------------------------------------------------------------
+# contacto Section
+--------------------------------------------------------------*/
+
+.contacto {
+    padding: 60px 0;
+
+
+
+
+    .form {
+
+        input,
+        textarea {
+            padding: 10px 14px;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 15px;
+        }
+
+        button {
+            
+            background: $primary;
+            border: 0;
+            padding: 10px 40px;
+            color: $white;
+            transition: 0.4s;
+            border-radius: 50px;
+            cursor: pointer;
+
+            &:hover {
+                background: $dark-blue;
+            }
+        }
+    }
+    //arreglar centrar card en movil
+    .info{
+        width: 18rem !important;
+        
+    }
+    ul {
+        li {
+    
+          a {
+            color: $black;
+    
+            &:hover {
+              color: $primary;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+      
+
+}
+
+/*--------------------------------------------------------------
+# Estilos para la sección de información de juego
+--------------------------------------------------------------*/
+
+.carousel-inner{
+  height: 460px;
+  img {
+      width: 100%;
+      max-height: 460px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Seccion Sobre nosotros
+--------------------------------------------------------------*/
+
+.nosotros {
+  padding: 60px 0 30px 0;
+
+  .personal {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .detalles {
+      background: rgba(6, 12, 34, 0.76);
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      right: 0;
+      text-align: center;
+      padding-top: 10px;
+      transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      h3 {
+        color: $white;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: $white;
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .social {
+        height: 30px;
+      }
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    &:hover .detalles {
+      bottom: 0;
+    }
+  }
+
+  ul {
+    li {
+
+      a {
+        color: $black;
+
+        &:hover {
+          color: $primary;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+
+}
+
+/*--------------------------------------------------------------
+# Seccion Recomendaciones Juegos y Series
+--------------------------------------------------------------*/
+
+.recomendaciones .recomendaciones-list {
+  padding: 0;
+  list-style: none;
+}
+
+.recomendaciones .recomendaciones-list li {
+  border-bottom: 1px solid #ddd;
+  padding-left: 25px;
+}
+
+.recomendaciones .recomendaciones-list a {
+  margin:18px 0;
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: $darken;
+    &:hover{
+      color:$primary;
+    }
+}
+
+.recomendaciones .recomendaciones-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
+
+.recomendaciones .recomendaciones-list p {
+  margin-bottom: 20px;
+}
+
+.recomendaciones .recomendaciones-list a.collapse {
+  color: $primary;
+}
+
+.recomendaciones .recomendaciones-list a.collapsed {
+  color: #000;
+}
+
+.recomendaciones .recomendaciones-list a.collapsed i::before {
+  content: "\f055" !important;
+}
+
+.storesbotones img{
+  width: 200px;
+  margin-top: -30px !important;
+  margin-bottom: -20px;
+}
+.cartelrecos{
+  width: 230px;
+  max-height: 300px;
+  border: 3px solid $primary !important;
+  margin-bottom: 15px;
+  
+}
+
+/*--------------------------------------------------------------
+# Seccion index intro
+--------------------------------------------------------------*/
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/intro-bg.jpg) top center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .intro-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 90px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 56px;
+    font-weight: 600;
+    text-transform: uppercase;  
+
+    span {
+      color: $primary;
+    }
+  }
+
+  p {
+    color: #ebebeb;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .play-btn {
+    width: 94px;
+    height: 94px;
+    background: radial-gradient($primary 50%, rgba(101, 111, 150, 0.15) 52%);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateX(-40%) translateY(-50%);
+      transform: translateX(-40%) translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid #fff;
+      z-index: 100;
+      transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+      -webkit-animation: pulsate-btn 2s;
+      animation: pulsate-btn 2s;
+      -webkit-animation-direction: forwards;
+      animation-direction: forwards;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: steps;
+      animation-timing-function: steps;
+      opacity: 1;
+      border-radius: 50%;
+      border: 2px solid rgba(163, 163, 163, 0.4);
+      top: -15%;
+      left: -15%;
+      background: rgba(198, 16, 0, 0);
+    }
+
+    &:hover {
+      &::after {
+        border-left: 15px solid $primary;
+        -webkit-transform: scale(20);
+        transform: scale(20);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-40%) translateY(-50%);
+        transform: translateX(-40%) translateY(-50%);
+        width: 0;
+        height: 0;
+        border: none;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid #fff;
+        z-index: 200;
+        -webkit-animation: none;
+        animation: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .about-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid $primary;
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Seccion sobrefanbase (index)
+--------------------------------------------------------------*/
+
+.about {
+  background: url("../img/about-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 40px 0;
+
+  &:before {
+    content: "";
+    background: rgba(13, 20, 41, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+/*--------------------------------------------------------------
+# Seccion de registro
+--------------------------------------------------------------*/
+
+.registro {
+
+  .form { 
+
+      input,
+      textarea {
+          padding: 10px 14px;
+          border-radius: 0;
+          box-shadow: none;
+          font-size: 15px;
+      }
+
+      button {
+          
+          background: $primary;
+          border: 0;
+          padding: 10px 40px;
+          color: $white;
+          transition: 0.4s;
+          border-radius: 50px;
+          cursor: pointer;
+
+          &:hover {
+              background: $dark-blue;
+          }
+      }
+  }
+
+  ul {
+      li {
+  
+        a {
+          color: $black;
+  
+          &:hover {
+            color: $primary;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    
+
+}
+
+/************************************
+Seccion Trailer
+************************************/
+
+.tarjeta-trailers:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.tarjeta-trailers {
+  transition: 0.3s ease-in-out;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 1600px){
+  .trailers .container {
+      max-width: 1580px;
+  }
+}
+
+/************************************
+Seccion Video
+************************************/
+
+.video{
+margin-top: 100px;
+}
+
+.tarjeta-video:hover {
+-webkit-transform: scale(1.04);
+transform: scale(1.04);
+}
+
+
+.tarjeta-video {
+transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 1600px){
+.video .container {
+    max-width: 1580px;
+}
+}
+
+/*--------------------------------------------------------------
+# Video bootstrap Section
+--------------------------------------------------------------*/
+.video-container {
+  width: 640px;
+  height: 365px;
+  position: relative;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  -ms-transition: opacity .3s;
+  transition: opacity .3s;
+  background-image: linear-gradient(bottom, rgb(13, 18, 35) 13%, rgb(11, 16, 34) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(13, 18, 35) 13%, rgb(11, 16, 34) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(13, 18, 35) 13%, rgb(11, 16, 34) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(13, 18, 35) 13%, rgb(11, 16, 34) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(13, 18, 35) 13%, rgb(11, 16, 34) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.13, rgb(13, 18, 35)), color-stop(1, rgb(11, 16, 34)));
+}
+
+.video-container:hover .video-controls {
+  opacity: .9;
+}
+
+.video-controls {
+  button{
+    background: #2AB09C;
+    border: 0;
+    color: #EEE;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 7px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.seek-bar {
+  width: 340px;
+}
+
+.volume-bar {
+  width: 60px;
+}
