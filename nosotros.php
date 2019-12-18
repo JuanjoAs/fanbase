@@ -13,7 +13,7 @@
 
   <main class="container">
 
-    <section class="nosotros wow fadeInUp mt-5">
+    <section class="nosotros wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>¿Quienes somos?</h2>
@@ -30,10 +30,10 @@
                     <h3><a href="personal-detalles.html">Juan José Arévalo</a></h3>
                     <p>Desarrollador jefe de la web</p>
                     <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook-square"></i></a>
-                      <a href=""><i class="fa fa-instagram"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-facebook-square"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href=""><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -45,10 +45,10 @@
                     <h3><a href="personal-detalles.html">Antonio Escobar</a></h3>
                     <p>Desarrollador de la interfaz de usuario</p>
                     <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook-square"></i></a>
-                      <a href=""><i class="fa fa-instagram"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-facebook-square"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href=""><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -60,10 +60,10 @@
                     <h3><a href="personal-detalles.html">Francisco Jesús Trillo</a></h3>
                     <p>Desarrollador jefe de la web</p>
                     <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook-square"></i></a>
-                      <a href=""><i class="fa fa-instagram"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-facebook-square"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href=""><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -75,10 +75,10 @@
                     <h3><a href="personal-detalles.html">Rafael Serrano</a></h3>
                     <p>Desarrollador de la interfaz de usuario</p>
                     <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook-square"></i></a>
-                      <a href=""><i class="fa fa-instagram"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-facebook-square"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href=""><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -96,6 +96,10 @@
                 <li class="list-group-item"><a href="contactar.php" class="card-link">Contáctanos</a></li>
                 <li class="list-group-item"><a href="mailto:info@fanbase.com" class="card-link">info@fanbase.com</a></li>
                 <li class="list-group-item"><a href="tel:+34 689 488 855" class="card-link">+34 689 488 855</a></li>
+                <li class="list-group-item">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537.535958051929!2d-4.481326319022569!3d37.41008335273653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13417153fad2ce31!2sIES%20Marqu%C3%A9s%20de%20Comares!5e0!3m2!1ses!2ses!4v1576671936753!5m2!1ses!2ses" width="205" height="205" frameborder="0"  >
+                  </iframe>
+                </li>
               </ul>
 
             </div>
@@ -104,10 +108,7 @@
       </div>
 
     </section>
-    <section>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-    </section>
-  </main>
+    </main>
 
 
   <?php include("includes/footer.php"); ?>
