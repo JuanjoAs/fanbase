@@ -10,7 +10,7 @@
 /**
  * Description of Juegos
  *
- * @author DWES
+ * @author Trillo
  */
 class RecomendacionesObj {
     private $nombre;
@@ -78,16 +78,22 @@ class RecomendacionesObj {
         }  
     }
 
-    public static function buscaNombre($dni_p){
+    public static function recuperarTodosSeries(){
         try{
             $conex=new Conexion();
             $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try{
-                $consulta=$conex->query("SELECT * FROM profesores WHERE dni_p='$dni_p'");
-                while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
-                    return $registro->nombre." ".$registro->apellidos;
-                }
+                $consulta=$conex->query("SELECT * FROM recomendaciones WHERE tipo='seriepeli'");
+                if($consulta!=null){
+                    $productos=null;
+                    while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
+                        $p=new self($registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
+                        $productos[]=$p;
+                    }
+                    return $productos;
 
+                }
+               
             }catch (PDOException $p) {
                 echo "Error ".$p->getMessage()."<br />";
             }  
