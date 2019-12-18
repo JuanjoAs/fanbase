@@ -17,7 +17,7 @@
       <li class="nav-item <?php if ($CURRENT_PAGE == "Inicio"){echo "active";} ?>">
         <a class="nav-link" href="index.php">Inicio <span class="sr-only"></span></a>
       </li>
-      <li class="nav-item <?php if ($CURRENT_PAGE == "Juegos"){echo "active";} ?>">
+      <li class="nav-item <?php if ($CURRENT_PAGE == "Juegos" || $CURRENT_PAGE == "Informacion Juego"){echo "active";} ?>">
        <a class="nav-link" href="juegos.php">Juegos</a>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video"){echo "active";} ?>">

@@ -1,6 +1,7 @@
 <?php
-
-$dondeEstoy = basename($_SERVER["REQUEST_URI"]);
+$dondeEstoy = (explode("?",basename($_SERVER["REQUEST_URI"])));
+$dondeEstoy = $dondeEstoy[0];
+//echo $dondeEstoy; 
 
 	switch ($dondeEstoy) {
 		case "registro.php":
@@ -11,6 +12,12 @@ $dondeEstoy = basename($_SERVER["REQUEST_URI"]);
 		case "contactar.php":
 			$CURRENT_PAGE = "Contactar"; 
 			$PAGE_TITLE = "FanBase - Contáctanos";
+			break;
+
+
+		case "info_juego.php":
+			$CURRENT_PAGE = "Informacion Juego"; 
+			$PAGE_TITLE = "FanBase - Informacion Juego";
 		break;
 
 		case "recomendaciones.php":
