@@ -29,13 +29,14 @@
       <li class="nav-item <?php if ($CURRENT_PAGE == "Recomendaciones"){echo "active";} ?>">
         <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
       </li>
-      <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar"){echo "active";} ?>">
+      <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Contacto
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="nosotros.php">Sobre nosotros</a>
           <a class="dropdown-item" href="contactar.php">Contactanos</a>
+          <a class="dropdown-item" href="terminoslegales.php">Terminos Legales</a>
         </div>
       </li>
     </ul>

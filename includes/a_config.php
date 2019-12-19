@@ -14,6 +14,13 @@ $dondeEstoy = $dondeEstoy[0];
 			$PAGE_TITLE = "FanBase - Contáctanos";
 			break;
 
+		case "terminoslegales.php":
+			$CURRENT_PAGE = "Terminos Legales"; 
+			$PAGE_TITLE = "FanBase - Terminos Legales";
+			break;
+
+			
+
 
 		case "info_juego.php":
 			$CURRENT_PAGE = "Informacion Juego"; 
