@@ -91,11 +91,11 @@
 
             <?php 
                 if($_REQUEST['juego'] == 'Pokemon') {
-                    include_once 'includes/pokemon.php';
+                    include_once 'includes/juegos/pokemon.php';
                 } else if($_REQUEST['juego'] == 'League of Legends') {
-                    include_once 'includes/lol.php';
+                    include_once 'includes/juegos/lol.php';
                 } else if($_REQUEST['juego'] == 'The Witcher') {
-                    include_once 'includes/witcher.php';
+                    include_once 'includes/juegos/witcher.php';
                 }
             ?>
 

@@ -41,6 +41,25 @@
 
                 <div class="text-center mt-5 shadow p-3 mb-5 bg-white rounded">
                     <h3>Licencia sobre recursos externos</h3>
+                    <h5>Recursos relacionados con Pokemon</h5>
+                    <p>
+                        Todos los recursos relacionados con Pokemon han sido extraidos de la página oficial de 
+                        la franquicia, donde podemos ver sus condiciones de uso en el siguente enlace, 
+                        <a href="https://www.pokemon.com/es/condiciones-de-uso/" class="text-primary">Condiciones de uso</a>. 
+                        Alegamos que no se tendrán ningún uso comercial de estos.
+                    </p>
+                    <h5>Recursos relacionados con League of Legends</h5>
+                    <p>
+                        Todos los recursos relacionados con League of Legends han sido extraidos de la página Fandom, donde podemos ver sus condiciones de uso en el siguente enlace, 
+                        <a href="https://www.fandom.com/terms-of-use" class="text-primary">Condiciones de uso</a>. 
+                        Alegamos que no se tendrán ningún uso comercial de estos.
+                    </p>
+                    <h5>Recursos relacionados con The Witcher</h5>
+                    <p>
+                        Todos los recursos relacionados con The Witcher han sido extraidos de la página Fandom, donde podemos ver sus condiciones de uso en el siguente enlace, 
+                        <a href="https://www.fandom.com/terms-of-use" class="text-primary">Condiciones de uso</a>. 
+                        Alegamos que no se tendrán ningún uso comercial de estos.
+                    </p>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
