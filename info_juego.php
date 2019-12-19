@@ -37,39 +37,6 @@
                 2 => "assets/img/juegos/witcher/slider3.png",
             );
             break;
-        case "The Legend of Zelda":
-            echo $description_game = "The Legend of Zelda es una serie de videojuegos de acción-aventura desarrollada 
-            por Nintendo. Su trama por lo general describe las heroicas aventuras del joven guerrero 
-            Link, que debe enfrentarse a peligros y resolver acertijos para ayudar a la Princesa Zelda 
-            a derrotar a Ganon y salvar su hogar, el reino de Hyrule.";
-            $slider_game = array(
-                0 => "assets/img/juegos/zelda/slider1.png",
-                1 => "assets/img/juegos/zelda/slider2.png",
-                2 => "assets/img/juegos/zelda/slider3.png",
-            );
-            break;
-        case "Final Fantasy":
-            $description_game = "Final Fantasy es una franquicia de medios creada por Hironobu Sakaguchi y 
-            desarrollada por Square Enix (antes conocida como Squaresoft). La franquicia se centra en una 
-            serie fantástica y ciencia fantástica de videojuegos RPG.";
-            $slider_game = array(
-                0 => "assets/img/juegos/ff/slider1.png",
-                1 => "assets/img/juegos/ff/slider2.png",
-                2 => "assets/img/juegos/ff/slider3.png",
-            );
-            break;
-        case "Grand Theft Auto":
-            $description_game = "Grand Theft Auto (GTA) es una serie de videojuegos creada por David 
-            Jones y luego por Sam Houser y Dan Houser. Originalmente fue desarrollada por DMA Design, 
-            que posteriormente pasó a llamarse Rockstar North, de la empresa Rockstar Games. Grand Theft 
-            Auto cuenta la historia de distintos criminales y aunque sean varios, por una razón se van 
-            relacionando y envolviendo en problemas a más personajes conforme va pasando el tiempo.";
-            $slider_game = array(
-                0 => "assets/img/juegos/gta/slider1.png",
-                1 => "assets/img/juegos/gta/slider2.png",
-                2 => "assets/img/juegos/gta/slider3.png",
-            );
-            break;
         default: 
             $description_game = "Juego no reconocido";
     }
@@ -99,8 +66,8 @@
             <p class="text-secondary"><?php echo $description_game; ?>
             </p>
         </div>
-        <?php if(isset($_REQUEST['juego'])) { ?>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <?php if(isset($_REQUEST['juego'])) {  ?>
+            <div id="carouselExampleControls" class="carousel slide d-none d-lg-block" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="<?php echo $slider_game[0]; ?>" class="d-block w-100" alt="...">
@@ -122,38 +89,15 @@
                 </a>
             </div>
 
-            <div class="row mb-3 justify-content-around">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card ">
-                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card ">
-                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card ">
-                        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php 
+                if($_REQUEST['juego'] == 'Pokemon') {
+                    include_once 'includes/pokemon.php';
+                } else if($_REQUEST['juego'] == 'League of Legends') {
+                    include_once 'includes/lol.php';
+                } else if($_REQUEST['juego'] == 'The Witcher') {
+                    include_once 'includes/witcher.php';
+                }
+            ?>
 
         <?php } ?>
     </section>
