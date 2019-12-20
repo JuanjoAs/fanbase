@@ -25,7 +25,7 @@
             <div class="row">
               <div class="col-lg-6 col-md-6">
                 <div class="personal">
-                  <img src="assets/img/speakers/3.jpg" alt="personal 3" class="img-fluid">
+                  <img src="assets/img/nosotros/juanjo.jpg" alt="personal 3" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Juan José Arévalo</a></h3>
                     <p>Desarrollador jefe de la web</p>
@@ -40,7 +40,7 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="personal">
-                  <img src="assets/img/speakers/4.jpg" alt="personal 4" class="img-fluid">
+                  <img src="assets/img/nosotros/antonio.jpg" alt="personal 4" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Antonio Escobar</a></h3>
                     <p>Desarrollador de la interfaz de usuario</p>
@@ -55,7 +55,7 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="personal">
-                  <img src="assets/img/speakers/5.jpg" alt="personal 5" class="img-fluid">
+                  <img src="assets/img/nosotros/francisco.jpg" alt="personal 5" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Francisco Jesús Trillo</a></h3>
                     <p>Desarrollador jefe de la web</p>
@@ -70,7 +70,7 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="personal">
-                  <img src="assets/img/speakers/6.jpg" alt="personal 6" class="img-fluid">
+                  <img src="assets/img/nosotros/rafa.jpg" alt="personal 6" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Rafael Serrano</a></h3>
                     <p>Desarrollador de la interfaz de usuario</p>
@@ -87,7 +87,7 @@
           </div>
           <div class="col-md-3">
             <div class="card">
-              <img src="assets/img/gallery/8.jpg" class="card-img-top h-100">
+              <img src="assets/img/contacto/fotoGrupal.jpg" class="card-img-top h-100">
               <div class="card-body">
                 <h5 class="card-title">Se uno más</h5>
                 <p class="card-text">Si tienes alguna duda o recomendacion para la pagina no dudes en mandarnosla.</p>
