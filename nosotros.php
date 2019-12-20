@@ -28,7 +28,7 @@
                   <img src="assets/img/nosotros/juanjo.jpg" alt="personal 3" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Juan José Arévalo</a></h3>
-                    <p>Desarrollador jefe de la web</p>
+                    <p>Desarrollador</p>
                     <div class="social">
                       <a href=""><i class="fab fa-twitter"></i></a>
                       <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -43,7 +43,7 @@
                   <img src="assets/img/nosotros/antonio.jpg" alt="personal 4" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Antonio Escobar</a></h3>
-                    <p>Desarrollador de la interfaz de usuario</p>
+                    <p>Desarrollador</p>
                     <div class="social">
                       <a href=""><i class="fab fa-twitter"></i></a>
                       <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -58,7 +58,7 @@
                   <img src="assets/img/nosotros/francisco.jpg" alt="personal 5" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Francisco Jesús Trillo</a></h3>
-                    <p>Desarrollador jefe de la web</p>
+                    <p>Desarrollador</p>
                     <div class="social">
                       <a href=""><i class="fab fa-twitter"></i></a>
                       <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -73,7 +73,7 @@
                   <img src="assets/img/nosotros/rafa.jpg" alt="personal 6" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Rafael Serrano</a></h3>
-                    <p>Desarrollador de la interfaz de usuario</p>
+                    <p>Desarrollador</p>
                     <div class="social">
                       <a href=""><i class="fab fa-twitter"></i></a>
                       <a href=""><i class="fab fa-facebook-square"></i></a>

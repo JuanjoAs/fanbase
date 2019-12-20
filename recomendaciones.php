@@ -114,6 +114,10 @@ require_once 'Objetos/RecomendacionesObj.php';
 </main>
 
 <?php include("includes/footer.php");?>  
-
+<script>
+  // Primero de recomendaciones esta abierto
+  $("#juegos0").collapse('show');
+  $("#series0").collapse('show');
+</script>
 </body>
 </html>
