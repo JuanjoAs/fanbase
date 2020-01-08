@@ -51,10 +51,15 @@
         var pshop;
         var loop;
         var fps = 60;
+        var pcextra=1;
         var centromejora = "centeractu1.jpg";
 
         function initGame() {
           cacheImagenes();
+          const interval = setInterval(function () {
+            pokecoins+=pcextra;
+          }, 1000);
+
           background.onload = function () {
             loop = setInterval(function () {
               ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
@@ -64,6 +69,7 @@
           gameLogic();
         }
         function dibujaJuego() {
+
           //Dibujamos fondo
           ctx.drawImage(background, 0, 0);
           // Dibujamos cuadrado derecha logo
@@ -109,14 +115,14 @@
           //Boton comprar meowth y persian
           ctx.font = "17px Raleway";
           ctx.fillStyle = "black";
-          ctx.fillText("Meowth (" + preciomejora1 + " PC)", 10, 180);
-          ctx.fillText("CLICKS EXTRA +(" + mejora1 + ")", 260, 180);
-          ctx.fillText("Persian (" + preciomejora2 + " PC)", 10, 280);
-          ctx.fillText("CLICKS EXTRA +(" + mejora2 + ")", 260, 280);
+          ctx.fillText("Meowth [" + preciomejora1 + " PC]", 10, 180);
+          ctx.fillText("PokeCoins/click: " +(1+ mejora1), 260, 180);
+          ctx.fillText("Persian [" + preciomejora2 + " PC]", 10, 280);
+          ctx.fillText("PC automáticos/s: " + pcextra, 260, 280);
           ctx.fillText("- Meowth mejora los clicks con un extra de +1.", 10, 340);
-          ctx.fillText("- Persian mejora los clicks con un extra de +3", 10, 360);
+          ctx.fillText("- Persian aumenta en 1 los PokeCoins automáticos.", 10, 360);
           ctx.fillText("- El Centro Pokémon DUPLICA todas tus mejoras y aumenta", 10, 380);
-          ctx.fillText("el coste de las mejoras X4. Precio reforma: " + preciocentro, 20, 400);
+          ctx.fillText("el coste de las mejoras X4. Precio reforma: " + preciocentro+" PC", 20, 400);
           //Dibujamos las imagenes
           ctx.drawImage(pcoins, 230, 0);
           ctx.drawImage(pshop, 280, 60);
@@ -172,7 +178,7 @@
               } else {
                 pokecoins -= preciomejora1;
                 mejora1++;
-                preciomejora1 = preciomejora1 + 10;
+                preciomejora1+= preciomejora1/2;
                 pokeclick = 1 + mejora1 + mejora2;
               }
             }
@@ -182,9 +188,8 @@
                 alert("No tienes suficiente dinero");
               } else {
                 pokecoins -= preciomejora2;
-                mejora2 += 3;
-                preciomejora2 = preciomejora2 + 30;
-                pokeclick = 1 + mejora1 + mejora2;
+                pcextra+=1;
+                preciomejora2 += preciomejora2/2;
               }
             }
           });
