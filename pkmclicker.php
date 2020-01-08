@@ -186,7 +186,7 @@
               } else {
                 pokecoins -= preciomejora1;
                 mejora1++;
-                preciomejora1+= preciomejora1/2;
+                preciomejora1+= Math.ceil(preciomejora1/2); //redondeamos al alza o estropea con decimales
                 pokeclick = 1 + mejora1 + mejora2;
               }
             }
@@ -197,7 +197,7 @@
               } else {
                 pokecoins -= preciomejora2;
                 pcextra+=1;
-                preciomejora2 += preciomejora2/2;
+                preciomejora2 += Math.ceil(preciomejora2/2);
               }
             }
           });
