@@ -19,16 +19,18 @@
     var posYpersian=215;
     var mejora1=0;
     var mejora2=0;
+    var preciomejora1=20;
+    var preciomejora2=80;
     var pokeclick=1+mejora1+mejora2;
     var imgmeowth = new Image();
     var imgpersian = new Image();
-
+    var centromejora="centeractu1.jpg";
 
     
     function dibujaJuego() {
       //Dibujamos fondo
       var background = new Image();
-      background.src = "assets/img/pkmclicker/centeractu1.jpg";
+      background.src = "assets/img/pkmclicker/"+centromejora+"";
       background.onload = function () {
         ctx.drawImage(background, 0, 0);
 
@@ -50,6 +52,7 @@
         ctx.strokeStyle = gradient;
         ctx.strokeText("Pokemon Clicker", 680, 45);
 
+
         //Cuadrado monedas
         ctx.fillStyle = "rgb(24,161,156)";
         ctx.fillRect(0, 0, 285, 55);
@@ -69,17 +72,21 @@
         ctx.font = "50px Raleway";
         ctx.strokeStyle = gradient;
         ctx.strokeText("Mejoras", 10, 110);
+        ctx.font = "30px Raleway";
+        ctx.strokeText("-> MEJORAR CENTRO <-", 45, 460);
 
         //Boton comprar meowth y persian
         ctx.font = "17px Roboto";
         ctx.fillStyle = "rgb(24,161,156)";
-        ctx.fillText("Meowth (20 PC)", 10, 180);
+        ctx.fillText("Meowth ("+preciomejora1+" PC)", 10, 180);
         ctx.fillText("MEJORA POR -> ("+mejora1+")", 260, 180);
-        ctx.fillText("Persian (80 PC)", 10, 280);
+        ctx.fillText("Persian ("+preciomejora2+" PC)", 10, 280);
         ctx.fillText("MEJORA POR -> ("+mejora2+")", 260, 280);
         ctx.fillText("- Meowth mejora los clicks con un extra de +1", 10, 340);
         ctx.fillText("- Persian mejora los clicks con un extra de +3", 10, 360);
         ctx.fillText("- El Centro Pokémon multiplica tus mejoras un X0.5", 10, 380);
+        ctx.fillText("y el coste de las mejoras X4", 20, 400);
+
       }
 
       var pcoins = new Image();
@@ -125,21 +132,44 @@
         dibujaJuego();
       }
 
-      // Click meowth
-      if (x > posXmeowth && x < imgmeowth.width + posXmeowth && y > posYmeowth && y < imgmeowth.height + posYmeowth) {
-        mejora1++;
-        pokeclick=1+mejora1+mejora2;
+      // Click mejora centro
+      if (x > 45 && x < 450 && y > 440) {
+        alert("¡ Enhorabuena ! Centro Pokémon mejorado");
+        centromejora="centeractu2.jpg";
         ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
-        ctx.strokeText(pokecoins, 130, 35);
+        preciomejora1+=preciomejora1*4;
+        preciomejora2+=preciomejora2*4;
         dibujaJuego();
       }
+
       // Click meowth
+      if (x > posXmeowth && x < imgmeowth.width + posXmeowth && y > posYmeowth && y < imgmeowth.height + posYmeowth) {
+        if(pokecoins-preciomejora1<0){
+          alert("No tienes suficiente dinero");
+        }else{
+          pokecoins-=preciomejora1;
+          mejora1++;
+          preciomejora1=preciomejora1+10;
+          pokeclick=1+mejora1+mejora2;
+          ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
+          ctx.strokeText(pokecoins, 130, 35);
+          dibujaJuego();
+        }
+
+      }
+      // Click persian
       if (x > posXpersian && x < imgpersian.width + posXpersian && y > posYpersian && y < imgpersian.height + posYpersian) {
-        mejora2+=3;
-        pokeclick=1+mejora1+mejora2;
-        ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
-        ctx.strokeText(pokecoins, 130, 35);
-        dibujaJuego();
+        if(pokecoins-preciomejora2<0){
+        }else{
+          pokecoins-=preciomejora2;
+          mejora2+=3;
+          preciomejora2=preciomejora2+30;
+          pokeclick=1+mejora1+mejora2;
+          ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
+          ctx.strokeText(pokecoins, 130, 35);
+          dibujaJuego();
+        }
+        
       }
     });
 
