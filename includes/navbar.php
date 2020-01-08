@@ -23,8 +23,13 @@
       <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video"){echo "active";} ?>">
         <a class="nav-link" href="trailers.php">Tráilers</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Zona Interactiva</a>
+      <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Zona interactiva"){echo "active";} ?>">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Zona Interactiva
+        </a>
+        <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="pkmclicker.php">Pokemon Clicker</a>
+        </div>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Recomendaciones"){echo "active";} ?>">
         <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
