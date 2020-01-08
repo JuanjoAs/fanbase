@@ -5,7 +5,6 @@
 <head>
   <?php include("includes/head-tag-contents.php");?>
   <style>
-
     </style>
 </head>
 
@@ -20,7 +19,7 @@
     TRILLO'S PKM CLICKER
   ============================-->
     <section class="section-bg wow fadeInUp pb-5">
-        <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3; margin-top: 120px;">
+        <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3;">
           Your browser does not support the HTML5 canvas tag.</canvas>
 
         <script>
@@ -48,10 +47,8 @@
           var loop;
           var fps = 60;
           var centromejora = "centeractu1.jpg";
-
           function initGame() {
             cacheImagenes();
-
             background.onload = function () {
               loop = setInterval(function () {
                 ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
@@ -63,18 +60,15 @@
           function dibujaJuego() {
             //Dibujamos fondo
             ctx.drawImage(background, 0, 0);
-
             // Dibujamos cuadrado derecha logo
             ctx.fillStyle = "rgb(11, 16, 34)";
             ctx.fillRect(c.width - 300, 0, 300, 55);
-
             //Pintamos logos
             ctx.font = "15px Raleway";
             ctx.fillStyle = "rgb(24,161,156)";
             ctx.fillText("Francisco Trillo's Fanbase", 670, 20);
             //ctx.fillText("FPS: ", c.width-80, c.height-10);
             //ctx.fillText(fps, c.width-45, c.height-10);
-
             // Creamos el gradient para el logo
             var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
             gradient.addColorStop("0", "yellow");
@@ -83,7 +77,6 @@
             ctx.font = "30px Permanent Marker";
             ctx.strokeStyle = gradient;
             ctx.strokeText("Pokemon Clicker", 680, 45);
-
             //Cuadrado monedas
             ctx.fillStyle = "rgb(24,161,156)";
             ctx.fillRect(0, 0, 285, 55);
@@ -92,14 +85,12 @@
             ctx.fillText("PokeCoins:", 10, 35);
             ctx.fillText(pokecoins, 115, 35);
             ctx.fillStyle = "rgb(24,161,156)";
-
             //Cuadrados compras
             ctx.fillRect(0, 72, 350, 50);
             ctx.fillRect(0, 135, 510, 76);
             ctx.fillRect(0, 243, 510, 60);
             ctx.fillRect(0, 325, 510, 80);
             ctx.fillRect(0, 420, 410, 60);
-
             var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
             gradient.addColorStop("0", "red");
             gradient.addColorStop("0.4", "blue");
@@ -109,7 +100,6 @@
             ctx.strokeText("Tienda", 10, 115);
             ctx.font = "30px Raleway";
             ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
-
             //Boton comprar meowth y persian
             ctx.font = "17px Raleway";
             ctx.fillStyle = "black";
@@ -121,7 +111,6 @@
             ctx.fillText("- Persian mejora los clicks con un extra de +3", 10, 360);
             ctx.fillText("- El Centro Pokémon DUPLICA todas tus mejoras y aumenta", 10, 380);
             ctx.fillText("el coste de las mejoras X4. Precio reforma: " + preciocentro, 20, 400);
-
             //Dibujamos las imagenes
             ctx.drawImage(pcoins, 230, 0);
             ctx.drawImage(pshop, 280, 60);
@@ -129,7 +118,6 @@
             ctx.drawImage(imgpersian, posXpersian, posYpersian);
             ctx.drawImage(img, posXball, posYball);
           }
-
           function cacheImagenes() {
             img = new Image();
             imgmeowth = new Image();
@@ -144,18 +132,15 @@
             imgpersian.src = "assets/img/pkmclicker/persian.png";
             img.src = "assets/img/pkmclicker/pokeball.png";
           }
-
           function gameLogic() {
             //Listener evento clicks
             c.addEventListener('click', function (event) {
               var x = event.pageX,
                 y = event.pageY;
-
               // Click pokeball
               if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
                 pokecoins += pokeclick;
               }
-
               // Click mejora centro
               if (x > 45 && x < 450 && y > 440) {
                 if (pokecoins - preciocentro < 0) {
@@ -171,9 +156,7 @@
                   background.src = "assets/img/pkmclicker/" + centromejora;
                   alert("¡ Enhorabuena !\n El Centro Pokémon ha sido reformado y disfrutas del doble de tus mejoras.");
                 }
-
               }
-
               // Click meowth
               if (x > posXmeowth && x < imgmeowth.width + posXmeowth && y > posYmeowth && y < imgmeowth.height + posYmeowth) {
                 if (pokecoins - preciomejora1 < 0) {
@@ -184,7 +167,6 @@
                   preciomejora1 = preciomejora1 + 10;
                   pokeclick = 1 + mejora1 + mejora2;
                 }
-
               }
               // Click persian
               if (x > posXpersian && x < imgpersian.width + posXpersian && y > posYpersian && y < imgpersian.height + posYpersian) {
@@ -196,14 +178,10 @@
                   preciomejora2 = preciomejora2 + 30;
                   pokeclick = 1 + mejora1 + mejora2;
                 }
-
               }
             });
           }
-
           initGame();
-
-
         </script>
       </div>
     </section>
