@@ -11,8 +11,20 @@
     var pokecoins = 0;
     var img = new Image();
     var ctx = c.getContext("2d");
-    var posXball = c.width / 1.8;
+    var posXball = c.width / 1.7;
     var posYball = 100;
+    var posXmeowth=160;
+    var posYmeowth=130;
+    var posXpersian=140;
+    var posYpersian=215;
+    var mejora1=0;
+    var mejora2=0;
+    var pokeclick=1+mejora1+mejora2;
+    var imgmeowth = new Image();
+    var imgpersian = new Image();
+
+
+    
     function dibujaJuego() {
       //Dibujamos fondo
       var background = new Image();
@@ -46,7 +58,8 @@
         ctx.strokeText(pokecoins, 130, 35);
         
         //Cuadrado compras
-        ctx.fillRect(0, 70, 400, 455);
+        ctx.fillStyle = "rgb(11, 16, 34)";
+        ctx.fillRect(0, 70, 510, 455);
         ctx.fillStyle = "rgb(24,161,156)";
 
         var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
@@ -57,10 +70,16 @@
         ctx.strokeStyle = gradient;
         ctx.strokeText("Mejoras", 10, 110);
 
-        //Boton comprar meawth
+        //Boton comprar meowth y persian
         ctx.font = "17px Roboto";
-        ctx.fillStyle = "rgb(11, 16, 34)";
-        ctx.fillText("Meawth", 10, 160);
+        ctx.fillStyle = "rgb(24,161,156)";
+        ctx.fillText("Meowth (20 PC)", 10, 180);
+        ctx.fillText("MEJORA POR -> ("+mejora1+")", 260, 180);
+        ctx.fillText("Persian (80 PC)", 10, 280);
+        ctx.fillText("MEJORA POR -> ("+mejora2+")", 260, 280);
+        ctx.fillText("- Meowth mejora los clicks con un extra de +1", 10, 340);
+        ctx.fillText("- Persian mejora los clicks con un extra de +3", 10, 360);
+        ctx.fillText("- El Centro Pokémon multiplica tus mejoras un X0.5", 10, 380);
       }
 
       var pcoins = new Image();
@@ -75,15 +94,22 @@
       };
       pshop.src = "assets/img/pkmclicker/pokeshop.png";
 
+      imgmeowth.onload = function () {
+        ctx.drawImage(imgmeowth, posXmeowth, posYmeowth);
+      };
+      imgmeowth.src = "assets/img/pkmclicker/meowth.png";
+
+      imgpersian.onload = function () {
+        ctx.drawImage(imgpersian, posXpersian, posYpersian,120,100);
+      };
+      imgpersian.src = "assets/img/pkmclicker/persian.png";
 
       img.onload = function () {
         ctx.drawImage(img, posXball, posYball);
-        //efectoBall();
       };
       img.src = "assets/img/pkmclicker/pokeball.png";
 
     }
-  
     dibujaJuego();
 
     //Detectar clicks
@@ -91,10 +117,27 @@
       var x = event.pageX,
         y = event.pageY;
 
-      // Donde hacemos click.
+      // Click pokeball
       if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
-        pokecoins++;
-        ctx.clearRect(0, 0, c.width, c.height); // clear canvas
+        pokecoins+=pokeclick;
+        ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
+        ctx.strokeText(pokecoins, 130, 35);
+        dibujaJuego();
+      }
+
+      // Click meowth
+      if (x > posXmeowth && x < imgmeowth.width + posXmeowth && y > posYmeowth && y < imgmeowth.height + posYmeowth) {
+        mejora1++;
+        pokeclick=1+mejora1+mejora2;
+        ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
+        ctx.strokeText(pokecoins, 130, 35);
+        dibujaJuego();
+      }
+      // Click meowth
+      if (x > posXpersian && x < imgpersian.width + posXpersian && y > posYpersian && y < imgpersian.height + posYpersian) {
+        mejora2+=3;
+        pokeclick=1+mejora1+mejora2;
+        ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
         ctx.strokeText(pokecoins, 130, 35);
         dibujaJuego();
       }
