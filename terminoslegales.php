@@ -8,12 +8,9 @@
 
 <body>
     <?php include("includes/navbar.php");?>
-    <main class="">
-
+    <main>
         <section class="section-bg wow fadeInUp">
-
             <div class="container">
-
                 <div class="section-header">
                     <h2>Términos Legales</h2>
                     <p></p>
@@ -26,14 +23,12 @@
                         <li><p>Compartir — copiar y redistribuir el material en cualquier medio o formato.</p></li>
                         <li><p>Adaptar — remezclar, transformar y crear a partir del material presente en nuestra web para cualquier finalidad, incluso comercial.</p></li>
                     </ul>
-                    
                     <h5 class="text-center mt-4">Bajo las siguientes condiciones:</h5>
                     <ul>
                     <li><p>Reconocimiento — Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. 
                         Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.</p></li>
                     <li><p>No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.</p></li>
-                    </ul>
-                    
+                    </ul>  
                 </div>
 
                 <div class="text-center mt-5 shadow p-3 mb-5 bg-white rounded">
