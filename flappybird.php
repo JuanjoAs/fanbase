@@ -18,7 +18,7 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h2>Tráilers</h2>
+                    <h2>Flappy Bird</h2>
                     <p></p>
                 </div>
 
