@@ -60,14 +60,19 @@
                         <a href="https://www.fandom.com/terms-of-use" class="text-primary">Condiciones de uso</a>. 
                         Alegamos que no se tendrán ningún uso comercial de estos.
                     </p>
+                    <h5>Recursos relacionados con la zona de los tráiler</h5>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen 
-                        book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-                        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                         Aldus PageMaker including versions of Lorem Ipsum
+                        Todos los recursos relacionados con Zona Tráiler han sido extraidos de la página 3djuegos, podemos ver sus condiciones de uso en el siguente enlace, 
+                        <a href="https://www.3djuegos.com/index.php?zona=3djuegos&subzona=informacion-legal" class="text-primary">Condiciones de uso</a>. 
+                        Alegamos que no se tendrán ningún uso comercial de estos.
+                    </p>
+
+                    <h5>Recursos relacionados con la zona de los Videos</h5>
+                    <p>
+                        Todos los recursos relacionados con la zona de los videos han sido extraidos de la página Youtube y 3djuegos, podemos ver las condiciones de uso de Youtube
+                        en el siguiente enlace, <a href="https://www.youtube.com/t/terms" class="text-primary">Condiciones de uso</a>. Y las condiciones de uso de 3djuegos en el siguiente:
+                        <a href="https://www.3djuegos.com/index.php?zona=3djuegos&subzona=informacion-legal" class="text-primary">Condiciones de uso</a>. 
+                        Alegamos que no se tendrán ningún uso comercial de estos.
                     </p>
                     
                 </div>

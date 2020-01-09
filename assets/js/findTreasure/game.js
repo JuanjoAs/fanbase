@@ -17,7 +17,7 @@ let ctx = $map.getContext('2d');
 // Instanciamos un objeto Image.
 let img = new Image();
 // Establecemos al objeto la fuente.
-img.src = 'assets/js/findTreasure/map.jpg';
+img.src = 'assets/img/busquedadeltesoro/map.jpg';
 // Si ejecutamos el método drawImage() puede que se cargue la 
 // imagen en el canvas o no. Esto se debe a que solo se ejecuta 
 // si la imagen está ya descargada, en caso contrario no pinta
