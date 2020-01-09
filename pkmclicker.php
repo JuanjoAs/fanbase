@@ -58,6 +58,9 @@
         var pshop;
         var loop;
         var fps = 60;
+        var latestprint=410;
+        var meowthscomprados=3;
+        var persianscomprados=0;
         var pcextra=1;
         var centromejora = "centeractu1.jpg";
 
@@ -154,6 +157,7 @@
           ctx.drawImage(imgmeowth, posXmeowth, posYmeowth);
           ctx.drawImage(imgpersian, posXpersian, posYpersian);
           ctx.drawImage(img, posXball, posYball);
+
           if(feedbuy){
             ctx.beginPath();
             ctx.fillStyle="blue";
@@ -166,7 +170,18 @@
             ctx.strokeStyle = gradient;
             ctx.fill();
           }
-         
+         //Dibujamos pokes comprados
+         for(i=0;i<meowthscomprados;i++){
+          ctx.drawImage(imgmeowth, latestprint, 405); 
+          latestprint+=40;
+         }
+         latestprint=410;
+
+         for(i=0;i<persianscomprados;i++){
+          ctx.drawImage(imgpersian, latestprint+(i*50), 405); 
+         }
+         latestprint=410;
+
         }
         function cacheImagenes() {
           img = new Image();
@@ -217,6 +232,7 @@
                 alert("No tienes suficiente dinero");
               } else {
                 feedbuy=true;
+                meowthscomprados++;
                 pokecoins -= preciomejora1;
                 mejora1++;
                 preciomejora1+= Math.ceil(preciomejora1/2); //redondeamos al alza o estropea con decimales
@@ -229,6 +245,7 @@
                 alert("No tienes suficiente dinero");
               } else {
                 feedbuy=true;
+                persianscomprados++;
                 pokecoins -= preciomejora2;
                 pcextra+=1;
                 preciomejora2 += Math.ceil(preciomejora2/2);
@@ -240,7 +257,6 @@
         if(window.innerHeight > window.innerWidth){
           alert("El juego se tiene que jugar apaisado o en PC")
           document.getElementById("canvassection").className = "wrapper"; 
-        }else{
         }
       </script>
       </div>
