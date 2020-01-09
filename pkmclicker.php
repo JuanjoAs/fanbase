@@ -10,6 +10,11 @@
       margin-top: 115px;
       display: block;
     }
+    
+    .wrapper{
+        transform: rotate(90deg);
+        
+    }
   </style>
 </head>
 
@@ -23,13 +28,15 @@
     <!--==========================
     TRILLO'S PKM CLICKER
   ============================-->
-    <section class="section-bg wow fadeInUp pb-5">
+    <section id="canvassection" class="section-bg wow fadeInUp pb-5">
       <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.
       </canvas>
       <script>
         var c = document.getElementById("myCanvas");
         var pokecoins = 0;
+        var feedball=false;
+        var feedbuy=false;
         var ctx = c.getContext("2d");
         var posXball = c.width / 1.7;
         var posYball = 100;
@@ -58,6 +65,8 @@
           cacheImagenes();
           const interval = setInterval(function () {
             pokecoins+=pcextra;
+            feedball=false;
+            feedbuy=false;
           }, 1000);
 
           background.onload = function () {
@@ -110,6 +119,7 @@
           ctx.fillRect(0, 325, 510, 80);
           ctx.fillRect(0, 420, 410, 60);
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+          ctx.lineWidth = 2;
           gradient.addColorStop("0", "red");
           gradient.addColorStop("0.3", "blue");
           gradient.addColorStop("1", "pink");
@@ -117,7 +127,9 @@
           ctx.strokeStyle = gradient;
           ctx.strokeText("Tienda", 10, 115);
           ctx.font = "30px Raleway";
+          ctx.lineWidth = 1;
           ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
+          ctx.lineWidth = 2;
 
           //Boton comprar meowth y persian
           ctx.font = "17px Raleway";
@@ -125,11 +137,11 @@
           ctx.fillText("Meowth [" + preciomejora1 + " PC]", 10, 180);
           ctx.fillText("PokeCoins/click: " +(1+ mejora1), 260, 180);
           ctx.fillText("Persian [" + preciomejora2 + " PC]", 10, 280);
-          ctx.fillText("PC automáticos/s: " + pcextra, 260, 280);
+          ctx.fillText("PokeCoins/segundo: " + pcextra, 260, 280);
           ctx.fillText("- Meowth mejora los clicks con un extra de +1.", 10, 340);
           ctx.fillText("- Persian aumenta en 1 los PokeCoins automáticos.", 10, 360);
-          ctx.fillText("- El Centro Pokémon DUPLICA todas tus mejoras y aumenta", 10, 380);
-          ctx.fillText("el coste de las mejoras X4. Precio reforma: " + preciocentro+" PC", 20, 400);
+          ctx.fillText("- El Centro Pokémon multiplica X4 tus mejoras y", 10, 380);
+          ctx.fillText("el coste de ellas X2. Precio reforma: " + preciocentro+" PC", 20, 400);
 
           //Dibujamos las imagenes
           ctx.drawImage(pcoins, 230, 0);
@@ -137,6 +149,19 @@
           ctx.drawImage(imgmeowth, posXmeowth, posYmeowth);
           ctx.drawImage(imgpersian, posXpersian, posYpersian);
           ctx.drawImage(img, posXball, posYball);
+          if(feedbuy){
+            ctx.beginPath();
+            ctx.fillStyle="blue";
+            ctx.fillRect(230,23,53,7);
+          }
+          if(feedball){
+            ctx.beginPath();
+            ctx.fillStyle="red";
+            ctx.arc(780, 253, 20, 0, 2 * Math.PI);
+            ctx.strokeStyle = gradient;
+            ctx.fill();
+          }
+         
         }
         function cacheImagenes() {
           img = new Image();
@@ -162,6 +187,7 @@
             // Click pokeball
             if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
               pokecoins += pokeclick;
+              feedball=true;
             }
             // Click mejora centro
             if (x > 45 && x < 450 && y > 440) {
@@ -170,11 +196,11 @@
               } else {
                 pokecoins -= preciocentro;
                 centromejora = "centeractu2.jpg";
-                preciomejora1 = preciomejora1 * 4;
-                preciomejora2 = preciomejora2 * 4;
-                preciocentro += preciocentro;
-                mejora1 = mejora1 + (mejora1 / 2);
-                mejora2 = mejora2 + (mejora2 / 2);
+                preciomejora1 = preciomejora1 * 2;
+                preciomejora2 = preciomejora2 * 2;
+                preciocentro = preciocentro*3;
+                mejora1 = mejora1 *4;
+                pcextra = pcextra *4;
                 background.src = "assets/img/pkmclicker/" + centromejora;
                 alert("¡ Enhorabuena !\n El Centro Pokémon ha sido reformado y disfrutas del doble de tus mejoras.");
               }
@@ -184,6 +210,7 @@
               if (pokecoins - preciomejora1 < 0) {
                 alert("No tienes suficiente dinero");
               } else {
+                feedbuy=true;
                 pokecoins -= preciomejora1;
                 mejora1++;
                 preciomejora1+= Math.ceil(preciomejora1/2); //redondeamos al alza o estropea con decimales
@@ -195,6 +222,7 @@
               if (pokecoins - preciomejora2 < 0) {
                 alert("No tienes suficiente dinero");
               } else {
+                feedbuy=true;
                 pokecoins -= preciomejora2;
                 pcextra+=1;
                 preciomejora2 += Math.ceil(preciomejora2/2);
@@ -203,6 +231,11 @@
           });
         }
         initGame();
+        if(window.innerHeight > window.innerWidth){
+          alert("El juego se tiene que jugar apaisado o en PC")
+          document.getElementById("canvassection").className = "wrapper"; 
+        }else{
+        }
       </script>
       </div>
     </section>

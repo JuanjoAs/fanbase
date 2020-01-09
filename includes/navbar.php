@@ -10,8 +10,6 @@
 </span>
   </button>
 
-  <?php $CURRENT_PAGE; ?>
-
   <nav class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-3 mr-auto">
       <li class="nav-item <?php if ($CURRENT_PAGE == "Inicio"){echo "active";} ?>">

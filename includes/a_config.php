@@ -19,8 +19,6 @@ $dondeEstoy = $dondeEstoy[0];
 			$PAGE_TITLE = "FanBase - Terminos Legales";
 			break;
 
-			
-
 
 		case "info_juego.php":
 			$CURRENT_PAGE = "Informacion Juego"; 
@@ -32,6 +30,14 @@ $dondeEstoy = $dondeEstoy[0];
 			$PAGE_TITLE = "FanBase - Recomendaciones";
 			break;
 
+		case "pkmclicker.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Pokémon Clicker";
+			break;
+		case "findTreasure.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Buscar el tesoro";
+			break;
 		case "index.php":
 			$CURRENT_PAGE = "Inicio"; 
 			$PAGE_TITLE = "FanBase - Inicio";
