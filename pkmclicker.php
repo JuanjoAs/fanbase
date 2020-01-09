@@ -65,9 +65,14 @@
           cacheImagenes();
           const interval = setInterval(function () {
             pokecoins+=pcextra;
+          }, 1000);
+
+          //Desactivamos efectos
+          const interval2 = setInterval(function () {
+            if(feedball||feedbuy)
             feedball=false;
             feedbuy=false;
-          }, 1000);
+          }, 200);
 
           background.onload = function () {
             loop = setInterval(function () {
@@ -157,7 +162,7 @@
           if(feedball){
             ctx.beginPath();
             ctx.fillStyle="red";
-            ctx.arc(780, 253, 20, 0, 2 * Math.PI);
+            ctx.arc(780, 253, 30, 0, 2 * Math.PI);
             ctx.strokeStyle = gradient;
             ctx.fill();
           }
@@ -188,6 +193,7 @@
             if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
               pokecoins += pokeclick;
               feedball=true;
+              
             }
             // Click mejora centro
             if (x > 45 && x < 450 && y > 440) {
