@@ -18,8 +18,7 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h2>Tráilers</h2>
-                    <p></p>
+                    <h2>Flappy Bird</h2>
                 </div>
 
                 <div class="row justify-content-center pb-5">
