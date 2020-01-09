@@ -10,10 +10,8 @@
       margin-top: 115px;
       display: block;
     }
-    
     .wrapper{
         transform: rotate(90deg);
-        
     }
   </style>
 </head>
@@ -36,7 +34,6 @@
         var c = document.getElementById("myCanvas");
         var pokecoins = 0;
         var feedball=false;
-        var feedbuy=false;
         var ctx = c.getContext("2d");
         var posXball = c.width / 1.7;
         var posYball = 100;
@@ -57,10 +54,11 @@
         var pcoins;
         var pshop;
         var loop;
+        var lvlcentro=1;
         var fps = 60;
         var latestprint=410;
-        var meowthscomprados=3;
-        var persianscomprados=0;
+        var meowthscomprados=1;
+        var persianscomprados=1;
         var pcextra=1;
         var centromejora = "centeractu1.jpg";
 
@@ -69,13 +67,6 @@
           const interval = setInterval(function () {
             pokecoins+=pcextra;
           }, 1000);
-
-          //Desactivamos efectos
-          const interval2 = setInterval(function () {
-            if(feedball||feedbuy)
-            feedball=false;
-            feedbuy=false;
-          }, 200);
 
           background.onload = function () {
             loop = setInterval(function () {
@@ -108,11 +99,11 @@
           gradient.addColorStop("1", "pink");
           ctx.font = "30px Permanent Marker";
           ctx.strokeStyle = gradient;
-          ctx.strokeText("Pokemon Clicker", 680, 45);
+          ctx.strokeText("Pokémon Clicker", 680, 45);
 
           //Cuadrado monedas
           ctx.fillStyle = "rgb(24,161,156)";
-          ctx.fillRect(0, 0, 285, 55);
+          ctx.fillRect(0, 0, 365, 55);
           ctx.font = "20px Raleway";
           ctx.fillStyle = "yellow";
           ctx.fillText("PokeCoins:", 10, 35);
@@ -120,7 +111,7 @@
 
           //Cuadrados tienda
           ctx.fillStyle = "rgb(13,18,35)";
-          ctx.fillRect(0, 72, 350, 50);
+          ctx.fillRect(0, 72, 420, 50);
           ctx.fillStyle = "rgb(24,161,156)";
           ctx.fillRect(0, 135, 510, 76);
           ctx.fillRect(0, 243, 510, 60);
@@ -133,7 +124,7 @@
           gradient.addColorStop("1", "pink");
           ctx.font = "50px Permanent Marker";
           ctx.strokeStyle = gradient;
-          ctx.strokeText("Tienda", 10, 115);
+          ctx.strokeText("Centro Lvl. "+lvlcentro, 10, 115);
           ctx.font = "30px Raleway";
           ctx.lineWidth = 1;
           ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
@@ -149,20 +140,15 @@
           ctx.fillText("- Meowth mejora los clicks con un extra de +1.", 10, 340);
           ctx.fillText("- Persian aumenta en 1 los PokeCoins automáticos.", 10, 360);
           ctx.fillText("- El Centro Pokémon multiplica X4 tus mejoras y", 10, 380);
-          ctx.fillText("el coste de ellas X2. Precio reforma: " + preciocentro+" PC", 20, 400);
+          ctx.fillText("el coste de ellas X2. Precio reforma: [" + preciocentro+" PC]", 20, 400);
 
           //Dibujamos las imagenes
-          ctx.drawImage(pcoins, 230, 0);
-          ctx.drawImage(pshop, 280, 60);
+          ctx.drawImage(pcoins, 310, 0);
+          ctx.drawImage(pshop, 360, 57);
           ctx.drawImage(imgmeowth, posXmeowth, posYmeowth);
           ctx.drawImage(imgpersian, posXpersian, posYpersian);
           ctx.drawImage(img, posXball, posYball);
 
-          if(feedbuy){
-            ctx.beginPath();
-            ctx.fillStyle="blue";
-            ctx.fillRect(230,23,53,7);
-          }
           if(feedball){
             ctx.beginPath();
             ctx.fillStyle="red";
@@ -171,16 +157,14 @@
             ctx.fill();
           }
          //Dibujamos pokes comprados
+         latestprint=410;
          for(i=0;i<meowthscomprados;i++){
-          ctx.drawImage(imgmeowth, latestprint, 405); 
+          ctx.drawImage(imgmeowth, latestprint, 415); 
           latestprint+=40;
          }
-         latestprint=410;
-
          for(i=0;i<persianscomprados;i++){
-          ctx.drawImage(imgpersian, latestprint+(i*50), 405); 
+          ctx.drawImage(imgpersian, latestprint+(i*50), 403); 
          }
-         latestprint=410;
 
         }
         function cacheImagenes() {
@@ -198,6 +182,21 @@
           img.src = "assets/img/pkmclicker/pokeball.png";
         }
         function gameLogic() {
+          //c.img.onclick = function() { alert("hello world"); }
+          //Efectos listener
+          c.addEventListener('mousedown', function (event) {
+            var rect = c.getBoundingClientRect(); //posicion absoluta canvas, si no restamos no funcionan bien las coordenadas al mover el canvas con CSS.
+            var x = event.pageX - rect.left;
+            var y = event.pageY - rect.top;
+            //Efecto pokeball
+            if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
+              feedball=true;
+            }
+          });
+          //Desactivamos efectos
+          c.addEventListener('mouseup', function (event) {
+              feedball=false;
+          });
           //Listener evento clicks
           c.addEventListener('click', function (event) {
             var rect = c.getBoundingClientRect(); //posicion absoluta canvas, si no restamos no funcionan bien las coordenadas al mover el canvas con CSS.
@@ -207,14 +206,13 @@
             // Click pokeball
             if (x > posXball && x < img.width + posXball && y > posYball && y < img.height + posYball) {
               pokecoins += pokeclick;
-              feedball=true;
-              
             }
             // Click mejora centro
             if (x > 45 && x < 450 && y > 440) {
               if (pokecoins - preciocentro < 0) {
                 alert("No tienes suficiente dinero");
               } else {
+                lvlcentro++;
                 pokecoins -= preciocentro;
                 centromejora = "centeractu2.jpg";
                 preciomejora1 = preciomejora1 * 2;
