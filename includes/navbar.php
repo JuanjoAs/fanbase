@@ -28,6 +28,7 @@
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="pkmclicker.php">Pokemon Clicker</a>
           <a class="dropdown-item" href="findTreasure.php">Busca el tesoro</a>
+          <a class="dropdown-item" href="flappybird.php">Flappy Bird</a>
         </div>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Recomendaciones"){echo "active";} ?>">
