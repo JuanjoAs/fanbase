@@ -14,6 +14,7 @@ function startGame() {
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "", 280, 40, "text", "black");
     myFondo= new component(0, 0, cargarImagen("fondo.png"), "fondo", "black");
+
     myGameArea.start();
 }
 
@@ -52,6 +53,9 @@ function component(width, height, img, x, y, type, color) {
     this.update = function () {
 
         ctx = myGameArea.context;
+        background = new Image();
+        background.src = "./assets/img/pkmonrun/fondo.png";
+        ctx.drawImage(background, 0, 0);
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;

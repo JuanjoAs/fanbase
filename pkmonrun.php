@@ -7,8 +7,6 @@
 </head>
 
 <body>
-
-    <?php include("includes/design-top.php");?>
     <?php include("includes/navbar.php");?>
     <main class="">
         <section class="section-bg wow fadeInUp">
