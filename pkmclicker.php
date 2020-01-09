@@ -242,7 +242,7 @@
         initGame();
         if(window.innerHeight > window.innerWidth){
           alert("El juego se tiene que jugar apaisado o en PC")
-          document.getElementById("canvassection").className = "wrapper"; 
+          //document.getElementById("canvassection").className = "wrapper"; 
         }
       </script>
       </div>
