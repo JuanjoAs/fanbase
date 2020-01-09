@@ -1,24 +1,12 @@
 <?php include("includes/a_config.php");?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <?php include("includes/head-tag-contents.php");?>
-  <style>
-    canvas {
-      margin: 0 auto;
-      margin-top: 115px;
-      display: block;
-    }
-    .wrapper{
-        transform: rotate(90deg);
-    }
-  </style>
 </head>
 
 <body>
-
-  <?php include("includes/design-top.php");?>
   <?php include("includes/navbar.php");?>
 
 
@@ -27,7 +15,7 @@
     TRILLO'S PKM CLICKER
   ============================-->
     <section id="canvassection" class="section-bg wow fadeInUp pb-5">
-      <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3;">
+      <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3;margin: 0 auto;margin-top: 115px;display: block;">
         Your browser does not support the HTML5 canvas tag.
       </canvas>
       <script>
