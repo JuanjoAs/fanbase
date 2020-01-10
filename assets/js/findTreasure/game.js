@@ -89,9 +89,12 @@ $map.addEventListener('click', function(e) {
             imageHeight: 128,
             imageAlt: 'Tesoro',
         });
-        //
+        
         $info.innerHTML = `
             <button class="btn btn-primary" onclick="reload()">Volver a jugar</button>
+        `;
+        $icon.innerHTML = `
+            <img src="assets/img/busquedadeltesoro/tesoro.png" alt="Tesoro"/>
         `;
     }
 });
