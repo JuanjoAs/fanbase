@@ -41,7 +41,7 @@
 
                 <div class="text-center mt-5 shadow p-3 mb-5 bg-white rounded">
                     <h3>Licencia sobre recursos externos</h3>
-                    <h5>Recursos relacionados con Pokemon [Recomendaciones, Juegos]</h5>
+                    <h5>Recursos relacionados con Pokemon [Recomendaciones, Juegos, Zona interactiva]</h5>
                     <p>
                         Todos los recursos relacionados con Pokemon han sido extraidos de la página oficial de 
                         la franquicia, donde podemos ver sus condiciones de uso en el siguente enlace, 
