@@ -4,6 +4,8 @@
 
 <head>
   <?php include("includes/head-tag-contents.php");?>
+  <?php include("includes/inc_pkmclicker.php");?>
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     TRILLO'S PKM CLICKER
   ============================-->
     <section id="canvassection" class="section-bg wow fadeInUp pb-5">
-      <canvas id="myCanvas" width="960" height="495" style="border:1px solid #d3d3d3;margin: 0 auto;margin-top: 115px;display: block;">
+      <canvas id="myCanvas" width="960" height="495">
         Your browser does not support the HTML5 canvas tag.
       </canvas>
       <script>
@@ -170,7 +172,6 @@
           img.src = "assets/img/pkmclicker/pokeball.png";
         }
         function gameLogic() {
-          //c.img.onclick = function() { alert("hello world"); }
           //Efectos listener
           c.addEventListener('mousedown', function (event) {
             var rect = c.getBoundingClientRect(); //posicion absoluta canvas, si no restamos no funcionan bien las coordenadas al mover el canvas con CSS.
@@ -198,8 +199,12 @@
             // Click mejora centro
             if (x > 45 && x < 450 && y > 440) {
               if (pokecoins - preciocentro < 0) {
-                alert("No tienes suficiente dinero");
-              } else {
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No tienes suficiente dinero.',
+                });             
+               } else {
                 lvlcentro++;
                 pokecoins -= preciocentro;
                 centromejora = "centeractu2.jpg";
@@ -209,14 +214,21 @@
                 mejora1 = mejora1 *4;
                 pcextra = pcextra *4;
                 background.src = "assets/img/pkmclicker/" + centromejora;
-                alert("¡ Enhorabuena !\n El Centro Pokémon ha sido reformado y disfrutas del doble de tus mejoras.");
+                Swal.fire(
+                  '¡Enhorabuena!',
+                  'El Centro Pokémon ha sido reformado y disfrutas de un X3 de tus mejoras.',
+                  'success'
+                );
               }
             }
             // Click meowth
             if (x > posXmeowth && x < imgmeowth.width + posXmeowth && y > posYmeowth && y < imgmeowth.height + posYmeowth) {
               if (pokecoins - preciomejora1 < 0) {
-                alert("No tienes suficiente dinero");
-              } else {
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No tienes suficiente dinero.',
+                });               } else {
                 feedbuy=true;
                 meowthscomprados++;
                 pokecoins -= preciomejora1;
@@ -228,8 +240,11 @@
             // Click persian
             if (x > posXpersian && x < imgpersian.width + posXpersian && y > posYpersian && y < imgpersian.height + posYpersian) {
               if (pokecoins - preciomejora2 < 0) {
-                alert("No tienes suficiente dinero");
-              } else {
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No tienes suficiente dinero.',
+                });               } else {
                 feedbuy=true;
                 persianscomprados++;
                 pokecoins -= preciomejora2;
