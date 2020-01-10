@@ -13,7 +13,7 @@ function startGame() {
     myGamePiece = new component(50, 30, imgPikachu[0], 30, 15);
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "", 280, 40, "text", "black");
-    myFondo= new component(0, 0, cargarImagen("fondo.png"), "fondo", "black");
+    myFondo=cargarImagen("fondo.png");
 
     myGameArea.start();
 }
@@ -28,6 +28,7 @@ var myGameArea = {
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.drawImage(myFondo, 0, 0);
     }
 }
 
@@ -53,9 +54,7 @@ function component(width, height, img, x, y, type, color) {
     this.update = function () {
 
         ctx = myGameArea.context;
-        background = new Image();
-        background.src = "./assets/img/pkmonrun/fondo.png";
-        ctx.drawImage(background, 0, 0);
+        
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
@@ -105,11 +104,13 @@ function component(width, height, img, x, y, type, color) {
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
         }
+        
         return crash;
     }
 }
 
 function updateGameArea() {
+    $(window).scrollTop(0);
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
@@ -145,7 +146,6 @@ function updateGameArea() {
         }
 
     }
-    myFondo.update();
     myScore.update();
 
     myGamePiece.newPos();
@@ -164,8 +164,8 @@ function everyinterval(n) {
 
 
 $(document).keypress(function (e) {
-
-    if (e.keyCode == 32 && myGamePiece.puedeSaltar === true) {
+    
+    if (e.keyCode == 70 && myGamePiece.puedeSaltar === true) {
         myGamePiece.puedeSaltar = false;
         if (!myGameArea.interval) {
             myGameArea.interval = setInterval(updateGameArea, 20);
@@ -176,7 +176,7 @@ $(document).keypress(function (e) {
 });
 
 $(document).keyup(function (e) {
-    if (e.keyCode == 32) {
+    if (e.keyCode == 70) {
         if (!myGameArea.interval) {
             myGameArea.interval = setInterval(updateGameArea, 20);
         }
@@ -197,5 +197,8 @@ $("#boton").click(function (e) {
         findeljuego = false;
     }
     $("#boton").attr("disabled", true);
+    if (!myGameArea.interval) {
+        myGameArea.interval = setInterval(updateGameArea, 20);
+    }
     startGame();
 });
