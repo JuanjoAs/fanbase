@@ -33,6 +33,8 @@
                     <h5 class="text-center mt-4">Nuestro contenido:</h5>
                     <ul>
                     <li><p>Imagenes de la sección Sobre Nosotros.</p></li>
+                    <li><p>Botones recomendaciones.</p></li>
+
                     </ul> 
 
 

@@ -1,8 +1,11 @@
 //variables usadas y modificables
-var distancia = 170; //distancia entre dos tuberias
+var distancia = 180; //distancia entre dos tuberias
 var distanciaseg = 130; //distancia entre tuberia superior e inferior
 var atraccionsuelojugador = 1;
 var subida = 30;
+var limiteinferior = 70; //limite inferior
+var limitesuperior = 230; //limite superior
+
 
 //carga del canvas
 var canvas = document.getElementById('canvas');
@@ -182,7 +185,7 @@ function juegomovimiento(){
         //si esta el jugador, y la tuberia es la ultima, compruebo si coje otra
         if (i == tuberias.length-1 && jugador != null){
             if (tuberias[i].x < width-distancia){
-                tuberias[tuberias.length] = new Tuberia(Math.floor(Math.random() * (250 - 20)) + 20);
+                tuberias[tuberias.length] = new Tuberia(Math.floor(Math.random() * (limitesuperior - limiteinferior)) + limiteinferior);
             }
         }
 
@@ -241,7 +244,8 @@ window.addEventListener('load', bucle, false);
 function PulsarTecla(event) {
     if (findeljuego == false){
         tecla = event.keyCode;
-        if (tecla == 32){
+        console.log(event.keyCode);
+        if (tecla == 70){
             jugador.arriba();
         }
     }
