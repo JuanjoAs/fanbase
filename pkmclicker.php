@@ -67,17 +67,13 @@
           ctx.drawImage(background, 0, 0);
           
           // Dibujamos cuadrado derecha logo
-          ctx.globalAlpha = 0.8;
           ctx.fillStyle = "rgb(11, 16, 34)";
-          ctx.fillRect(c.width - 300, 0, 300, 55);
-          ctx.globalAlpha = 1;
-
+          ctx.fillRect(590, 0, 296, 47);
+          
           //Pintamos logos
           ctx.font = "13px Raleway";
           ctx.fillStyle = "rgb(24,161,156)";
-          ctx.fillText("Francisco Trillo's Fanbase", 752, 14);
-          //ctx.fillText("FPS: ", c.width-80, c.height-10);
-          //ctx.fillText(fps, c.width-45, c.height-10);
+          ctx.fillText("Francisco Trillo's Fanbase", 680, 14);
 
           // Creamos el gradient para el logo
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
@@ -86,11 +82,13 @@
           gradient.addColorStop("1", "pink");
           ctx.font = "34px Permanent Marker";
           ctx.strokeStyle = gradient;
-          ctx.strokeText("Pokémon Clicker", 665, 42);
+          ctx.strokeText("Pokémon Clicker", 593, 40);
 
           //Cuadrado monedas
+          ctx.globalAlpha = 0.8;
           ctx.fillStyle = "rgb(24,161,156)";
-          ctx.fillRect(0, 0, 365, 55);
+          ctx.fillRect(0, 5, 350, 45);
+          ctx.globalAlpha = 1;
           ctx.font = "20px Raleway";
           ctx.fillStyle = "yellow";
           ctx.fillText("PokeCoins:", 10, 35);
@@ -100,23 +98,29 @@
           ctx.fillStyle = "rgb(13,18,35)";
           ctx.fillRect(0, 72, 420, 50);
           ctx.fillStyle = "rgb(24,161,156)";
-          ctx.globalAlpha = 0.7;
+          ctx.globalAlpha = 0.8;
           ctx.fillRect(0, 135, 510, 76);
-          ctx.fillRect(0, 243, 510, 60);
+          ctx.fillRect(0, 243, 510, 60);//Persian cuadrado
           ctx.globalAlpha = 1;
-          ctx.fillRect(0, 325, 510, 80);
-          ctx.fillRect(0, 420, 410, 60);
+
+          ctx.fillRect(0, 325, 420, 80);
+          ctx.fillStyle = "rgb(24,161,156)";
+          ctx.fillRect(0, 420, 420, 60);
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
           ctx.lineWidth = 2;
           gradient.addColorStop("0", "red");
           gradient.addColorStop("0.5", "blue");
           gradient.addColorStop("0.8", "pink");
-
           ctx.font = "50px Permanent Marker";
           ctx.strokeStyle = gradient;
           ctx.strokeText("Centro Lvl. "+lvlcentro, 10, 115);
-          ctx.font = "30px Raleway";
-          ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
+          ctx.font = "35px Raleway";
+          var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+          gradient.addColorStop("0", "red");
+          gradient.addColorStop("0.5", "blue");
+          gradient.addColorStop("0.8", "pink");
+          ctx.fillStyle = gradient;
+          ctx.fillText("[ MEJORAR CENTRO ]", 33, 463);
         
 
           //Boton comprar meowth y persian
@@ -130,6 +134,7 @@
           ctx.fillText("- Persian aumenta en 1 los PokeCoins automáticos.", 10, 360);
           ctx.fillText("- El Centro Pokémon multiplica X4 tus mejoras y", 10, 380);
           ctx.fillText("el coste de ellas X2. Precio reforma: [" + preciocentro+" PC]", 20, 400);
+          ctx.fillStyle = "black";
 
           //Dibujamos las imagenes
           ctx.drawImage(pcoins, 310, 0);
