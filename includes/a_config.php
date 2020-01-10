@@ -34,10 +34,22 @@ $dondeEstoy = $dondeEstoy[0];
 			$CURRENT_PAGE = "Zona interactiva"; 
 			$PAGE_TITLE = "FanBase - Pokémon Clicker";
 			break;
+
 		case "findTreasure.php":
 			$CURRENT_PAGE = "Zona interactiva"; 
 			$PAGE_TITLE = "FanBase - Buscar el tesoro";
 			break;
+
+		case "flappybird.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Flappy Bird";
+			break;
+
+		case "pkmonrun.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Pokemon Run";
+			break;
+
 		case "index.php":
 			$CURRENT_PAGE = "Inicio"; 
 			$PAGE_TITLE = "FanBase - Inicio";
