@@ -38,11 +38,6 @@
         var preciocentro = 2000;
         var pokeclick = 1 + mejora1 + mejora2;
         var background;
-        var img;
-        var imgmeowth;
-        var imgpersian;
-        var pcoins;
-        var pshop;
         var loop;
         var lvlcentro=1;
         var fps = 60;
@@ -228,7 +223,8 @@
                 icon: 'error',
                 title: 'Oops...',
                 text: 'No tienes suficiente dinero.',
-                });               } else {
+                });               
+                } else {
                 feedbuy=true;
                 meowthscomprados++;
                 pokecoins -= preciomejora1;
@@ -244,7 +240,8 @@
                 icon: 'error',
                 title: 'Oops...',
                 text: 'No tienes suficiente dinero.',
-                });               } else {
+                });               
+                } else {
                 feedbuy=true;
                 persianscomprados++;
                 pokecoins -= preciomejora2;
