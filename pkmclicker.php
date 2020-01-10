@@ -71,9 +71,9 @@
           ctx.fillRect(c.width - 300, 0, 300, 55);
 
           //Pintamos logos
-          ctx.font = "15px Raleway";
+          ctx.font = "13px Raleway";
           ctx.fillStyle = "rgb(24,161,156)";
-          ctx.fillText("Francisco Trillo's Fanbase", 670, 20);
+          ctx.fillText("Francisco Trillo's Fanbase", 752, 14);
           //ctx.fillText("FPS: ", c.width-80, c.height-10);
           //ctx.fillText(fps, c.width-45, c.height-10);
 
@@ -82,9 +82,9 @@
           gradient.addColorStop("0", "yellow");
           gradient.addColorStop("0.4", "yellow");
           gradient.addColorStop("1", "pink");
-          ctx.font = "30px Permanent Marker";
+          ctx.font = "34px Permanent Marker";
           ctx.strokeStyle = gradient;
-          ctx.strokeText("Pokémon Clicker", 680, 45);
+          ctx.strokeText("Pokémon Clicker", 665, 42);
 
           //Cuadrado monedas
           ctx.fillStyle = "rgb(24,161,156)";
@@ -105,15 +105,14 @@
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
           ctx.lineWidth = 2;
           gradient.addColorStop("0", "red");
-          gradient.addColorStop("0.3", "blue");
-          gradient.addColorStop("1", "pink");
+          gradient.addColorStop("0.5", "blue");
+          gradient.addColorStop("0.8", "pink");
+
           ctx.font = "50px Permanent Marker";
           ctx.strokeStyle = gradient;
           ctx.strokeText("Centro Lvl. "+lvlcentro, 10, 115);
           ctx.font = "30px Raleway";
-          ctx.lineWidth = 1;
           ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
-          ctx.lineWidth = 2;
 
           //Boton comprar meowth y persian
           ctx.font = "17px Raleway";
