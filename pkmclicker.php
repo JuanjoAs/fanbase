@@ -67,8 +67,10 @@
           ctx.drawImage(background, 0, 0);
           
           // Dibujamos cuadrado derecha logo
+          ctx.globalAlpha = 0.8;
           ctx.fillStyle = "rgb(11, 16, 34)";
           ctx.fillRect(c.width - 300, 0, 300, 55);
+          ctx.globalAlpha = 1;
 
           //Pintamos logos
           ctx.font = "13px Raleway";
@@ -98,8 +100,10 @@
           ctx.fillStyle = "rgb(13,18,35)";
           ctx.fillRect(0, 72, 420, 50);
           ctx.fillStyle = "rgb(24,161,156)";
+          ctx.globalAlpha = 0.7;
           ctx.fillRect(0, 135, 510, 76);
           ctx.fillRect(0, 243, 510, 60);
+          ctx.globalAlpha = 1;
           ctx.fillRect(0, 325, 510, 80);
           ctx.fillRect(0, 420, 410, 60);
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
@@ -113,6 +117,7 @@
           ctx.strokeText("Centro Lvl. "+lvlcentro, 10, 115);
           ctx.font = "30px Raleway";
           ctx.strokeText("[ MEJORAR CENTRO ]", 45, 460);
+        
 
           //Boton comprar meowth y persian
           ctx.font = "17px Raleway";
