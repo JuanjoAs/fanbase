@@ -58,8 +58,9 @@
               ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
               dibujaJuego();
             }, 1000 / fps);
+            gameLogic();
+
           };
-          gameLogic();
         }
         function dibujaJuego() {
 
