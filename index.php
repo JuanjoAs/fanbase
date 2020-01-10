@@ -62,7 +62,7 @@
         
         <div class="video-container" id="video-container">
           <!-- Video -->
-          <video id="video"  width="640" height="365">
+          <video id="video" class="video-fluid">
             <source src="assets/videos/amanecer.webm" type="video/webm">
             <source src="assets/videos/amanecer.mp4" type="video/mp4">
             <p>
