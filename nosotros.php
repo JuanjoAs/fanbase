@@ -57,7 +57,7 @@
                   <img src="assets/img/nosotros/francisco.jpg" alt="personal 5" class="img-fluid">
                   <div class="detalles">
                     <h3><a href="personal-detalles.html">Francisco Jesús Trillo</a></h3>
-                    <p>Desarrollador</p>
+                    <p>Caudillo</p>
                     <div class="social">
                       <a href=""><i class="fab fa-twitter"></i></a>
                       <a href=""><i class="fab fa-facebook-square"></i></a>
