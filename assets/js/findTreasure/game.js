@@ -30,25 +30,69 @@ img.onload = function() {
 
 
 let $info = document.getElementById('info');
+let $icon = document.getElementById('icon');
 let $intentos = document.getElementById('intentos');
 let $coordenadas = document.getElementById('coordenadas');
-let clicks = 1;
+let clicks = 0;
 
 // Manejo del evento click sobre el mapa.
 $map.addEventListener('click', function(e) {
     clicks++;
     let distance = getDistance(e, target);
     let distanceHint = getDistanceHint(distance);
+
+    let msg, img;
+
+    switch(distanceHint) {
+        case 1: 
+            msg = 'Hirviendo, casi lo tienes';
+            img = '<img src="assets/img/busquedadeltesoro/muy-caliente.png" alt="hirviendo"/>';
+            break;
+        case 2: 
+            msg = 'Muy caliente, te acercas';
+            img = '<img src="assets/img/busquedadeltesoro/muy-caliente.png" alt="muy caliente"/>';
+            break;
+        case 3: 
+            msg = 'Caliente, vas por buen camino';
+            img = '<img src="assets/img/busquedadeltesoro/caliente.png" alt="caliente"/>';
+            break;
+        case 4: 
+            msg = 'Frio, sigue buscando';
+            img = '<img src="assets/img/busquedadeltesoro/frio.png" alt="frio"/>';
+            break;
+        case 5: 
+            msg = 'Muy frio, sigue buscando';
+            img = '<img src="assets/img/busquedadeltesoro/muy-frio.png" alt="muy frio"/>';
+            break;
+        case 6: 
+            msg = 'Congelado, sigue buscando';
+            img = '<img src="assets/img/busquedadeltesoro/congelado.png" alt="congelado"/>';
+            break;
+    }
+
     $info.innerHTML = `
-        ${distanceHint}
+        ${msg}
+    `;
+    $icon.innerHTML = `
+        ${img}
     `;
     $intentos.innerHTML = `
         Intentos: ${clicks}
     `;
 
     if(distance < 20) {
-        alert(`Has encontrado el tesoro en ${clicks} intentos`);
-        location.reload();
+        Swal.fire({
+            title: 'ENORABUENA',
+            text: `Has encontrado el tesoro en ${clicks} intentos`,
+            imageUrl: 'assets/img/busquedadeltesoro/tesoro.png',
+            imageWidth: 128,
+            imageHeight: 128,
+            imageAlt: 'Tesoro',
+        });
+        //
+        $info.innerHTML = `
+            <button class="btn btn-primary" onclick="reload()">Volver a jugar</button>
+        `;
     }
 });
 
@@ -58,3 +102,7 @@ $map.addEventListener('mousemove', function(e) {
         Coordenadas del ratón: X -> ${e.offsetX}, Y -> ${e.offsetY}
     `;
 });
+
+function reload() {
+    location.reload();
+}

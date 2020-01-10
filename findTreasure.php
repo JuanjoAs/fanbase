@@ -9,7 +9,7 @@
     <title>Busca el tesoro</title>
 </head>
 <body>
-    <?php include("includes/design-top.php");?>
+    <?php //include("includes/design-top.php");?>
     <?php include("includes/navbar.php");?>
     <main class="container mt-5 pt-5">
         <section class="section-bg wow fadeInUp pb-5">
@@ -18,6 +18,7 @@
                     <h1 class="text-center">Busca el tesoro</h1>
                     <p id="intentos">Intentos: 1</p>
                     <p id="info"></p>
+                    <div id="icon"></div>
                 </div>
                 <div class="col-5">
                     <p id="coordenadas"></p>
@@ -27,6 +28,7 @@
         </section>
     </main>
     <?php include("includes/footer.php"); ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="assets/js/findTreasure/helpers.js"></script>
     <script src="assets/js/findTreasure/game.js"></script>
 </body>
