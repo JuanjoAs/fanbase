@@ -4,11 +4,7 @@
       <div class="col-lg-3 col-md-6">
         <img src="assets/img/logo.png" class="logo" alt="Logo Fanbase">
         <p>
-          In alias aperiam. Placeat tempore facere. Officiis voluptate
-          ipsam vel eveniet est dolor et totam porro. Perspiciatis ad
-          omnis fugit molestiae recusandae possimus. Aut consectetur id
-          quis. In inventore consequatur ad voluptate cupiditate debitis
-          accusamus repellat cumque.
+          Donde se informan los fans de verdad
         </p>
       </div>
 

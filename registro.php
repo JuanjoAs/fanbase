@@ -1,6 +1,6 @@
 <?php include("includes/a_config.php"); ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <?php include("includes/head-tag-contents.php"); ?>
@@ -77,7 +77,7 @@
       </div>
     </section>
   </main>
-  </div>
+
   <?php include("includes/footer.php"); ?>
 </body>
 

@@ -1,6 +1,7 @@
 <?php
-
-$dondeEstoy = basename($_SERVER["REQUEST_URI"]);
+$dondeEstoy = (explode("?",basename($_SERVER["REQUEST_URI"])));
+$dondeEstoy = $dondeEstoy[0];
+//echo $dondeEstoy; 
 
 	switch ($dondeEstoy) {
 		case "registro.php":
@@ -11,6 +12,17 @@ $dondeEstoy = basename($_SERVER["REQUEST_URI"]);
 		case "contactar.php":
 			$CURRENT_PAGE = "Contactar"; 
 			$PAGE_TITLE = "FanBase - Contáctanos";
+			break;
+
+		case "terminoslegales.php":
+			$CURRENT_PAGE = "Terminos Legales"; 
+			$PAGE_TITLE = "FanBase - Terminos Legales";
+			break;
+
+
+		case "info_juego.php":
+			$CURRENT_PAGE = "Informacion Juego"; 
+			$PAGE_TITLE = "FanBase - Informacion Juego";
 		break;
 
 		case "recomendaciones.php":
@@ -18,6 +30,14 @@ $dondeEstoy = basename($_SERVER["REQUEST_URI"]);
 			$PAGE_TITLE = "FanBase - Recomendaciones";
 			break;
 
+		case "pkmclicker.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Pokémon Clicker";
+			break;
+		case "findTreasure.php":
+			$CURRENT_PAGE = "Zona interactiva"; 
+			$PAGE_TITLE = "FanBase - Buscar el tesoro";
+			break;
 		case "index.php":
 			$CURRENT_PAGE = "Inicio"; 
 			$PAGE_TITLE = "FanBase - Inicio";
