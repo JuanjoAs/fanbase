@@ -100,10 +100,12 @@
           ctx.fillStyle = "rgb(24,161,156)";
           ctx.globalAlpha = 0.8;
           ctx.fillRect(0, 135, 510, 76);
-          ctx.fillRect(0, 243, 510, 60);
+          ctx.fillRect(0, 243, 510, 60);//Persian cuadrado
           ctx.globalAlpha = 1;
-          ctx.fillRect(0, 325, 510, 80);
-          ctx.fillRect(0, 420, 400, 60);
+
+          ctx.fillRect(0, 325, 420, 80);
+          ctx.fillStyle = "rgb(24,161,156)";
+          ctx.fillRect(0, 420, 420, 60);
           var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
           ctx.lineWidth = 2;
           gradient.addColorStop("0", "red");
@@ -118,7 +120,7 @@
           gradient.addColorStop("0.5", "blue");
           gradient.addColorStop("0.8", "pink");
           ctx.fillStyle = gradient;
-          ctx.fillText("[ MEJORAR CENTRO ]", 25, 463);
+          ctx.fillText("[ MEJORAR CENTRO ]", 33, 463);
         
 
           //Boton comprar meowth y persian
@@ -132,6 +134,7 @@
           ctx.fillText("- Persian aumenta en 1 los PokeCoins automáticos.", 10, 360);
           ctx.fillText("- El Centro Pokémon multiplica X4 tus mejoras y", 10, 380);
           ctx.fillText("el coste de ellas X2. Precio reforma: [" + preciocentro+" PC]", 20, 400);
+          ctx.fillStyle = "black";
 
           //Dibujamos las imagenes
           ctx.drawImage(pcoins, 310, 0);
