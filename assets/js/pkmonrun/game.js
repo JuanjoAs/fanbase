@@ -7,14 +7,24 @@ var imgFearow = [];
 var imgMaractus = [];
 var findeljuego = false;
 
+window.onload= function() {
+    myFondo = new Image();
+    myFondo.src = './assets/img/pkmonrun/fondo.png';
+    myFondo.addEventListener('load', function () {
+        ctx=myGameArea.canvas.getContext("2d");
+        ctx.drawImage(this,0,0);
+    }, false);
+};
+
+
 function startGame() {
     imgPikachu[0] = cargarImagen("pika1.png");
     imgPikachu[1] = cargarImagen("pika2.png");
     myGamePiece = new component(50, 30, imgPikachu[0], 30, 15);
     myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "", 280, 40, "text", "black");
-    myFondo=cargarImagen("fondo.png");
-
+    myScore = new component("30px", "Permanent Marker", "", 280, 40, "text", "black");
+    
+    
     myGameArea.start();
 }
 
@@ -24,6 +34,7 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
         this.context.drawImage(cargarImagen("fondo.png"), 0, 0);
+        
         updateGameArea();
     },
     clear: function () {
@@ -110,7 +121,6 @@ function component(width, height, img, x, y, type, color) {
 }
 
 function updateGameArea() {
-    $(window).scrollTop(0);
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
@@ -163,7 +173,7 @@ function everyinterval(n) {
 
 
 
-$(document).keypress(function (e) {
+$(document).keydown(function (e) {
     
     if (e.keyCode == 70 && myGamePiece.puedeSaltar === true) {
         myGamePiece.puedeSaltar = false;
@@ -175,12 +185,12 @@ $(document).keypress(function (e) {
     }
 });
 
-$(document).keyup(function (e) {
+$(document).keypress(function (e) {
     if (e.keyCode == 70) {
         if (!myGameArea.interval) {
             myGameArea.interval = setInterval(updateGameArea, 20);
         }
-        myGamePiece.gravity = 0.1;
+        myGamePiece.gravity = 0.8;
         myGamePiece.puedeSaltar = false;
     }
 });
@@ -190,13 +200,13 @@ $("#boton").click(function (e) {
         myGamePiece = null;
         myObstacles = null;
         myObstacles = [];
-        myFondo=null;
         myScore = null;
         imgPikachu = null;
         imgPikachu = [];
         findeljuego = false;
     }
     $("#boton").attr("disabled", true);
+    $("#boton").attr("text", "Volver a jugar");
     if (!myGameArea.interval) {
         myGameArea.interval = setInterval(updateGameArea, 20);
     }
