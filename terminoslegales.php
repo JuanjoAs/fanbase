@@ -29,6 +29,14 @@
                         Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.</p></li>
                     <li><p>No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.</p></li>
                     </ul>  
+
+                    <h5 class="text-center mt-4">Nuestro contenido:</h5>
+                    <ul>
+                    <li><p>Imagenes de la sección Sobre Nosotros.</p></li>
+                    </ul> 
+
+
+
                 </div>
 
                 <div class="text-center mt-5 shadow p-3 mb-5 bg-white rounded">
