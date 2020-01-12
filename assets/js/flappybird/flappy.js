@@ -13,25 +13,20 @@ var ctx = canvas.getContext('2d');
 var width = canvas.width;
 var height = canvas.height;
 
-//carga de imagenes
-var imagenTuberia = new Image();
-    imagenTuberia.src = 'assets/img/flappybird/tubo.png';
 
-var imagenFinTuberia = new Image();
-    imagenFinTuberia.src = 'assets/img/flappybird/Fintubo.png';
-
-var escenario = new Image();
-    escenario.src = 'assets/img/flappybird/Escenario.png';
-
-var pajaro = new Image();
-    pajaro.src = "assets/img/flappybird/bird.png";
 
 //contenedores
+var juegocargado = false;
 var tuberias = [];
 var jugador = null;
 var findeljuego = true;
 var contador = null;
 var primerinicio = false;
+var imagenTuberia = null;
+var imagenFinTuberia = null;
+var escenario = null;
+var pajaro = null;
+var imgcargadas = 0;
 
 //clase para el contador de puntos
 class Puntuacion {
@@ -62,7 +57,7 @@ class Tuberia {
 
         //superior
         this.x = width; //lat
-        this.y = 0; //arryba
+        this.y = 0; //arriba
 
         //lateralmente
         this.maxx = 50; 
@@ -95,6 +90,7 @@ class Tuberia {
 
 }
 
+//clase para el jugador
 class Jugador {
  
     constructor(){
@@ -203,7 +199,7 @@ function juegomovimiento(){
     }
 }
 
-//dibujo de los objetos
+//funcion que pinta el juego
 function dibujarjuego(params) {
     //dibujo del fondo
     ctx.drawImage(escenario, 0,0, width, height);
@@ -225,20 +221,50 @@ function dibujarjuego(params) {
 
     //si has chocado, muestro fin del juego
     if (primerinicio == true && findeljuego == true){
-        ctx.font = "bold 30px sans-serif";
+        ctx.font = "bold 30px Raleway";
         ctx.fillText("Fin del Juego",(width/2)-100,height/2);
     }
 }
 
 //bucle del juego
-function bucle(params) {
-    juegomovimiento();
-    dibujarjuego();
+function bucle() {
+
+    if (imgcargadas < 1){
+        precarga();
+        console.log(imgcargadas);
+    } else if (imgcargadas > 3) {
+        juegocargado = true;
+        juegomovimiento();
+        dibujarjuego();
+    } else {
+        console.log(imgcargadas);
+    }
     window.setTimeout(bucle, 17);
 }
 
-//inicio del bucle, al iniciar el js
-window.addEventListener('load', bucle, false);
+//carga de imagenes
+function precarga(){
+    imagenTuberia = new Image();
+    imagenTuberia.src = 'assets/img/flappybird/tubo.png';
+    imagenTuberia.addEventListener('load', function() {
+        imgcargadas++;
+      }, false);
+    imagenFinTuberia = new Image();
+    imagenFinTuberia.src = 'assets/img/flappybird/Fintubo.png';
+    imagenFinTuberia.addEventListener('load', function() {
+        imgcargadas++;
+      }, false);
+    escenario = new Image();
+    escenario.src = 'assets/img/flappybird/Escenario.png';
+    escenario.addEventListener('load', function() {
+        imgcargadas++;
+      }, false);
+    pajaro = new Image();
+    pajaro.src = "assets/img/flappybird/bird.png";
+    pajaro.addEventListener('load', function() {
+        imgcargadas++;
+      }, false);
+}
 
 //funcion de las teclas para funcionar
 function PulsarTecla(event) {
@@ -262,16 +288,21 @@ function click(){
 //boton inicio del juego
 $(document).ready(function() {
     $("#boton").click(function() {
-        jugador = new Jugador();
-        findeljuego = false;
-        tuberias = null;
-        tuberias = [];
-        primerinicio = true;
-        contador = new Puntuacion();
-        $("#boton").attr("disabled", true);
+        if (juegocargado == true){
+            jugador = new Jugador();
+            findeljuego = false;
+            tuberias = null;
+            tuberias = [];
+            primerinicio = true;
+            contador = new Puntuacion();
+            $("#boton").attr("disabled", true);
+        } 
     });
 });
  
+
+//inicio del juego
+window.addEventListener('load', bucle, false);
 
 //listener
 window.onkeydown=PulsarTecla;
