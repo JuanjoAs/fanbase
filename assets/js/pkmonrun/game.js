@@ -3,28 +3,33 @@ var myObstacles = [];
 var myScore;
 var myFondo;
 var imgPikachu = [];
-var imgFearow = [];
-var imgMaractus = [];
+var imgFearow;
+var imgMaractus;
 var findeljuego = false;
+var numImg = 0;
 
-window.onload= function() {
+window.onload = function () {
     myFondo = new Image();
     myFondo.src = './assets/img/pkmonrun/fondo.png';
     myFondo.addEventListener('load', function () {
-        ctx=myGameArea.canvas.getContext("2d");
-        ctx.drawImage(this,0,0);
+        ctx = myGameArea.canvas.getContext("2d");
+        ctx.drawImage(this, 0, 0);
+        numImg++;
+        activarJuego();
     }, false);
+    imgPikachu[0] = cargarImagen("pika1.png");
+    imgPikachu[1] = cargarImagen("pika2.png");
+    imgMaractus = cargarImagen("maractus.png");
+    imgFearow = cargarImagen("fearow1.png");
 };
 
 
 function startGame() {
-    imgPikachu[0] = cargarImagen("pika1.png");
-    imgPikachu[1] = cargarImagen("pika2.png");
     myGamePiece = new component(50, 30, imgPikachu[0], 30, 15);
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Permanent Marker", "", 280, 40, "text", "black");
-    
-    
+
+
     myGameArea.start();
 }
 
@@ -33,8 +38,8 @@ var myGameArea = {
     start: function () {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
-        this.context.drawImage(cargarImagen("fondo.png"), 0, 0);
-        
+        this.context.drawImage(myFondo, 0, 0);
+
         updateGameArea();
     },
     clear: function () {
@@ -46,7 +51,21 @@ var myGameArea = {
 function cargarImagen(nombre) {
     img = new Image();
     img.src = './assets/img/pkmonrun/' + nombre;
+    img.addEventListener('load', function () {
+        numImg++;
+        activarJuego();
+    }, false);
     return img;
+}
+
+function activarJuego() {
+    if (numImg >= 5) {
+        $("#boton").html('Comenzar a jugar');
+        $("#boton").attr("disabled", false);
+    } else {
+        $("#boton").html('cargando ' + (numImg * 20) + '%');
+        $("#boton").attr("disabled", true);
+    }
 }
 
 function component(width, height, img, x, y, type, color) {
@@ -65,15 +84,14 @@ function component(width, height, img, x, y, type, color) {
     this.update = function () {
 
         ctx = myGameArea.context;
-        
+
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
-        } else if(this.type == "fondo"){
+        } else if (this.type == "fondo") {
             ctx.drawImage(this.img, this.width, this.height);
-        }
-        else {
+        } else {
             ctx.drawImage(this.img, this.x, this.y);
             //ctx.fillStyle = "black";
             //ctx.fillRect(this.x+10, this.y+10, this.width-10, this.height-10);
@@ -115,7 +133,7 @@ function component(width, height, img, x, y, type, color) {
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
         }
-        
+
         return crash;
     }
 }
@@ -135,9 +153,9 @@ function updateGameArea() {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height;
         if (Math.round(Math.random()) > 0.33) {
-            myObstacles.push(new component(50, 65, cargarImagen("maractus.png"), 430, 200));
+            myObstacles.push(new component(50, 65, imgMaractus, 430, 200));
         } else {
-            myObstacles.push(new component(50, 65, cargarImagen("fearow1.png"), 430, 150));
+            myObstacles.push(new component(50, 65, imgFearow, 430, 150));
         }
 
     }
@@ -174,7 +192,7 @@ function everyinterval(n) {
 
 
 $(document).keydown(function (e) {
-    
+
     if (e.keyCode == 70 && myGamePiece.puedeSaltar === true) {
         myGamePiece.puedeSaltar = false;
         if (!myGameArea.interval) {
@@ -196,17 +214,16 @@ $(document).keypress(function (e) {
 });
 
 $("#boton").click(function (e) {
+    $("#boton").html('Volver a Jugar');
+    $("#boton").attr("disabled", true);
     if (findeljuego) {
         myGamePiece = null;
         myObstacles = null;
         myObstacles = [];
         myScore = null;
-        imgPikachu = null;
-        imgPikachu = [];
-        findeljuego = false;
+
     }
-    $("#boton").attr("disabled", true);
-    $("#boton").attr("text", "Volver a jugar");
+    
     if (!myGameArea.interval) {
         myGameArea.interval = setInterval(updateGameArea, 20);
     }
