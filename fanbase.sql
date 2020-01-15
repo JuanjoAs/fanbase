@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-12-2019 a las 11:51:51
--- Versión del servidor: 5.7.26
--- Versión de PHP: 7.2.18
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 15-01-2020 a las 11:15:26
+-- Versión del servidor: 10.4.10-MariaDB
+-- Versión de PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `fanbase`
 --
-CREATE DATABASE IF NOT EXISTS `fanbase` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
-USE `fanbase`;
 
 -- --------------------------------------------------------
 
@@ -30,8 +28,7 @@ USE `fanbase`;
 -- Estructura de tabla para la tabla `recomendaciones`
 --
 
-DROP TABLE IF EXISTS `recomendaciones`;
-CREATE TABLE IF NOT EXISTS `recomendaciones` (
+CREATE TABLE `recomendaciones` (
   `nombre` varchar(55) COLLATE utf8_spanish_ci NOT NULL,
   `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
   `imagen` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
@@ -43,8 +40,7 @@ CREATE TABLE IF NOT EXISTS `recomendaciones` (
   `linkplataforma1` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `linkplataforma2` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `linkplataforma3` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `linkplataforma4` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`nombre`)
+  `linkplataforma4` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -58,6 +54,82 @@ INSERT INTO `recomendaciones` (`nombre`, `descripcion`, `imagen`, `tipo`, `plata
 ('Frozen 2', 'Frozen 2 (estilizado como Frozen II) es una película estadounidense musical de fantasía animada por computadora producida por Walt Disney Animation Studios, y es la secuela de la película Frozen de 2013.<br>\r\nLa reina Elsa, su hermana Anna, Kristoff, Olaf y Sven se embarcan en un nuevo viaje en lo profundo del bosque, más allá de su tierra natal de Arendelle, para descubrir la verdad sobre un antiguo misterio de su reino. Su objetivo principal es descubrir por qué Elsa oye voces procedentes del Bosque encantado, donde desde hace tiempo nadie puede entrar ni salir. De no lograrlo su reino estaría en peligro.\r\n', 'assets/img/recomendaciones/frozen2.png', 'seriepeli', 'imdb', '', '', '', 'https://www.imdb.com/title/tt4520988/', '', '', ''),
 ('League of Legends', 'League of Legends (también conocido por sus siglas LoL) es un videojuego del género multijugador de arena de batalla en línea (MOBA) y deporte electrónico el cual fue desarrollado por Riot Games para Microsoft Windows y OS X. En un principio los servidores estaban alojados en la empresa GOA y fue vendida a la empresa china Tencent Holdings Limited. ', 'assets/img/recomendaciones/leagueoflegends.png', 'juego', 'pc', 'google', '', '', 'https://signup.euw.leagueoflegends.com/es/signup/redownload', 'https://play.google.com/store/apps/details?id=com.riotgames.league.wildrift&hl=es_419', '', ''),
 ('Pokémon: Espada y Escudo', 'Pokémon Espada y Pokémon Escudo son los videojuegos de la octava generación. Se lanzaron el 15 de noviembre de 2019 para Nintendo Switch. Fueron anunciados el 28 de febrero de 2019 en un Nintendo Direct especial. <br>\r\n\r\nTu aventura te llevará por toda la región de Galar, donde encontrarás rincones únicos, como enormes praderas verdes llenas de naturaleza o pueblos y ciudades donde personas y Pokémon conviven en armonía. Otra característica de la cultura de la región es que los combates Pokémon son la forma de entretenimiento por excelencia. Los aspirantes miden sus fuerzas contra los Líderes de Gimnasio en combates Pokémon que se llevan a cabo en los estadios distribuidos por todo Galar. Siempre que se celebra un combate, los estadios se llenan de multitudes de espectadores y fans que acuden a animar a sus Entrenadores favoritos. Estuvieron revueltos en un halo de discusión debido a que incluyeron sólo 400 Pokémon, siendo el primer juego de la saga en no incluir todos, cuando incluso usando los mismos modelos de la anterior consola, la 3DS, incluyen casi la mitad.', 'assets/img/recomendaciones/pokemonespada.png', 'juego', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `pasword` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `usuario`, `nombre`, `email`, `pasword`, `rango`) VALUES
+(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '1234', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `valoraciones`
+--
+
+CREATE TABLE `valoraciones` (
+  `id` int(11) NOT NULL,
+  `idVideo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `comentario` text COLLATE utf8_spanish_ci NOT NULL,
+  `valoracion` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `recomendaciones`
+--
+ALTER TABLE `recomendaciones`
+  ADD PRIMARY KEY (`nombre`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `usuario` (`usuario`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indices de la tabla `valoraciones`
+--
+ALTER TABLE `valoraciones`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `valoraciones`
+--
+ALTER TABLE `valoraciones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
