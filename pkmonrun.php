@@ -16,8 +16,7 @@
                 </div>
                 <div class="row justify-content-center pb-5">
                     <div class="col text-center">
-                        <canvas class="border" id="canvas" width="480" height="270" opacity=0>
-                        <img id="imagenFondo" src="assets/img/pkmonrun/fondoPrincipal.png"></canvas><br>
+                        <canvas class="border" id="canvas" width="480" height="270" opacity=0></canvas><br>
                         <button class="btn button-primary" type="button" id="boton">Iniciar Juego</button>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
 <body>
   <?php include("includes/navbar.php"); ?>
   <main class="container">
-    <section class="registro section-bg wow fadeInUp mt-5 align-items-center">
+    <section class="registro section-bg wow fadeInUp pt-5 mt-5 align-items-center">
       <div class="row justify-content-left align-content-center">
         <div class="form col-md-6">
           <h2> ¡BIENVENIDOS A FANBASE!</h2>

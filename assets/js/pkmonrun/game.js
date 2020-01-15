@@ -10,7 +10,7 @@ var numImg = 0;
 
 window.onload = function () {
     myFondo = new Image();
-    myFondo.src = './assets/img/pkmonrun/fondo.png';
+    myFondo.src = './assets/img/pkmonrun/82311.jpg';
     myFondo.addEventListener('load', function () {
         ctx = myGameArea.canvas.getContext("2d");
         ctx.drawImage(this, 0, 0);
