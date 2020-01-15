@@ -46,8 +46,22 @@
         </div>
       </li>
     </ul>
-    <form action="registro.php" class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button>
-    </form>
+    <?php
+      //$_COOKIE['PHPSESSID']
+    ?>
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalLoginForm"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button></a>
+
+      <ul class="navbar-nav mr-3">
+        <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuario <img src="assets/img/favicon.png">
+          </a>
+          <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="nosotros.php">Sobre nosotros</a>
+            <a class="dropdown-item" href="contactar.php">Contactanos</a>
+            <a class="dropdown-item" href="terminoslegales.php">Terminos Legales</a>
+          </div>
+        </li>
+      </ul>
   </nav>
 </header>
