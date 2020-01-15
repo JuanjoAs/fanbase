@@ -531,10 +531,14 @@ transition: 0.3s ease-in-out;
 # Video bootstrap Section
 --------------------------------------------------------------*/
 .video-container {
-  width: 640px;
-  height: 365px;
+  
   position: relative;
 }
+.video-fluid{
+  width: 100%;
+  height:auto;
+}
+
 
 .video-controls {
   position: absolute;
