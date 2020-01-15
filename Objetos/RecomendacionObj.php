@@ -12,7 +12,7 @@
  *
  * @author Trillo
  */
-class RecomendacionesObj {
+class recomendacionObj {
     private $nombre;
     private $descripcion;
     private $imagen;
@@ -58,7 +58,7 @@ class RecomendacionesObj {
             $conex=new Conexion();
             $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try{
-                $consulta=$conex->query("SELECT * FROM recomendaciones WHERE tipo='juego'");
+                $consulta=$conex->query("SELECT * FROM recomendacion WHERE tipo='juego'");
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
@@ -83,7 +83,7 @@ class RecomendacionesObj {
             $conex=new Conexion();
             $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try{
-                $consulta=$conex->query("SELECT * FROM recomendaciones WHERE tipo='seriepeli'");
+                $consulta=$conex->query("SELECT * FROM recomendacion WHERE tipo='seriepeli'");
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
