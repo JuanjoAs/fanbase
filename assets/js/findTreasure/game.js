@@ -82,7 +82,7 @@ $map.addEventListener('click', function(e) {
 
     if(distance < 20) {
         Swal.fire({
-            title: 'ENORABUENA',
+            title: 'ENHORABUENA',
             text: `Has encontrado el tesoro en ${clicks} intentos`,
             imageUrl: 'assets/img/busquedadeltesoro/tesoro.png',
             imageWidth: 128,

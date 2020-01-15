@@ -655,9 +655,12 @@ Seccion Video
 # Video bootstrap Section
 --------------------------------------------------------------*/
 .video-container {
-  width: 640px;
-  height: 365px;
   position: relative;
+}
+
+.video-fluid {
+  width: 100%;
+  height: auto;
 }
 
 .video-controls {

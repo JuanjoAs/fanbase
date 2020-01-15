@@ -11,7 +11,7 @@
 
     <main>
 
-        <section class="section-bg wow fadeInUp">
+        <section class="section-bg fadeInUp">
 
             <div class="container">
 
@@ -21,8 +21,7 @@
 
                 <div class="row justify-content-center pb-5">
                     <div class="col text-center">
-                        <canvas class="border" id="canvas" width="400" height="500"></canvas>
-                        <script src="javascript.js"></script><br>
+                        <canvas class="border" id="canvas" width="400" height="500"></canvas><br>
                         <button class="btn button-primary" type="button" id="boton">Iniciar Juego</button>
                     </div>
                 </div>
@@ -30,6 +29,6 @@
         </section>
     </main>
     <?php include("includes/footer.php"); ?>
-    <script src="assets/js/flappybird/game.js"></script>
+    <script src="assets/js/flappybird/flappy.js"></script>
 </body>
 </html>
