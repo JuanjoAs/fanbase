@@ -1,11 +1,10 @@
 <?php
 
-
 class Conexion extends PDO {
     private $dbtype = 'mysql';
     private $host = 'localhost';
-    private $user = 'dwes';
-    private $passwd = 'abc123.';
+    private $user = 'root';
+    private $passwd = '';
     private $dbname = 'fanbase';
     private $charset = 'utf8';
 
