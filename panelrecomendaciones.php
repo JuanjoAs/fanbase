@@ -12,19 +12,63 @@ require_once 'Model/Recomendacion.php';
 
 <?php include("includes/navbar.php");?>
 
-<main class="container mainpadding">
+<main class="container">
 
 <!--==========================
       Backend recomendaciones
     ============================-->
-    <section class="wow fadeInUp">
+    <section class="wow fadeInUp recomendaciones">
         <div class="section-header">
-          <h2>Administrar Recomendaciones</h2>
+          <h2>Administrar Juegos</h2>
+        </div>
+        <div class="justify-content-center">
+        <ul class="recomendaciones-list">
+                <?php
+                $recomendaciones=RecomendacionObj::recuperarTodosJuegos();
+                ?>
+                <?php
+                $i=-1;
+                foreach($recomendaciones as $recomendacion){
+                  $i++;
+                ?>
+                  <li class="border">
+                    <div id="juegos<?php echo $i;?>">
+                      <div class="row">
+                        <div class="col-lg-10">
+                          <?php echo $recomendacion->nombre; ?>                      </div>
+                        <div class="col-lg-1">
+                        <button class="btn btn-primary">Editar</button>
+                        </div>
+                        <div class="col-lg-1">
+                          <div class="row">
+                            <button class="btn btn-danger">Borrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                <?php
+                }
+                ?>
+                
+              </ul>
+        <div class="row border">
+          <div class="col-lg-9">
+            Nombre juego
+          </div>
+          <div class="col-lg-3">
+            <button class="btn btn-primary">Editar</button>
+            <button class="btn btn-danger">Borrar</button>
+          </div>
+        </div>
+        </div>
+        <div class="section-header">
+          <h2>Administrar Series</h2>
         </div>
         <div class="justify-content-center">
         <div class="row border">
           <div class="col-lg-9">
-            Nombre reco
+            Nombre serie
           </div>
           <div class="col-lg-3">
             <button class="btn btn-primary">Editar</button>
