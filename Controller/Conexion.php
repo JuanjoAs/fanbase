@@ -6,7 +6,7 @@ class Conexion extends PDO {
     private $host = 'localhost';
     private $user = 'dwes';
     private $passwd = 'abc123.';
-    private $dbname = 'alquiler_juegos';
+    private $dbname = 'fanbase';
     private $charset = 'utf8';
 
     public function __construct() {
