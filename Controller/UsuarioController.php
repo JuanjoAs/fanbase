@@ -78,8 +78,8 @@ class UsuarioController {
 
         if(!$error && $usuario->rowCount()!=0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            return new Usuario($obj->usuario, $obj->nombre,
-                $obj->email, $obj->password, $obj->rango);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango);
+            $usuario->id=$obj->id;
         }
 
         return false;
