@@ -38,7 +38,6 @@
         var preciocentro = 2000;
         var pokeclick = 1 + mejora1 + mejora2;
         var background;
-        var loop;
         var lvlcentro=1;
         var fps = 60;
         var latestprint=410;
@@ -65,7 +64,7 @@
           }, 300);
 
           background.onload = function () {
-            loop = setInterval(function () {
+            var loop = setInterval(function () {
               ctx.clearRect(0, 0, c.width, c.height); // borramos canvas
               dibujaJuego();
             }, 1000 / fps);
