@@ -128,6 +128,7 @@ a:hover, a:focus, a:active {
 
 .btn-success {
   background-color: #2ab09c;
+  border-color: white;
 }
 .btn-success:hover {
   background-color: #101522;
@@ -348,6 +349,17 @@ a:hover, a:focus, a:active {
 }
 .recomendaciones .recomendaciones-list a:hover {
   color: #2ab09c;
+}
+
+.recomendaciones .recomendaciones-list span {
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: #101522;
 }
 
 .recomendaciones .recomendaciones-list i {

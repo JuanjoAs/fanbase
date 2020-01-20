@@ -29,6 +29,7 @@ a {
 
 .btn-success {
     background-color: $primary;
+    border-color: white;
     &:hover {
         background-color: $darken;
         border-color: $primary;
