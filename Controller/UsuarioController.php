@@ -19,7 +19,7 @@ class UsuarioController {
         while($obj = $usuarios->fetch(PDO::FETCH_OBJ)) {
             $u = new Usuario($obj->usuario, $obj->nombre,
                 $obj->email, $obj->password, $obj->rango);
-            $u->id = $obj->usuario;
+            $u->id = $obj->id;
             $coleccion[] = $u;
         }
 
@@ -50,7 +50,35 @@ class UsuarioController {
 
         if(!$error && $usuario->rowCount()) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            return new Usuario($obj->id, $obj->usuario, $obj->nombre,
+            return new Usuario($obj->usuario, $obj->nombre,
+                $obj->email, $obj->password, $obj->rango);
+        }
+
+        return false;
+    }
+    public static function login($usuario,$password) {
+        $error = false;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+
+        $sql = "SELECT * FROM usuario WHERE usuario='$usuario' & password='$password'";
+
+        try {
+            $usuario = $c->query($sql);
+        } catch (Exception $ex) {
+            $error = true;
+        }
+
+        unset($c);
+
+        if(!$error && $usuario->rowCount()!=0) {
+            $obj = $usuario->fetch(PDO::FETCH_OBJ);
+            return new Usuario($obj->usuario, $obj->nombre,
                 $obj->email, $obj->password, $obj->rango);
         }
 
