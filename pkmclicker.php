@@ -28,7 +28,7 @@
         var posXball = c.width / 1.7;
         var posYball = 100;
         var posXmeowth = 160;
-        var posYmeowth = 130;
+        var posYmeowth = 150;
         var posXpersian = 140;
         var posYpersian = 210;
         var mejora1 = 0;
@@ -55,13 +55,12 @@
           }, 1000);
 
           const intervalAnims = setInterval(function () {
-            if(countAnim>1){
+            if(countAnim>2){
               countAnim=0;
             }
             imgmeowth.src = arrayAnimMeowth[countAnim];
             countAnim++;
-            
-          }, 300);
+          }, 250);
 
           background.onload = function () {
             var loop = setInterval(function () {
@@ -162,9 +161,9 @@
             ctx.fill();
           }
          //Dibujamos pokes comprados
-         latestprint=410;
+         latestprint=420;
          for(i=0;i<meowthscomprados;i++){
-          ctx.drawImage(imgmeowth, latestprint, 415); 
+          ctx.drawImage(imgmeowth, latestprint, 425); 
           latestprint+=40;
          }
          for(i=0;i<persianscomprados;i++){
@@ -184,8 +183,9 @@
           pshop.src = "assets/img/pkmclicker/pokeshop.png";
           imgpersian.src = "assets/img/pkmclicker/persian.png";
           img.src = "assets/img/pkmclicker/pokeball.png";
-          arrayAnimMeowth[0] = "assets/img/pkmclicker/sprites/meowth.png";
+          arrayAnimMeowth[0] = "assets/img/pkmclicker/sprites/meowth1.png";
           arrayAnimMeowth[1] = "assets/img/pkmclicker/sprites/meowth2.png";
+          arrayAnimMeowth[2] = "assets/img/pkmclicker/sprites/meowth3.png";
 
         }
         function gameLogic() {
