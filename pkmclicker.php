@@ -184,8 +184,8 @@
           pshop.src = "assets/img/pkmclicker/pokeshop.png";
           imgpersian.src = "assets/img/pkmclicker/persian.png";
           img.src = "assets/img/pkmclicker/pokeball.png";
-          arrayAnimMeowth[0] = "assets/img/pkmclicker/meowth.png";
-          arrayAnimMeowth[1] = "assets/img/pkmclicker/meowth2.png";
+          arrayAnimMeowth[0] = "assets/img/pkmclicker/sprites/meowth.png";
+          arrayAnimMeowth[1] = "assets/img/pkmclicker/sprites/meowth2.png";
 
         }
         function gameLogic() {
