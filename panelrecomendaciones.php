@@ -1,6 +1,6 @@
 <?php 
 include("includes/a_config.php");
-require_once 'Objetos/RecomendacionesObj.php';
+require_once 'Model/Recomendacion.php';
 
 ?>
 <!DOCTYPE html>
@@ -17,12 +17,20 @@ require_once 'Objetos/RecomendacionesObj.php';
 <!--==========================
       Backend recomendaciones
     ============================-->
-    <section class="recomendaciones wow fadeInUp">
+    <section class="wow fadeInUp">
         <div class="section-header">
           <h2>Administrar Recomendaciones</h2>
         </div>
-        <div class="row justify-content-center">
+        <div class="justify-content-center">
+        <div class="row border">
+          <div class="col-lg-9">
+            Nombre reco
           </div>
+          <div class="col-lg-3">
+            <button class="btn btn-primary">Editar</button>
+            <button class="btn btn-danger">Borrar</button>
+          </div>
+        </div>
         </div>
     </section>
 
