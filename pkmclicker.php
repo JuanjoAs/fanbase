@@ -45,7 +45,8 @@
         var meowthscomprados=1;
         var persianscomprados=1;
         var pcextra=1;
-        var meowthanim=0;
+        var countAnim=0;
+        var arrayAnimMeowth=new Array();
         var centromejora = "centeractu1.jpg";
 
         function initGame() {
@@ -55,13 +56,12 @@
           }, 1000);
 
           const intervalAnims = setInterval(function () {
-            if(meowthanim==1){
-              imgmeowth.src = "assets/img/pkmclicker/meowth.png";
-              meowthanim=0;
-            }else{
-              meowthanim=1;
-              imgmeowth.src = "assets/img/pkmclicker/meowth2.png";
+            if(countAnim>1){
+              countAnim=0;
             }
+            imgmeowth.src = arrayAnimMeowth[countAnim];
+            countAnim++;
+            
           }, 300);
 
           background.onload = function () {
@@ -183,9 +183,11 @@
           background.src = "assets/img/pkmclicker/" + centromejora;
           pcoins.src = "assets/img/pkmclicker/pokecoins-pinterest.png";
           pshop.src = "assets/img/pkmclicker/pokeshop.png";
-          imgmeowth.src = "assets/img/pkmclicker/meowth.png";
           imgpersian.src = "assets/img/pkmclicker/persian.png";
           img.src = "assets/img/pkmclicker/pokeball.png";
+          arrayAnimMeowth[0] = "assets/img/pkmclicker/meowth.png";
+          arrayAnimMeowth[1] = "assets/img/pkmclicker/meowth2.png";
+
         }
         function gameLogic() {
           //Efectos listener
