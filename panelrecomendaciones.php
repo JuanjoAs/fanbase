@@ -1,6 +1,6 @@
 <?php 
 include("includes/a_config.php");
-require_once 'Objetos/RecomendacionObj.php';
+require_once 'Model/Recomendacion.php';
 
 ?>
 <!DOCTYPE html>
