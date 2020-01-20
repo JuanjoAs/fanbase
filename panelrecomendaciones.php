@@ -34,14 +34,15 @@ require_once 'Model/Recomendacion.php';
                   <li class="border">
                     <div id="juegos<?php echo $i;?>">
                       <div class="row">
-                        <div class="col-lg-10">
-                          <?php echo $recomendacion->nombre; ?>                      </div>
-                        <div class="col-lg-1">
-                        <button class="btn btn-primary">Editar</button>
+                        <div class="col-lg-8">
+                          <a><?php echo $recomendacion->nombre; ?></a>                
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-lg-2">
+                        <button class="btn btn-primary mt-2">Editar</button>
+                        </div>
+                        <div class="col-lg-2">
                           <div class="row">
-                            <button class="btn btn-danger">Borrar</button>
+                            <button class="btn btn-danger m-2">Borrar</button>
                           </div>
                         </div>
                       </div>
@@ -52,16 +53,6 @@ require_once 'Model/Recomendacion.php';
                 ?>
                 
               </ul>
-        <div class="row border">
-          <div class="col-lg-9">
-            Nombre juego
-          </div>
-          <div class="col-lg-3">
-            <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Borrar</button>
-          </div>
-        </div>
-        </div>
         <div class="section-header">
           <h2>Administrar Series</h2>
         </div>
