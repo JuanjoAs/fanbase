@@ -45,6 +45,7 @@
         var meowthscomprados=1;
         var persianscomprados=1;
         var pcextra=1;
+        var meowthanim=0;
         var centromejora = "centeractu1.jpg";
 
         function initGame() {
@@ -52,6 +53,16 @@
           const interval = setInterval(function () {
             pokecoins+=pcextra;
           }, 1000);
+
+          const intervalAnims = setInterval(function () {
+            if(meowthanim==1){
+              imgmeowth.src = "assets/img/pkmclicker/meowth.png";
+              meowthanim=0;
+            }else{
+              meowthanim=1;
+              imgmeowth.src = "assets/img/pkmclicker/meowth2.png";
+            }
+          }, 300);
 
           background.onload = function () {
             loop = setInterval(function () {
