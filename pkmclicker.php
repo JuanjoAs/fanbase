@@ -28,9 +28,9 @@
         var posXball = c.width / 1.7;
         var posYball = 100;
         var posXmeowth = 160;
-        var posYmeowth = 150;
-        var posXpersian = 140;
-        var posYpersian = 210;
+        var posYmeowth = 145;
+        var posXpersian = 155;
+        var posYpersian = 240;
         var mejora1 = 0;
         var mejora2 = 0;
         var preciomejora1 = 20;
@@ -46,6 +46,7 @@
         var pcextra=1;
         var countAnim=0;
         var arrayAnimMeowth=new Array();
+        var arrayAnimPersian=new Array();
         var centromejora = "centeractu1.jpg";
 
         function initGame() {
@@ -59,6 +60,7 @@
               countAnim=0;
             }
             imgmeowth.src = arrayAnimMeowth[countAnim];
+            imgpersian.src = arrayAnimPersian[countAnim];
             countAnim++;
           }, 250);
 
@@ -161,13 +163,13 @@
             ctx.fill();
           }
          //Dibujamos pokes comprados
-         latestprint=420;
+         latestprint=423;
          for(i=0;i<meowthscomprados;i++){
           ctx.drawImage(imgmeowth, latestprint, 425); 
           latestprint+=40;
          }
          for(i=0;i<persianscomprados;i++){
-          ctx.drawImage(imgpersian, latestprint+(i*50), 403); 
+          ctx.drawImage(imgpersian, latestprint+(i*50), 415); 
          }
 
         }
@@ -186,6 +188,9 @@
           arrayAnimMeowth[0] = "assets/img/pkmclicker/sprites/meowth1.png";
           arrayAnimMeowth[1] = "assets/img/pkmclicker/sprites/meowth2.png";
           arrayAnimMeowth[2] = "assets/img/pkmclicker/sprites/meowth3.png";
+          arrayAnimPersian[0] = "assets/img/pkmclicker/sprites/persian1.png";
+          arrayAnimPersian[1] = "assets/img/pkmclicker/sprites/persian2.png";
+          arrayAnimPersian[2] = "assets/img/pkmclicker/sprites/persian3.png";
 
         }
         function gameLogic() {
