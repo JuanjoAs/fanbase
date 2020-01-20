@@ -1,7 +1,0 @@
-formatos admitimos: png, jpg
-res minima 200px
-res maxima 1600px
-peso maximo 4 mb
-titanes png selecta vision https://www.selecta-vision.com/ataque-a-los-titanes
-
-
