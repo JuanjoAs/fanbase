@@ -209,6 +209,18 @@ a:hover, a:focus, a:active {
   padding: 0;
   margin: 0;
 }
+.footer button {
+  background: #2ab09c;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.footer button:hover {
+  background: #0d1223;
+}
 
 .credits {
   background-color: #101522;
@@ -325,7 +337,6 @@ a:hover, a:focus, a:active {
 }
 
 .recomendaciones .recomendaciones-list a {
-  margin: 18px 0;
   display: block;
   position: relative;
   font-family: "Raleway", sans-serif;

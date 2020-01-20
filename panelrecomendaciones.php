@@ -35,10 +35,10 @@ require_once 'Model/Recomendacion.php';
                     <div id="juegos<?php echo $i;?>">
                       <div class="row">
                         <div class="col-lg-8">
-                          <a><?php echo $recomendacion->nombre; ?></a>                
+                          <a class="mt-3"><?php echo $recomendacion->nombre; ?></a>                
                         </div>
                         <div class="col-lg-2">
-                        <button class="btn btn-primary mt-2">Editar</button>
+                        <button class="btn btn-primary mt-2 mb-2">Editar</button>
                         </div>
                         <div class="col-lg-2">
                           <div class="row">
