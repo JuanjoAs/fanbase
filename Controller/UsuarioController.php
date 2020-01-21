@@ -80,7 +80,7 @@ class UsuarioController
             die('Error fatal, imposible conectar con la base de datos.');
         }
 
-        $sql = "SELECT * FROM usuario WHERE email='$usuario' && password='$password'";
+        $sql = "SELECT * FROM usuario WHERE email='$usuario' && password='".md5($password)."'";
 
         try {
             $usuario = $c->query($sql);
@@ -111,8 +111,7 @@ class UsuarioController
             die('Error fatal, imposible conectar con la base de datos.');
         }
 
-        $sql = "INSERT INTO usuario (usuario, nombre, email, password, rango) VALUES('$usuario->usuario', '$usuario->nombre', '$usuario->email',"
-            . "$usuario->password, '$usuario->rango')";
+        $sql = "INSERT INTO usuario (usuario, nombre, email, password, rango) VALUES('$usuario->usuario', '$usuario->nombre', '$usuario->email','" . md5($usuario->password) . "', '$usuario->rango')";
 
         try {
             $query = $c->query($sql);
