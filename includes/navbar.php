@@ -48,8 +48,6 @@
       </li>
     </ul>
     <?php
-    include_once 'Model/Usuario.php';
-    session_start();
       if (isset($_SESSION['usuario'])) {
         include_once 'Controller/UsuarioController.php';
     ?>
@@ -64,7 +62,10 @@
               echo "<a class='dropdown-item' href='panelusuarios.php'>Usuarios</a>";
             }
             ?>
-            <a class="dropdown-item" href="panelrecomendaciones.php">Recomendaciones</a>
+            <?php if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){
+              echo "<a class='dropdown-item' href='panelrecomendaciones.php'>Recomendaciones</a>";
+            }
+            ?>
             <a class="dropdown-item" href="logoff.php">Cerrar sesión</a>
           </div>
         </li>
