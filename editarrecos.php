@@ -33,8 +33,9 @@ $PAGE_TITLE = "FanBase - Backend Recomendaciones";
       </div>
       <div class="justify-content-center">
         <?php
-        echo $_REQUEST['btneditar'];
+          $recomendacion=recomendacionObj::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
+        Nombre: <input type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
       </div>
      
 

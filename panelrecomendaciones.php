@@ -48,8 +48,8 @@ $PAGE_TITLE = "FanBase - Backend Recomendaciones";
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
                   </div>
                   <div class="col-lg-3">
-                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="s">Editar</button></form>
-                    <button class="btn btn-danger m-2">Borrar</button>
+                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id;?>">Editar</button></form>
+                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id;?>">Borrar</button></form>
                   </div>
                 </div>
               </div>
