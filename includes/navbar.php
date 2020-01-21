@@ -61,6 +61,7 @@
             <a class="dropdown-item" href="miperfil.php">Mi perfil</a>
             <a class="dropdown-item" href="panelusuarios.php">Usuarios</a>
             <a class="dropdown-item" href="panelrecomendaciones.php">Recomendaciones</a>
+            <a class="dropdown-item" href="logoff.php">Cerrar sesión</a>
           </div>
         </li>
       </ul>
