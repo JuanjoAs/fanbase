@@ -3,7 +3,7 @@
 
 class Usuario {
     private $id;
-    private $usuario;
+    public $usuario;
     private $nombre;
     private $email;
     private $password;
