@@ -1,7 +1,6 @@
 <?php
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
-require_once 'Model/Usuario.php';
 $PAGE_TITLE = "FanBase - Backend Recomendaciones";
 ?>
 <!DOCTYPE html>

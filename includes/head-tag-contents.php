@@ -1,4 +1,5 @@
-<title><?php print $PAGE_TITLE;session_start();
+<title><?php require_once 'Model/Usuario.php';
+print $PAGE_TITLE;session_start();
 ?></title>
 
 <?php if ($CURRENT_PAGE == "Index") { ?>
