@@ -66,7 +66,7 @@ class UsuarioController {
             die('Error fatal, imposible conectar con la base de datos.');
         }
 
-        $sql = "SELECT * FROM usuario WHERE usuario='$usuario' & password='$password'";
+        $sql = "SELECT * FROM usuario WHERE email='$usuario' && password='$password'";
 
         try {
             $usuario = $c->query($sql);
@@ -80,6 +80,7 @@ class UsuarioController {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
             $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango);
             $usuario->id=$obj->id;
+            return $usuario;
         }
 
         return false;

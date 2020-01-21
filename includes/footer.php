@@ -68,38 +68,40 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5 row">
-          <div class="col-1">
-            <i class="fas fa-envelope fa-2x prefix grey-text"></i>
+      <form action="sesionUsuario.php" method="POST">
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5 row">
+            <div class="col-1">
+              <i class="fas fa-envelope fa-2x prefix grey-text"></i>
 
+            </div>
+            <div class="col-11">
+              <input name="mail" type="email" id="defaultForm-email" class="form-control validate" placeholder="Introduce tu correo">
+              <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
+            </div>
           </div>
-          <div class="col-11">
-            <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Introduce tu correo">
-            <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
+          <div class="md-form mb-4 row">
+            <div class="col-1">
+              <i class="fas fa-lock fa-2x prefix grey-text"></i>
+            </div>
+            <div class="col-11">
+              <input name="password" type="password" id="defaultForm-pass" class="form-control validate" placeholder="Introduce tu contraseña">
+              <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
+            </div>
           </div>
-        </div>
-        <div class="md-form mb-4 row">
-          <div class="col-1">
-            <i class="fas fa-lock fa-2x prefix grey-text"></i>
-          </div>
-          <div class="col-11">
-            <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Introduce tu contraseña">
-            <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
-          </div>
-        </div>
 
-      </div>
-      <div class="modal-footer">
-        <div class="options mt-1 row">
-          <div class="col-9">
-            <p>¿Aún no te has registrado? <a href="#" class="text-primary blue-text">¡Regístrate!</a></p>
-          </div>
-          <div class="col-3">
-            <button class="btn btn-success">Login</button>
+        </div>
+        <div class="modal-footer">
+          <div class="options mt-1 row">
+            <div class="col-9">
+              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-success" name="inicioSesion">Login</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>

@@ -47,10 +47,10 @@
       </li>
     </ul>
     <?php
+    session_start();
       //$_COOKIE['PHPSESSID']
+      if (isset($_SESSION['usuario'])) {
     ?>
-        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalLoginForm"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button></a>
-
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,5 +63,13 @@
           </div>
         </li>
       </ul>
+      <?php 
+      }else{
+      ?>
+      <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalLoginForm">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button></a>
+      <?php 
+      }
+      ?>
   </nav>
 </header>
