@@ -3,9 +3,11 @@
 require_once 'Conexion.php';
 require_once 'Model/Usuario.php';
 
-class UsuarioController {
+class UsuarioController
+{
 
-    public static function findAll() {
+    public static function findAll()
+    {
         try {
             $c = new Conexion();
             $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,9 +18,14 @@ class UsuarioController {
         $sql = "SELECT * FROM usuario";
         $usuarios = $c->query($sql);
 
-        while($obj = $usuarios->fetch(PDO::FETCH_OBJ)) {
-            $u = new Usuario($obj->usuario, $obj->nombre,
-                $obj->email, $obj->password, $obj->rango);
+        while ($obj = $usuarios->fetch(PDO::FETCH_OBJ)) {
+            $u = new Usuario(
+                $obj->usuario,
+                $obj->nombre,
+                $obj->email,
+                $obj->password,
+                $obj->rango
+            );
             $u->id = $obj->id;
             $coleccion[] = $u;
         }
@@ -28,7 +35,8 @@ class UsuarioController {
         return $coleccion;
     }
 
-    public static function find($cod) {
+    public static function find($cod)
+    {
         $error = false;
 
         try {
@@ -48,15 +56,21 @@ class UsuarioController {
 
         unset($c);
 
-        if(!$error && $usuario->rowCount()) {
+        if (!$error && $usuario->rowCount()) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            return new Usuario($obj->usuario, $obj->nombre,
-                $obj->email, $obj->password, $obj->rango);
+            return new Usuario(
+                $obj->usuario,
+                $obj->nombre,
+                $obj->email,
+                $obj->password,
+                $obj->rango
+            );
         }
 
         return false;
     }
-    public static function login($usuario,$password) {
+    public static function login($usuario, $password)
+    {
         $error = false;
 
         try {
@@ -76,17 +90,18 @@ class UsuarioController {
 
         unset($c);
 
-        if(!$error && $usuario->rowCount()!=0) {
+        if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
             $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango);
-            $usuario->id=$obj->id;
+            $usuario->id = $obj->id;
             return $usuario;
         }
 
         return false;
     }
 
-    public static function insert($usuario) {
+    public static function insert($usuario)
+    {
         $success = true;
 
         try {
@@ -101,11 +116,10 @@ class UsuarioController {
 
         try {
             $query = $c->query($sql);
-        } catch(PDOException $ex) {
+        } catch (PDOException $ex) {
             $success = false;
         }
 
         return $success;
     }
-
 }

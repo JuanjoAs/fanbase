@@ -38,11 +38,11 @@
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="password" class="form-control" id="password" placeholder="Contraseña" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
+                <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="text" name="password" class="form-control" id="password" placeholder="Vuelva a introducir tu contraseña" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
+                <input type="password" name="password" class="form-control" id="password" placeholder="Vuelva a introducir tu contraseña" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
                 <div class="validation"></div>
               </div>
             </div>
