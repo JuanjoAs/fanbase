@@ -1,4 +1,5 @@
-<title><?php print $PAGE_TITLE;?></title>
+<title><?php print $PAGE_TITLE;session_start();
+?></title>
 
 <?php if ($CURRENT_PAGE == "Index") { ?>
 	<meta name="description" content="Bienvenido a Fanbase. Donde se informan los fans de verdad." />
