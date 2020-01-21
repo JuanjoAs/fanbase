@@ -1,7 +1,7 @@
 <?php
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
-$PAGE_TITLE = "FanBase - Backend Recomendaciones";
+$PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -38,8 +38,8 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
         Nombre: <input type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: <textarea class="form-control"><?php echo $recomendacion->descripcion;?></textarea>
         Tipo:<select class="form-control"> 
-        <option value="seriepeli">Serie/Película</option>
         <option value="juego">Juego</option>
+        <option value="seriepeli">Serie/Película</option>
         </select>
         Plataforma 1:<select name="plataforma1" class="form-control"> 
         <option value="">----</option>
@@ -85,8 +85,7 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
         Enlace plataforma 2: <input type="text" name="link2" class="form-control" value="<?php echo $recomendacion->linkplataforma2;?>">
         Enlace plataforma 3: <input type="text" name="link3" class="form-control" value="<?php echo $recomendacion->linkplataforma3;?>">
         Enlace plataforma 4: <input type="text" name="link4" class="form-control" value="<?php echo $recomendacion->linkplataforma4;?>">
-        <input type="submit" class="btn btn-success mb-4 mt-2 text-center" value="Guardar">
-
+        <input type="submit" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
       </div>
      
 
