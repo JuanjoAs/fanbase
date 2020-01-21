@@ -6,6 +6,7 @@ if (isset($_POST['registro'])) {
     $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user");
     if(UsuarioController::insert($u)){
         $_SESSION['usuario'] = $u;
+        setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(),"/");
     }
     
     header("Location:index.php");
@@ -15,6 +16,7 @@ if (isset($_POST['inicioSesion'])) {
     $u = UsuarioController::login($_POST['mail'], $_POST['password']);
     if($u!=false){
         $_SESSION['usuario'] = $u;
+        setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(),"/");
     }
     header("Location:index.php");
 }
