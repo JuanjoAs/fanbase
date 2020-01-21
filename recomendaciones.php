@@ -12,7 +12,7 @@ require_once 'Model/Recomendacion.php';
 
 <?php include("includes/navbar.php");?>
 
-<main class="container mainpadding">
+<main class="container">
 
 <!--==========================
       Juegos
@@ -33,7 +33,7 @@ require_once 'Model/Recomendacion.php';
                   $i++;
                 ?>
                 <li class="border">
-                  <a data-toggle="collapse" href="#juegos<?php echo $i;?>" class="collapsed cajaenlace"><?php echo $recomendacion->nombre; ?><i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#juegos<?php echo $i;?>" class="collapsed m-3"><?php echo $recomendacion->nombre; ?><i class="fa fa-minus-circle"></i></a>
                   <div id="juegos<?php echo $i;?>" class="collapse">
                     <div class="row">
                       <div class="col-lg-3">
@@ -82,7 +82,7 @@ require_once 'Model/Recomendacion.php';
                   $i++;
                 ?>
                 <li class="border">
-                  <a data-toggle="collapse" href="#series<?php echo $i;?>" class="collapsed cajaenlace"><?php echo $recomendacion->nombre; ?><i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#series<?php echo $i;?>" class="collapsed"><?php echo $recomendacion->nombre; ?><i class="fa fa-minus-circle"></i></a>
                   <div id="series<?php echo $i;?>" class="collapse">
                     <div class="row">
                       <div class="col-lg-3">

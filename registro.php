@@ -13,7 +13,7 @@
       <div class="row justify-content-left align-content-center">
         <div class="form col-md-6">
           <h2> ¡BIENVENIDOS A FANBASE!</h2>
-          <form action="" method="post" class="" role="form" class="registro form">
+          <form action="sesionUsuario.php" method="post" class="" role="form" class="registro form">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
@@ -46,7 +46,7 @@
                 <div class="validation"></div>
               </div>
             </div>
-            <div class="text-center"><button type="submit">Registrarse</button></div>
+            <div class="text-center"><button type="submit" name="registro">Registrarse</button></div>
           </form>
         </div>
         <div class="col-md-6 ">
