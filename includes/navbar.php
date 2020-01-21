@@ -1,6 +1,7 @@
 <!--==========================
     HEADER
 ============================-->
+
 <header class="navbar navbar-expand-lg bg-secondary fixed-top">
   <a class="navbar-brand" href="index.php">
     <img src="assets/img/logo.png" alt="Logo Fanbase">
@@ -48,13 +49,13 @@
     </ul>
     <?php
     session_start();
-      //$_COOKIE['PHPSESSID']
       if (isset($_SESSION['usuario'])) {
+        include_once 'Controller/UsuarioController.php';
     ?>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Usuario <img src="assets/img/favicon.png">
+            <?php echo $_COOKIE['usu'];?> <img src="assets/img/favicon.png">
           </a>
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="miperfil.php">Mi perfil</a>
