@@ -3,6 +3,41 @@
 <html lang="es">
 <head>
 	<?php include("includes/head-tag-contents.php");?>
+
+    <style>
+
+        p.clasificacion {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        p.clasificacion span{
+            font-size: 18px;
+        }
+
+        p.clasificacion input {
+            position: absolute;
+            top: -100px;
+        }
+
+        p.clasificacion label {
+            float: right;
+            color: #333;
+        }
+
+        p.clasificacion label:hover,
+        p.clasificacion label:hover ~ label,
+        p.clasificacion input:checked ~ label {
+            color: #dd4;
+        }
+
+
+
+
+    </style>
+
 </head>
 <body>
 
@@ -35,31 +70,47 @@
 
                     <div class="row">
                         <div class="col-12">
+                            <form method="post">
+                                <input type="text" name="titulo" value="<?php if (isset($_REQUEST["titulo"])) echo $_REQUEST["titulo"];  ?>" hidden>
+                                <input type="text" name="video" value="<?php if (isset($_REQUEST["video"])) echo $_REQUEST["video"]; ?>" hidden>
 
-                            <!--Incio comentar-->
-                            <div class="row p-3 ml-0 mr-0 mt-4 border">
-
-                                <!--Interior comentar-->
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <div class="card">
-                                                <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top h-100" title="usename">
+                                <div class="row p-3 ml-0 mr-0 mt-4 border">
+                                    <!--Interior comentar-->
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="clasificacion">
+                                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                                    <label for="radio1" class="fas fa-star"></label>
+                                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                                    <label for="radio2" class="fas fa-star"></label>
+                                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                                    <label for="radio3" class="fas fa-star"></label>
+                                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                                    <label for="radio4" class="fas fa-star"></label>
+                                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                                    <label for="radio5" class="fas fa-star"></label>
+                                                </p>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-12">
 
-                                        <div class="col-11">
-                                            <div class="row">
-                                                <form class="col-12"> 
-                                                    <textarea class="form-control"></textarea>
-                                                    <button type="submit" class="btn btn-success mt-2" >Comentar</button>
-                                                </form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <form class="col-12">
+                                                        <textarea class="form-control" name="comentario"></textarea>
+                                                        <button type="submit" class="btn btn-success mt-2" >Comentar</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
+                            <!--Incio comentar-->
+
 
                             <!--Incio comentario-->
                             <div class="row p-3 ml-0 mr-0 mt-4 border">
