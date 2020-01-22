@@ -1,6 +1,7 @@
 <?php
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
+require_once 'Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Editar Recomendaciones";
 ?>
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
       </div>
       <div class="justify-content-center">
         <?php
-          $recomendacion=recomendacionObj::recuperarRecomendacion($_REQUEST['btneditar']);
+          $recomendacion=recomendacionController::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
         Nombre: <input type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: <textarea rows="5" class="form-control"><?php echo $recomendacion->descripcion;?></textarea>

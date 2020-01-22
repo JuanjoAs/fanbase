@@ -1,5 +1,6 @@
 <?php
  require_once 'Controller/Conexion.php';
+ require_once 'Model/Recomendacion.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,26 +9,11 @@
  */
 
 /**
- * Description of Recomendacion
+ * Description of RecomendacionController
  *
  * @author Trillo
  */
-class recomendacion {
-    private $nombre;
-    private $descripcion;
-    private $imagen;
-    private $tipo;
-    private $plataforma1;
-    private $plataforma2;
-    private $plataforma3;
-    private $plataforma4;
-    private $linkplataforma1;
-    private $linkplataforma2;
-    private $linkplataforma3;
-    private $linkplataforma4;
-
-
-    private $intentos;
+class recomendacionController {
 
     function __construct($id, $nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4) {
         $this->id = $id;
@@ -61,7 +47,7 @@ class recomendacion {
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
-                        $p=new self($registro->id, $registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
+                        $p=new recomendacion($registro->id, $registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
                         $productos[]=$p;
                     }
                     return $productos;
@@ -86,7 +72,7 @@ class recomendacion {
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
-                        $p=new self($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
+                        $p=new recomendacion($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
                         $productos[]=$p;
                     }
                     return $productos;
@@ -111,7 +97,7 @@ class recomendacion {
                 if($consulta!=null){
                     $productos=null;
                     $registro=$consulta->fetch(PDO::FETCH_OBJ);
-                        $productos=new self($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);                    
+                        $productos=new recomendacion($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);                    
                     return $productos;
                 }
                
@@ -173,7 +159,6 @@ class recomendacion {
         } catch (Exception $ex) {
             die('Error fatal, imposible conectar con la base de datos.');
         }
-        $recomendacion=self::recuperarRecomendacion($id);
         $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4')";
 
         try {

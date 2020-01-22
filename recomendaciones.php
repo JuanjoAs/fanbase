@@ -1,6 +1,7 @@
 <?php 
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
+require_once 'Controller/RecomendacionController.php';
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ require_once 'Model/Recomendacion.php';
           <div class="col-lg-12">
               <ul class="recomendaciones-list">
                 <?php
-                $recomendaciones=RecomendacionObj::recuperarTodosJuegos();
+                $recomendaciones=recomendacionController::recuperarTodosJuegos();
                 ?>
                 <?php
                 $i=-1;
@@ -74,7 +75,7 @@ require_once 'Model/Recomendacion.php';
           <div class="col-lg-12">
               <ul class="recomendaciones-list">
               <?php
-                $recomendaciones=RecomendacionObj::recuperarTodosSeries();
+                $recomendaciones=recomendacionController::recuperarTodosSeries();
                 ?>
                 <?php
                 $i=-1;

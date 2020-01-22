@@ -1,6 +1,7 @@
 <?php
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
+require_once 'Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 ?>
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
   <?php 
   include("includes/navbar.php"); 
   if(isset($_REQUEST['btnborrar'])){
-    recomendacionObj::borrarRecomendacion($_REQUEST['btnborrar']);
+    recomendacionController::borrarRecomendacion($_REQUEST['btnborrar']);
   }
   ?>
 
@@ -38,7 +39,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
       <div class="justify-content-center">
         <ul class="recomendaciones-list">
           <?php
-          $recomendaciones = RecomendacionObj::recuperarTodosJuegos();
+          $recomendaciones = recomendacionController::recuperarTodosJuegos();
           ?>
           <?php
           foreach ($recomendaciones as $recomendacion) {
@@ -67,7 +68,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
         <div class="justify-content-center">
         <ul class="recomendaciones-list">
           <?php
-          $recomendaciones = RecomendacionObj::recuperarTodosSeries();
+          $recomendaciones = recomendacionController::recuperarTodosSeries();
           ?>
           <?php
           foreach ($recomendaciones as $recomendacion) {
