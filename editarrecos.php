@@ -21,7 +21,12 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
 	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
 </script>
 </head>
+<?php
+if(isset($_REQUEST['btnguardar'])){
 
+}
+
+?>
 <body>
 
   <?php include("includes/navbar.php"); 
@@ -40,7 +45,7 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
         <?php
           $recomendacion=recomendacionController::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
-        Nombre: <input type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
+        Nombre: <input name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: <textarea rows="5" class="form-control"><?php echo $recomendacion->descripcion;?></textarea>
         Imagen: <img class="d-block border cartelrecos" src="<?php echo $recomendacion->imagen;?>">
         Tipo:<select class="form-control"> 
@@ -91,7 +96,7 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
         Enlace plataforma 2: <input type="text" name="link2" class="form-control" value="<?php echo $recomendacion->linkplataforma2;?>">
         Enlace plataforma 3: <input type="text" name="link3" class="form-control" value="<?php echo $recomendacion->linkplataforma3;?>">
         Enlace plataforma 4: <input type="text" name="link4" class="form-control" value="<?php echo $recomendacion->linkplataforma4;?>">
-        <input type="submit" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
+        <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
       </div>
      
 
