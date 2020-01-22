@@ -2,7 +2,7 @@
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
 require_once 'Controller/RecomendacionController.php';
-$PAGE_TITLE = "FanBase - Editar Recomendaciones";
+$PAGE_TITLE = "FanBase - Añadir recomendacion";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,8 +23,9 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
 </head>
 <?php
 if(isset($_REQUEST['btnguardar'])){
-  recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$_REQUEST['imagen'],$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4']);
-  header("Location:panelrecomendaciones.php?edit=success");
+  if(recomendacionController::insertarRecomendacion($_REQUEST['nombre'],$_REQUEST['descripcion'],$_REQUEST['imagen'],$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
+    header("Location:panelrecomendaciones.php?addreco=success");
+  }
 }
 
 ?>
@@ -40,7 +41,7 @@ if(isset($_REQUEST['btnguardar'])){
     ============================-->
     <section class="wow fadeInUp recomendaciones">
       <div class="section-header">
-        <h2>Editar recomendación</h2>
+        <h2>Añadir recomendación</h2>
       </div>
       <div class="justify-content-center">
       <form method="post">
@@ -59,45 +60,45 @@ if(isset($_REQUEST['btnguardar'])){
         <option value="pc">PC</option>
         <option value="gog">>GoG</option>
         <option value="steam">Steam</option>
-        <option value="microsoft"<?php if($recomendacion->plataforma1=="microsoft"){echo "selected";}?>>Microsoft</option>
-        <option value="google"<?php if($recomendacion->plataforma1=="google"){echo "selected";}?>>Google Play Store</option>
-        <option value="apple"<?php if($recomendacion->plataforma1=="apple"){echo "selected";}?>>App Store Apple</option>
-        <option value="imdb"<?php if($recomendacion->plataforma1=="imdb"){echo "selected";}?>>IMDB</option>
+        <option value="microsoft">>Microsoft</option>
+        <option value="google">Google Play Store</option>
+        <option value="apple">App Store Apple</option>
+        <option value="imdb">IMDB</option>
         </select>
         Plataforma 2:<select name="plataforma2" class="form-control"> 
         <option value="">----</option>
-          <option value="pc"<?php if($recomendacion->plataforma2=="pc"){echo "selected";}?>>PC</option>
-          <option value="gog"<?php if($recomendacion->plataforma2=="gog"){echo "selected";}?>>GoG</option>
-          <option value="steam"<?php if($recomendacion->plataforma2=="steam"){echo "selected";}?>>Steam</option>
-          <option value="microsoft"<?php if($recomendacion->plataforma2=="microsoft"){echo "selected";}?>>Microsoft</option>
-          <option value="google"<?php if($recomendacion->plataforma2=="google"){echo "selected";}?>>Google Play Store</option>
-          <option value="apple"<?php if($recomendacion->plataforma2=="apple"){echo "selected";}?>>App Store Apple</option>
-          <option value="imdb"<?php if($recomendacion->plataforma2=="imdb"){echo "selected";}?>>IMDB</option>
+          <option value="pc">>PC</option>
+          <option value="gog">GoG</option>
+          <option value="steam">>Steam</option>
+          <option value="microsoft">>Microsoft</option>
+          <option value="google">>Google Play Store</option>
+          <option value="apple">>App Store Apple</option>
+          <option value="imdb">IMDB</option>
         </select>
         Plataforma 3:<select name="plataforma3" class="form-control"> 
         <option value="">----</option>
-          <option value="pc"<?php if($recomendacion->plataforma3=="pc"){echo "selected";}?>>PC</option>
-          <option value="gog"<?php if($recomendacion->plataforma3=="gog"){echo "selected";}?>>GoG</option>
-          <option value="steam"<?php if($recomendacion->plataforma3=="steam"){echo "selected";}?>>Steam</option>
-          <option value="microsoft"<?php if($recomendacion->plataforma3=="microsoft"){echo "selected";}?>>Microsoft</option>
-          <option value="google"<?php if($recomendacion->plataforma3=="google"){echo "selected";}?>>Google Play Store</option>
-          <option value="apple"<?php if($recomendacion->plataforma3=="apple"){echo "selected";}?>>App Store Apple</option>
-          <option value="imdb"<?php if($recomendacion->plataforma3=="imdb"){echo "selected";}?>>IMDB</option>
+          <option value="pc">>PC</option>
+          <option value="gog">GoG</option>
+          <option value="steam">Steam</option>
+          <option value="microsoft">Microsoft</option>
+          <option value="google">Google Play Store</option>
+          <option value="apple">>App Store Apple</option>
+          <option value="imdb">IMDB</option>
         </select>
         Plataforma 4:<select name="plataforma4" class="form-control"> 
         <option value="">----</option>
-          <option value="pc"<?php if($recomendacion->plataforma4=="pc"){echo "selected";}?>>PC</option>
-          <option value="gog"<?php if($recomendacion->plataforma4=="gog"){echo "selected";}?>>GoG</option>
-          <option value="steam"<?php if($recomendacion->plataforma4=="steam"){echo "selected";}?>>Steam</option>
-          <option value="microsoft"<?php if($recomendacion->plataforma4=="microsoft"){echo "selected";}?>>Microsoft</option>
-          <option value="google"<?php if($recomendacion->plataforma4=="google"){echo "selected";}?>>Google Play Store</option>
-          <option value="apple"<?php if($recomendacion->plataforma4=="apple"){echo "selected";}?>>App Store Apple</option>
-          <option value="imdb"<?php if($recomendacion->plataforma4=="imdb"){echo "selected";}?>>IMDB</option>
+          <option value="pc">>PC</option>
+          <option value="gog">GoG</option>
+          <option value="steam">Steam</option>
+          <option value="microsoft">Microsoft</option>
+          <option value="google">Google Play Store</option>
+          <option value="apple">>App Store Apple</option>
+          <option value="imdb">IMDB</option>
         </select>
-        Enlace plataforma 1: <input type="text" name="linkplataforma1" class="form-control" value="<?php echo $recomendacion->linkplataforma1;?>">
-        Enlace plataforma 2: <input type="text" name="linkplataforma2" class="form-control" value="<?php echo $recomendacion->linkplataforma2;?>">
-        Enlace plataforma 3: <input type="text" name="linkplataforma3" class="form-control" value="<?php echo $recomendacion->linkplataforma3;?>">
-        Enlace plataforma 4: <input type="text" name="linkplataforma4" class="form-control" value="<?php echo $recomendacion->linkplataforma4;?>">
+        Enlace plataforma 1: <input type="text" name="linkplataforma1" class="form-control" value="">
+        Enlace plataforma 2: <input type="text" name="linkplataforma2" class="form-control" value="">
+        Enlace plataforma 3: <input type="text" name="linkplataforma3" class="form-control" value="">
+        Enlace plataforma 4: <input type="text" name="linkplataforma4" class="form-control" value="">
         <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
         </form>
       </div>

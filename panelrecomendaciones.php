@@ -49,6 +49,19 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
         <?php
       }
   }
+  if(isset($_GET['addreco'])){
+    if($_GET['addreco']=="success"){
+        ?>
+        <script>
+        Swal.fire(
+            'Añadida!',
+            'Recomendación añadida correctamente.',
+            'success'
+        );
+        </script>
+      <?php
+    }
+}
   ?>
 
   <main class="container">

@@ -48,11 +48,13 @@
       </li>
       <?php
       if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){
+        if($PAGE_TITLE == "FanBase - Administrar Recomendaciones"){
         ?> 
         <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video"){echo "active";} ?>">
         <a class="nav-link" href="add_reco.php">Añadir recomendación</a>
       </li>        
       <?php
+        }
       }
       ?>
     </ul>

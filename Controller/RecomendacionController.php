@@ -141,7 +141,7 @@ class recomendacionController {
         } catch (Exception $ex) {
             die('Error fatal, imposible conectar con la base de datos.');
         }
-        $sql = "INSERT INTO recomendacion VALUES('', $nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4)";
+        $sql = "INSERT INTO recomendacion VALUES( null, '$nombre', '$descripcion', 'assets','$tipo','$plataforma1', '$plataforma2','$plataforma3','$plataforma4','$linkplataforma1','$linkplataforma2','$linkplataforma3','$linkplataforma4')";
 
         try {
             $query = $c->query($sql);
