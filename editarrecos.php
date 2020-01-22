@@ -15,6 +15,10 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
         }
       }
   ?>
+  <script type="text/javascript" src="assets/js/nicedit/nicEdit.js"></script>
+<script type="text/javascript">
+	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+</script>
 </head>
 
 <body>
@@ -36,7 +40,8 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
           $recomendacion=recomendacionObj::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
         Nombre: <input type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
-        Descripción: <textarea class="form-control"><?php echo $recomendacion->descripcion;?></textarea>
+        Descripción: <textarea rows="5" class="form-control"><?php echo $recomendacion->descripcion;?></textarea>
+        Imagen: <img class="d-block border cartelrecos" src="<?php echo $recomendacion->imagen;?>">
         Tipo:<select class="form-control"> 
         <option value="juego">Juego</option>
         <option value="seriepeli">Serie/Película</option>

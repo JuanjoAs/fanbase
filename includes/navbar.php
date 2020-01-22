@@ -51,7 +51,7 @@
       if (isset($_SESSION['usuario'])) {
         include_once 'Controller/UsuarioController.php';
     ?>
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-5">
         <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo ucfirst($_SESSION['usuario']->usuario);?> <img src="assets/img/favicon.png">

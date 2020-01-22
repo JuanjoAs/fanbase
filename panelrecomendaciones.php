@@ -37,12 +37,10 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           $recomendaciones = RecomendacionObj::recuperarTodosJuegos();
           ?>
           <?php
-          $i = -1;
           foreach ($recomendaciones as $recomendacion) {
-            $i++;
           ?>
             <li class="border">
-              <div id="juegos<?php echo $i; ?>">
+              <div id="juegos">
                 <div class="row">
                   <div class="col-lg-9">
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
@@ -68,12 +66,10 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           $recomendaciones = RecomendacionObj::recuperarTodosSeries();
           ?>
           <?php
-          $i = -1;
           foreach ($recomendaciones as $recomendacion) {
-            $i++;
           ?>
             <li class="border">
-              <div id="juegos<?php echo $i; ?>">
+              <div id="seriepelis">
                 <div class="row">
                   <div class="col-lg-9">
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
