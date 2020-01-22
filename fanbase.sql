@@ -2,8 +2,8 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 21-01-2020 a las 14:45:03
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-01-2020 a las 10:52:00
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -68,15 +68,18 @@ CREATE TABLE `usuario` (
   `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
-  `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL
+  `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL,
+  `texto` text COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`) VALUES
-(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin');
+INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`, `texto`) VALUES
+(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'hola'),
+(2, 'rafa', 'Rafael', 'rafa@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', ''),
+(3, 'juanjo', 'Juanjo', 'juanjo@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '');
 
 -- --------------------------------------------------------
 
@@ -131,7 +134,7 @@ ALTER TABLE `recomendacion`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `valoracion`
