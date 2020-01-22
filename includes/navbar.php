@@ -57,7 +57,7 @@
             <?php echo $_SESSION['usuario']->usuario;?> <img src="assets/img/favicon.png">
           </a>
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="miperfil.php">Mi perfil</a>
+            <a class="dropdown-item" href="perfil.php">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango=='admin'){
               echo "<a class='dropdown-item' href='panelusuarios.php'>Usuarios</a>";
             }
