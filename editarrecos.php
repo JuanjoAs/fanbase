@@ -31,7 +31,7 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
       <div class="section-header">
         <h2>Editar recomendación</h2>
       </div>
-      <div class="justify-content-center text-center">
+      <div class="justify-content-center">
         <?php
           $recomendacion=recomendacionObj::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
