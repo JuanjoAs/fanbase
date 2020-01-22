@@ -124,10 +124,12 @@ class recomendacionController {
         try {
             $query = $c->query($sql);
         } catch (PDOException $ex) {
-            $success = false;
+            echo "Error ".$ex->getMessage()."<br />";
+            return false;
+
         }
 
-        return $success;
+        return true;
     }
 
     public static function insertarRecomendacion($nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4){
@@ -145,6 +147,8 @@ class recomendacionController {
             $query = $c->query($sql);
         } catch (PDOException $ex) {
             $success = false;
+            echo "Error ".$ex->getMessage()."<br />";
+
         }
 
         return $success;
@@ -152,19 +156,22 @@ class recomendacionController {
 
     public static function actualizarRecomendacion($id, $nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4){
         $success = true;
-
+    echo "actualizar";
         try {
             $c = new Conexion();
             $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (Exception $ex) {
             die('Error fatal, imposible conectar con la base de datos.');
         }
-        $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4' WHERE id=$id)";
-
+        $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4' WHERE id=$id";
         try {
             $query = $c->query($sql);
+            echo "run sql";
+
         } catch (PDOException $ex) {
             $success = false;
+            echo "Error ".$ex->getMessage()."<br />";
+
         }
 
         return $success;

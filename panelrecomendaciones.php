@@ -23,7 +23,31 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
   <?php 
   include("includes/navbar.php"); 
   if(isset($_REQUEST['btnborrar'])){
-    recomendacionController::borrarRecomendacion($_REQUEST['btnborrar']);
+    if(recomendacionController::borrarRecomendacion($_REQUEST['btnborrar'])){
+        ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Borrrado',
+                text: 'Recomendación borrada correctamente.',
+            });
+        </script>
+        <?php
+    }
+
+  }
+  if(isset($_GET['edit'])){
+      if($_GET['edit']=="success"){
+          ?>
+          <script>
+          Swal.fire(
+              'Actualizado!',
+              'Recomendación actualizada correctamente.',
+              'success'
+          );
+          </script>
+        <?php
+      }
   }
   ?>
 
