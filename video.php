@@ -1,4 +1,7 @@
+<?php require_once 'Model/Valoracion.php' ?>
+<?php require_once 'Controller/ValoracionController.php' ?>
 <?php include("includes/a_config.php");?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,9 +44,33 @@
 </head>
 <body>
 
+<?php
+
+if (!isset($_REQUEST["video"]) || $_REQUEST["video"] == "" ||
+    !isset($_REQUEST["titulo"]) || $_REQUEST["titulo"] == ""){
+    header("Location:trailers.php");
+}
+
+
+if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
+    isset($_REQUEST["estrellas"]) && $_REQUEST["estrellas"] != "" &&
+    isset($_REQUEST["comentario"]) && $_REQUEST["comentario"] != ""){
+
+    $valorar = new Valoracion(0, $_REQUEST["video"], $_SESSION["usuario"]->id, $_REQUEST["comentario"], $_REQUEST["estrellas"]);
+
+    ValoracionController::insertValoracion($valorar);
+
+    header("Location:video.php?titulo=".$_REQUEST["titulo"]."&video=".$_REQUEST["video"]);
+}
+?>
+
+
 <?php include("includes/navbar.php");?>
 
-<main class="">
+
+
+
+<main>
 
     <section class="section-bg">
 
@@ -67,7 +94,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12">
                             <form method="post">
@@ -81,14 +107,14 @@
                                             <div class="col-12">
                                                 <p class="clasificacion">
                                                     <input id="radio1" type="radio" name="estrellas" value="5">
-                                                    <label for="radio1" class="fas fa-star"></label>
+                                                    <label for="radio1" class="fas fa-star warning"></label>
                                                     <input id="radio2" type="radio" name="estrellas" value="4">
                                                     <label for="radio2" class="fas fa-star"></label>
                                                     <input id="radio3" type="radio" name="estrellas" value="3">
                                                     <label for="radio3" class="fas fa-star"></label>
                                                     <input id="radio4" type="radio" name="estrellas" value="2">
                                                     <label for="radio4" class="fas fa-star"></label>
-                                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                                    <input id="radio5" type="radio" name="estrellas" checked value="1">
                                                     <label for="radio5" class="fas fa-star"></label>
                                                 </p>
                                             </div>
@@ -109,116 +135,83 @@
                                     </div>
                                 </div>
                             </form>
-                            <!--Incio comentar-->
 
+                            <?php
 
-                            <!--Incio comentario-->
-                            <div class="row p-3 ml-0 mr-0 mt-4 border">
+                            $comentarios = ValoracionController::findAllfromVideoId($_REQUEST["video"]);
 
-                                <!--Interior comentario-->
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <div class="card d-none d-md-block">
-                                                <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top h-100" title="usename">
+                            if ($comentarios != null){
+                                foreach ($comentarios as $comentario){
+                                    ?>
+                                    <!--Incio comentario-->
+                                    <div class="row p-3 ml-0 mr-0 mt-4 border">
+
+                                        <!--Interior comentario-->
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-3 col-sm-2 col-md-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <img src="http://blog.aulaformativa.com/wp-content/uploads/2016/08/consideraciones-mejorar-primera-experiencia-de-usuario-aplicaciones-web-perfil-usuario.jpg" class="img-fluid" alt="Responsive image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-sm-10 col-md-10">
+                                                    <div class="row">
+                                                        <?php
+                                                        echo UsuarioController::find($comentario->idusuario)->usuario;
+                                                        ?>
+                                                    </div>
+                                                    <div class="row">
+                                                        <?php
+                                                        echo $comentario->comentario;
+                                                        ?>
+                                                    </div>
+                                                    <div class="row justify-content-end">
+                                                        <div class="col-5">
+                                                            <ul>
+                                                                <?php
+
+                                                                $val = $comentario->valoracion;
+
+                                                                    for ($i = 0; $i < 5; $i++){
+                                                                        if ($i < $val){
+                                                                            echo "<li class='fas text-warning fa-star'></li>";
+                                                                        } else {
+                                                                            echo "<li class='fas fa-star'></li>";
+                                                                        }
+                                                                    }
+                                                                ?>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <?php
+                                }
+                            } else {
+                                ?>
+                                <!--Incio comentario-->
+                                <div class="row p-3 ml-0 mr-0 mt-4 border">
 
-                                        <div class="col-11">
-                                            <div class="row">
-                                                username
-                                            </div>
-                                            <div class="row">
-                                                Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown...
+                                    <!--Interior comentario-->
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                </div>
+                                                <div class="row">
+                                                    No hay comentarios...
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!--Incio comentario-->
-                            <div class="row p-3 ml-0 mr-0 mt-4 border">
-
-                                <!--Interior comentario-->
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <div class="card d-none d-md-block">
-                                                <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top h-100" title="usename">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="row">
-                                                username
-                                            </div>
-                                            <div class="row">
-                                                Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown...
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Incio comentario-->
-                            <div class="row p-3 ml-0 mr-0 mt-4 border">
-
-                                <!--Interior comentario-->
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <div class="card d-none d-md-block">
-                                                <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top h-100" title="usename">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="row">
-                                                username
-                                            </div>
-                                            <div class="row">
-                                                Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown...
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Incio comentario-->
-                            <div class="row p-3 ml-0 mr-0 mt-4 border">
-
-                                <!--Interior comentario-->
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <div class="card d-none d-md-block">
-                                                <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                                                    class="card-img-top h-100" title="usename">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-11">
-                                            <div class="row">
-                                                username
-                                            </div>
-                                            <div class="row">
-                                                Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown...
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

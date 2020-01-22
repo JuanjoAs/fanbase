@@ -26,49 +26,13 @@ class Valoracion {
         $this->valoracion = $valoracion;
     }
 
-    /**
-     * @return id del mensaje
-     */
-    public function getId()
-    {
-        return $this->id;
+    public function __get($name) {
+        return $this->$name;
     }
 
-    /**
-     * @return id del video
-     */
-    public function getIdvideo()
-    {
-        return $this->idvideo;
+    public function __set($name, $value) {
+        $this->$name = $value;
     }
-
-    /**
-     * @return id del usuario
-     */
-    public function getIdusuario()
-    {
-        return $this->idusuario;
-    }
-
-    /**
-     * @return comentario
-     */
-    public function getComentario()
-    {
-        return $this->comentario;
-    }
-
-    /**
-     * @return valoracion
-     */
-    public function getValoracion()
-    {
-        return $this->valoracion;
-    }    //estrellas del usuario
-
-
-
-
 
 
 }
