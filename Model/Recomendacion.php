@@ -29,7 +29,8 @@ class recomendacionObj {
 
     private $intentos;
 
-    function __construct($nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4) {
+    function __construct($id, $nombre, $descripcion, $imagen,$tipo,$plataforma1, $plataforma2,$plataforma3,$plataforma4,$linkplataforma1,$linkplataforma2,$linkplataforma3,$linkplataforma4) {
+        $this->id = $id;
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->imagen = $imagen;
@@ -42,8 +43,6 @@ class recomendacionObj {
         $this->linkplataforma2 = $linkplataforma2;
         $this->linkplataforma3 = $linkplataforma3;
         $this->linkplataforma4 = $linkplataforma4;
-
-     
     }
     //Metodos 
     public function __get($name)    {        
@@ -62,7 +61,7 @@ class recomendacionObj {
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
-                        $p=new self($registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
+                        $p=new self($registro->id, $registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
                         $productos[]=$p;
                     }
                     return $productos;
@@ -87,7 +86,7 @@ class recomendacionObj {
                 if($consulta!=null){
                     $productos=null;
                     while($registro=$consulta->fetch(PDO::FETCH_OBJ)){
-                        $p=new self($registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
+                        $p=new self($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);
                         $productos[]=$p;
                     }
                     return $productos;
@@ -103,6 +102,27 @@ class recomendacionObj {
         }  
     }
 
+    public static function recuperarRecomendacion($id){
+        try{
+            $conex=new Conexion();
+            $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try{
+                $consulta=$conex->query("SELECT * FROM recomendacion WHERE id=$id");
+                if($consulta!=null){
+                    $productos=null;
+                    $registro=$consulta->fetch(PDO::FETCH_OBJ);
+                        $productos=new self($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);                    
+                    return $productos;
+                }
+               
+            }catch (PDOException $p) {
+                echo "Error ".$p->getMessage()."<br />";
+            }  
+
+        } catch (PDOException $p) {
+            echo "Error ".$p->getMessage()."<br />";
+        }  
+    }
 
     
 }
