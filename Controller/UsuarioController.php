@@ -133,7 +133,7 @@ class UsuarioController
             die('Error fatal, imposible conectar con la base de datos.');
         }
         
-        $sql = "DELETE FROM usuario WHERE id=$id";
+        $sql = "UPDATE usuario SET activo=0 WHERE id=$id";
 
         try {
             $query = $c->query($sql);
