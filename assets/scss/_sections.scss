@@ -600,3 +600,37 @@ transition: 0.3s ease-in-out;
 .volume-bar {
   width: 60px;
 }
+/*--------------------------------------------------------------
+# Seccion Perfil (DATOS USUARIO)
+--------------------------------------------------------------*/
+.datos-usuario{
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $secondary;
+    }
+    h5 {
+      @include body-font;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $secondary;
+      
+    } 
+    h4{
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $secondary;
+      span{
+        @include body-font;
+      }
+    }
+    p {
+      @include body-font;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color:$secondary;
+    }
+  }

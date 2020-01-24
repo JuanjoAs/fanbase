@@ -13,23 +13,50 @@
     } else { ?>
         <main class="container">
             <section class="datos-usuario section-bg wow fadeInUp pt-5 mt-5 align-items-center">
+
                 <div class="row">
                     <div class="col-9">
-                        <h1>
-                        <?php
-                        echo $_SESSION['usuario']->nombre;
-                        ?>
-                        </h1>
-                        <h5>
-                        <?php
-                        echo $_SESSION['usuario']->texto;
-                        ?>
-                        </h5>
-                    </div> 
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>
+                                    <?php
+                                    echo $_SESSION['usuario']->nombre;
+                                    ?>
+                                </h1>
+                                <h5>
+                                    <?php
+                                    echo $_SESSION['usuario']->texto;
+                                    ?>
+                                </h5>
+                            </div>
+                            <div class="col-12 mt-5">
+                                <h2>Datos Personales</h2>
+                                <h4>Usuario: <span> <?php echo $_SESSION['usuario']->usuario; ?></span></h4>
+                                <h4>Nombre: <span> <?php echo $_SESSION['usuario']->nombre; ?></span></h4>
+                                <h4>Mail: <span> <?php echo $_SESSION['usuario']->email; ?></span></h4>
+                                <h4>Contraseña: <span class="password"> <?php echo $_SESSION['usuario']->password; ?></span></h4>
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="col-3">
-                    <img src="assets/img/favicon.png" height="200px">
+                        <div class="row">
+                            <div class="col-12"> <img src="assets/img/favicon.png" height="250px" class="d-none d-lg-block"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="contacto col-12">
+                        <div class="form text-center mb-3">
+                            <a href="modificarDatosUsuario.php">
+                                <button type="submit">Modificar Datos</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </section>
         </main>
     <?php

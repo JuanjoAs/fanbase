@@ -733,4 +733,36 @@ Seccion Video
   width: 60px;
 }
 
+/*--------------------------------------------------------------
+# Seccion Perfil (DATOS USUARIO)
+--------------------------------------------------------------*/
+.datos-usuario h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d1223;
+}
+.datos-usuario h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d1223;
+}
+.datos-usuario h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d1223;
+}
+.datos-usuario h4 span {
+  font-family: "Roboto", sans-serif;
+}
+.datos-usuario p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #0d1223;
+}
+
 /*# sourceMappingURL=resume.css.map */

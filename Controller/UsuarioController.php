@@ -24,7 +24,8 @@ class UsuarioController
                 $obj->nombre,
                 $obj->email,
                 $obj->password,
-                $obj->rango
+                $obj->rango,
+                $obj->texto
             );
             $u->id = $obj->id;
             $coleccion[] = $u;
@@ -63,7 +64,8 @@ class UsuarioController
                 $obj->nombre,
                 $obj->email,
                 $obj->password,
-                $obj->rango
+                $obj->rango,
+                $obj->texto
             );
         }
 
@@ -92,7 +94,7 @@ class UsuarioController
 
         if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto);
             $usuario->id = $obj->id;
             return $usuario;
         }
@@ -119,6 +121,43 @@ class UsuarioController
             $success = false;
         }
 
+        return $success;
+    }
+
+    
+    public static function updateValorUsuario($usuario, $nombre, $email, $password, $rango,$texto)
+    {
+        $success = true;
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        if($usuario!=""){
+            $sql = "update usuario set usuario=".$usuario." where id=".$_SESSION['usuario']->id;
+        }
+        if($nombre!=""){
+            $sql = "update usuario set nombre=".$nombre." where id=".$_SESSION['usuario']->id;
+        }
+        if($email!=""){
+            $sql = "update usuario set email=".$email." where id=".$_SESSION['usuario']->id;
+        }
+        if($password!=""){
+            $sql = "update usuario set password=".md5($password)." where id=".$_SESSION['usuario']->id;
+        }
+        if($rango!=""){
+            $sql = "update usuario set rango=".$rango." where id=".$_SESSION['usuario']->id;
+        }
+        if($texto!=""){
+            $sql = "update usuario set texto=".$texto." where id=".$_SESSION['usuario']->id;
+        }
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+        
         return $success;
     }
 }
