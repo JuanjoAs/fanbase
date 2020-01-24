@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-01-2020 a las 10:52:00
--- Versión del servidor: 10.4.6-MariaDB
--- Versión de PHP: 7.3.9
+-- Tiempo de generación: 24-01-2020 a las 13:28:33
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -69,17 +69,18 @@ CREATE TABLE `usuario` (
   `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
   `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL,
-  `texto` text COLLATE utf8_spanish_ci NOT NULL
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `Activo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`, `texto`) VALUES
-(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'hola'),
-(2, 'rafa', 'Rafael', 'rafa@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', ''),
-(3, 'juanjo', 'Juanjo', 'juanjo@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '');
+INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`, `texto`, `Activo`) VALUES
+(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'hola', 1),
+(2, 'rafa', 'Rafael', 'rafa@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1),
+(3, 'juanjo', 'Juanjo', 'juanjo@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1);
 
 -- --------------------------------------------------------
 
