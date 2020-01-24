@@ -144,59 +144,54 @@
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
-}
+  li{
+    border-bottom: 1px solid #ddd;
+    padding-left: 25px;
+  }
+  a{
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: $darken;
+      &:hover{
+        color:$primary;
+      }
+  }
 
-.recomendaciones .recomendaciones-list li {
-  border-bottom: 1px solid #ddd;
-  padding-left: 25px;
-}
+  span{
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: $darken;
+  }
 
-.recomendaciones .recomendaciones-list a {
-  display: block;
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  padding-right: 20px;
-  color: $darken;
-    &:hover{
-      color:$primary;
+  i{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+  a.collapse{
+    color: $primary;
+  }
+  a.collapsed{
+    color: #000;
+    i::before{
+      content: "\f055" !important;
     }
-}
-.recomendaciones .recomendaciones-list span {
-  display: block;
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  padding-right: 20px;
-  color: $darken;
-}
-
-
-.recomendaciones .recomendaciones-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  padding-right: 20px;
-}
-
-.recomendaciones .recomendaciones-list p {
-  margin-bottom: 20px;
-}
-
-.recomendaciones .recomendaciones-list a.collapse {
-  color: $primary;
-}
-
-.recomendaciones .recomendaciones-list a.collapsed {
-  color: #000;
-}
-
-.recomendaciones .recomendaciones-list a.collapsed i::before {
-  content: "\f055" !important;
+  }
 }
 
 .storesbotones img{

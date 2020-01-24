@@ -124,7 +124,49 @@ class UsuarioController
         return $success;
     }
 
-    
+    public static function disable($id)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "UPDATE usuario SET activo=0 WHERE id=$id";
+
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+
+        return $success;
+    }
+
+    public static function enable($id)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "UPDATE usuario SET activo=1 WHERE id=$id";
+
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+        return $success;
+    }
+
     public static function updateValorUsuario($usuario, $nombre, $email, $password, $rango,$texto)
     {
         $success = true;
@@ -157,7 +199,7 @@ class UsuarioController
         } catch (PDOException $ex) {
             $success = false;
         }
-        
         return $success;
     }
+
 }

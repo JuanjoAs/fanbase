@@ -331,12 +331,10 @@ a:hover, a:focus, a:active {
   padding: 0;
   list-style: none;
 }
-
 .recomendaciones .recomendaciones-list li {
   border-bottom: 1px solid #ddd;
   padding-left: 25px;
 }
-
 .recomendaciones .recomendaciones-list a {
   display: block;
   position: relative;
@@ -350,7 +348,6 @@ a:hover, a:focus, a:active {
 .recomendaciones .recomendaciones-list a:hover {
   color: #2ab09c;
 }
-
 .recomendaciones .recomendaciones-list span {
   display: block;
   position: relative;
@@ -361,26 +358,21 @@ a:hover, a:focus, a:active {
   padding-right: 20px;
   color: #101522;
 }
-
 .recomendaciones .recomendaciones-list i {
   font-size: 24px;
   position: absolute;
   right: 0;
   padding-right: 20px;
 }
-
 .recomendaciones .recomendaciones-list p {
   margin-bottom: 20px;
 }
-
 .recomendaciones .recomendaciones-list a.collapse {
   color: #2ab09c;
 }
-
 .recomendaciones .recomendaciones-list a.collapsed {
   color: #000;
 }
-
 .recomendaciones .recomendaciones-list a.collapsed i::before {
   content: "" !important;
 }

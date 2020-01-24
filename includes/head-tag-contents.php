@@ -33,3 +33,5 @@ print $PAGE_TITLE;session_start();
 <!-- JQuery scripts -->
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+

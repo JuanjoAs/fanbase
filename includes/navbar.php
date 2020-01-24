@@ -46,12 +46,24 @@
           <a class="dropdown-item" href="terminoslegales.php">Terminos Legales</a>
         </div>
       </li>
+      <?php
+      if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){
+        if($PAGE_TITLE == "FanBase - Administrar Recomendaciones"){
+        ?> 
+        <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video"){echo "active";} ?>">
+        <a class="nav-link" href="add_reco.php">Añadir recomendación</a>
+      </li>        
+      <?php
+        }
+      }
+      ?>
     </ul>
     <?php
       if (isset($_SESSION['usuario'])) {
         include_once 'Controller/UsuarioController.php';
-    ?>
-      <ul class="navbar-nav mr-auto">
+      ?>
+    
+      <ul class="navbar-nav mr-5">
         <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales"){echo "active";} ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo ucfirst($_SESSION['usuario']->usuario);?> <img src="assets/img/favicon.png">
@@ -59,7 +71,7 @@
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="perfil.php">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango=='admin'){
-              echo "<a class='dropdown-item' href='panelusuarios.php'>Usuarios</a>";
+              echo "<a class='dropdown-item' href='adminUsuarios.php'>Usuarios</a>";
             }
             ?>
             <?php if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){

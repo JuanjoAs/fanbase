@@ -9,6 +9,7 @@ class Usuario {
     private $password;
     private $rango;
     private $texto;
+    private $activo = 1;
 
     public function __construct($usuario, $nombre, $email, $password, $rango,$texto) {
         $this->usuario = $usuario;
