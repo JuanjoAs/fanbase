@@ -16,8 +16,8 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
         }
       }
 
-      if(isset($_REQUEST['delete'])) {
-          if(!UsuarioController::delete($_REQUEST['delete'])) {
+      if(isset($_REQUEST['disable'])) {
+          if(!UsuarioController::disable($_REQUEST['delete'])) {
               $error = "Algo ha fallado al borrar el usuario";
           }
       }
@@ -54,7 +54,8 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
                   </div>
                   <div class="col-lg-3">
                     <form class="d-inline" method="POST" action="editUsuario.php"><button name="edit" class="btn btn-success m-2" value="<?php echo $usuario->id;?>">Editar</button></form>
-                    <form class="d-inline" method="POST" action=""><button name="delete" class="btn btn-danger m-2" value="<?php echo $usuario->id;?>">Borrar</button></form>
+
+                    <form class="d-inline" method="POST" action=""><button name="disable" class="btn btn-danger m-2" value="<?php echo $usuario->id;?>">Desactivar</button></form>
                   </div>
                 </div>
               </div>
