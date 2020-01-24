@@ -9,15 +9,16 @@ class Usuario {
     private $password;
     private $rango;
     private $texto;
-    private $activo = 1;
+    private $activo;
 
-    public function __construct($usuario, $nombre, $email, $password, $rango,$texto) {
+    public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo) {
         $this->usuario = $usuario;
         $this->nombre = $nombre;
         $this->email = $email;
         $this->password = $password;
         $this->rango = $rango;
         $this->texto = $texto;
+        $this->activo = $activo;
     }
 
     public function __get($name) {

@@ -25,7 +25,8 @@ class UsuarioController
                 $obj->email,
                 $obj->password,
                 $obj->rango,
-                $obj->texto
+                $obj->texto,
+                $obj->activo
             );
             $u->id = $obj->id;
             $coleccion[] = $u;
