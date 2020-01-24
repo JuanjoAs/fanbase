@@ -47,6 +47,7 @@
         </div>
       </li>
       <?php
+      if(isset($_SESSION['usuario'])){
       if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){
         if($PAGE_TITLE == "FanBase - Administrar Recomendaciones"){
         ?> 
@@ -55,7 +56,7 @@
       </li>        
       <?php
         }
-      }
+      }}
       ?>
     </ul>
     <?php
