@@ -1,6 +1,7 @@
 <?php
 include("includes/a_config.php");
 require_once 'Model/Recomendacion.php';
+require_once 'Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 ?>
 <!DOCTYPE html>
@@ -19,7 +20,48 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 
 <body>
 
-  <?php include("includes/navbar.php"); 
+  <?php 
+  include("includes/navbar.php"); 
+  if(isset($_REQUEST['btnborrar'])){
+    if(recomendacionController::borrarRecomendacion($_REQUEST['btnborrar'])){
+        ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Borrrado',
+                text: 'Recomendación borrada correctamente.',
+            });
+        </script>
+        <?php
+    }
+
+  }
+  if(isset($_GET['edit'])){
+      if($_GET['edit']=="success"){
+          ?>
+          <script>
+          Swal.fire(
+              'Actualizado!',
+              'Recomendación actualizada correctamente.',
+              'success'
+          );
+          </script>
+        <?php
+      }
+  }
+  if(isset($_GET['addreco'])){
+    if($_GET['addreco']=="success"){
+        ?>
+        <script>
+        Swal.fire(
+            'Añadida!',
+            'Recomendación añadida correctamente.',
+            'success'
+        );
+        </script>
+      <?php
+    }
+}
   ?>
 
   <main class="container">
@@ -34,15 +76,13 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
       <div class="justify-content-center">
         <ul class="recomendaciones-list">
           <?php
-          $recomendaciones = RecomendacionObj::recuperarTodosJuegos();
+          $recomendaciones = recomendacionController::recuperarTodosJuegos();
           ?>
           <?php
-          $i = -1;
           foreach ($recomendaciones as $recomendacion) {
-            $i++;
           ?>
             <li class="border">
-              <div id="juegos<?php echo $i; ?>">
+              <div id="juegos">
                 <div class="row">
                   <div class="col-lg-9">
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
@@ -65,22 +105,20 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
         <div class="justify-content-center">
         <ul class="recomendaciones-list">
           <?php
-          $recomendaciones = RecomendacionObj::recuperarTodosSeries();
+          $recomendaciones = recomendacionController::recuperarTodosSeries();
           ?>
           <?php
-          $i = -1;
           foreach ($recomendaciones as $recomendacion) {
-            $i++;
           ?>
             <li class="border">
-              <div id="juegos<?php echo $i; ?>">
+              <div id="seriepelis">
                 <div class="row">
                   <div class="col-lg-9">
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
                   </div>
                   <div class="col-lg-3">
-                    <button class="btn btn-success m-2">Editar</button>
-                    <button class="btn btn-danger m-2">Borrar</button>
+                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id;?>">Editar</button></form>
+                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id;?>">Borrar</button></form>
                   </div>
                 </div>
               </div>
