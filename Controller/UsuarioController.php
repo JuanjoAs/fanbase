@@ -167,39 +167,14 @@ class UsuarioController
         return $success;
     }
 
-    public static function updateValorUsuario($usuario, $nombre, $email, $password, $rango,$texto)
-    {
-        $success = true;
-        try {
-            $c = new Conexion();
-            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (Exception $ex) {
-            die('Error fatal, imposible conectar con la base de datos.');
-        }
-        if($usuario!=""){
-            $sql = "update usuario set usuario=".$usuario." where id=".$_SESSION['usuario']->id;
-        }
-        if($nombre!=""){
-            $sql = "update usuario set nombre=".$nombre." where id=".$_SESSION['usuario']->id;
-        }
-        if($email!=""){
-            $sql = "update usuario set email=".$email." where id=".$_SESSION['usuario']->id;
-        }
-        if($password!=""){
-            $sql = "update usuario set password=".md5($password)." where id=".$_SESSION['usuario']->id;
-        }
-        if($rango!=""){
-            $sql = "update usuario set rango=".$rango." where id=".$_SESSION['usuario']->id;
-        }
-        if($texto!=""){
-            $sql = "update usuario set texto=".$texto." where id=".$_SESSION['usuario']->id;
-        }
+    public static function queryPush($c,$sql){
+        
         try {
             $query = $c->query($sql);
         } catch (PDOException $ex) {
-            $success = false;
+            return false;
         }
-        return $success;
+        return true;
     }
 
 }

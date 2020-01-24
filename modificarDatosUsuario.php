@@ -31,6 +31,7 @@
                             </div>
                             <div class="col-12 mt-5">
                                 <h2>Datos Personales</h2>
+                                
                                 <h4>Usuario: <span> <?php echo $_SESSION['usuario']->usuario; ?></span></h4>
                                 <h4>Nombre: <span> <?php echo $_SESSION['usuario']->nombre; ?></span></h4>
                                 <h4>Mail: <span> <?php echo $_SESSION['usuario']->email; ?></span></h4>
