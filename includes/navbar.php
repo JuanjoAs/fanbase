@@ -59,7 +59,7 @@
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="perfil.php">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango=='admin'){
-              echo "<a class='dropdown-item' href='panelusuarios.php'>Usuarios</a>";
+              echo "<a class='dropdown-item' href='adminUsuarios.php'>Usuarios</a>";
             }
             ?>
             <?php if ($_SESSION['usuario']->rango=='admin' || $_SESSION['usuario']->rango=='editor'){

@@ -121,4 +121,26 @@ class UsuarioController
 
         return $success;
     }
+
+    public static function delete($id)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "DELETE FROM usuario WHERE id=$id";
+
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+
+        return $success;
+    }
 }
