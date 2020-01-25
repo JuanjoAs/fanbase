@@ -66,7 +66,8 @@ class UsuarioController
                 $obj->email,
                 $obj->password,
                 $obj->rango,
-                $obj->texto
+                $obj->texto,
+                $obj->activo
             );
         }
 
@@ -95,7 +96,7 @@ class UsuarioController
 
         if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo);
             $usuario->id = $obj->id;
             return $usuario;
         }
@@ -165,6 +166,29 @@ class UsuarioController
         } catch (PDOException $ex) {
             $success = false;
         }
+        return $success;
+    }
+
+    public static function update($usuario)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "UPDATE usuario SET usuario='$usuario->usuario', nombre='$usuario->nombre', email='$usuario->email', 
+        rango='$usuario->rango', texto='$usuario->texto' WHERE id=$usuario->id";
+
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+
         return $success;
     }
 

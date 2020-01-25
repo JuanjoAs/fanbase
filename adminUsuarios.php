@@ -27,6 +27,22 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
             $error = "Algo ha fallado al activar el usuario";
         }
       }
+
+      if(isset($_REQUEST['save'])) {
+        $u1 = new Usuario(
+          $_REQUEST['usuario'],
+          $_REQUEST['nombre'],
+          $_REQUEST['email'],
+          "",
+          $_REQUEST['rango'],
+          $_REQUEST['texto'],
+          1
+        );
+        $u1->id = $_REQUEST['id'];
+        if(!UsuarioController::update($u1)) {
+            $error = "<h1 class='mt-5'>Algo ha fallado al actualizar el usuario</h1>";
+        }
+      }
   ?>
 </head>
 
@@ -44,24 +60,45 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
       <div class="section-header">
         <h2>Administrar Usuarios</h2>
       </div>
-      <?php if(isset($_REQUEST['edit'])) { ?>
-        <div class="row justify-content-center">
+      <?php if(isset($_REQUEST['edit'])) { 
+        $u = UsuarioController::find($_REQUEST['edit']);
+      ?>
+        <div class="row justify-content-center mb-1">
         <div class="col-5">
-        <form>
+        <form action="" method="POST">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <label for="usuario">Nombre de usuario</label>
+              <input type="text" class="form-control" name="usuario" id="usuario" 
+              value="<?php echo $u->usuario; ?>"
+              required>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" name="nombre" id="nombre" 
+              value="<?php echo $u->nombre; ?>"
+              required>
             </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" 
+              value="<?php echo $u->email; ?>"
+              required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+              <label for="rango">Rango</label>
+              <select class="form-control" name="rango" id="rango">
+                <option value="user" <?php if($u->rango == "user") echo "selected"; ?>>Soldado raso</option>
+                <option value="editor" <?php if($u->rango == "editor") echo "selected"; ?>>Teniente</option>
+                <option value="admin" <?php if($u->rango == "admin") echo "selected"; ?>>General</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="texto">Descripción</label>
+              <textarea name="texto" id="texto" cols="30" rows="5" class="form-control"
+              ><?php echo $u->texto; ?></textarea>
+            </div>
+            <input type="hidden" name="id" value="<?php echo $_REQUEST['edit']; ?>">
+            <button type="submit" name="save" class="btn btn-primary btn-block">Guardar</button>
           </form>
         </div>
         </div>
