@@ -3,7 +3,7 @@ session_set_cookie_params("7200", "/");
 session_start();
 if (isset($_POST['registro'])) {
     include_once 'Controller/UsuarioController.php';
-    $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible");
+    $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible",1);
     if (UsuarioController::insert($u)) {
         $_SESSION['usuario'] = $u;
         setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
@@ -13,9 +13,18 @@ if (isset($_POST['registro'])) {
 if (isset($_POST['inicioSesion'])) {
     include_once 'Controller/UsuarioController.php';
     $u = UsuarioController::login($_POST['mail'], $_POST['password']);
-    if ($u != false) {
-        $_SESSION['usuario'] = $u;
-        setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
+    if ($u != false ) {
+        if($u->activo==0){
+            $_SESSION['errorActivo'] = "Error al iniciar sesion. Usuario no valido";
+        }else{
+            $_SESSION['usuario'] = $u;
+            setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
+        }
+        
     }
+    else{
+        $_SESSION['errorContraseña'] = "Error al iniciar sesion. Contraseña incorrecta";
+    }
+    
     header("Location:index.php");
 }
