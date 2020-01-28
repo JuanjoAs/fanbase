@@ -7,40 +7,6 @@
 <head>
 	<?php include("includes/head-tag-contents.php");?>
 
-    <style>
-
-        p.clasificacion {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            font-size: 20px;
-        }
-
-        p.clasificacion span{
-            font-size: 18px;
-        }
-
-        p.clasificacion input {
-            position: absolute;
-            top: -100px;
-        }
-
-        p.clasificacion label {
-            float: right;
-            color: #333;
-        }
-
-        p.clasificacion label:hover,
-        p.clasificacion label:hover ~ label,
-        p.clasificacion input:checked ~ label {
-            color: #dd4;
-        }
-
-
-
-
-    </style>
-
 </head>
 <body>
 

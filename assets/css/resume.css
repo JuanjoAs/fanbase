@@ -726,6 +726,36 @@ Seccion Video
 }
 
 /*--------------------------------------------------------------
+# Seccion Video
+--------------------------------------------------------------*/
+p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 20px;
+}
+p.clasificacion span {
+  font-size: 18px;
+}
+p.clasificacion input {
+  position: absolute;
+  top: -100px;
+}
+p.clasificacion label {
+  float: right;
+  color: #333;
+}
+p.clasificacion label:hover {
+  color: #dd4;
+}
+p.clasificacion label:hover ~ label {
+  color: #dd4;
+}
+p.clasificacion input:checked ~ label {
+  color: #dd4;
+}
+
+/*--------------------------------------------------------------
 # Seccion Perfil (DATOS USUARIO)
 --------------------------------------------------------------*/
 .datos-usuario h1 {
@@ -739,7 +769,7 @@ Seccion Video
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #0d1223;
+  color: #101522;
 }
 .datos-usuario h4 {
   font-size: 18px;

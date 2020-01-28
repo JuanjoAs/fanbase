@@ -595,6 +595,43 @@ transition: 0.3s ease-in-out;
 .volume-bar {
   width: 60px;
 }
+
+/*--------------------------------------------------------------
+# Seccion Video
+--------------------------------------------------------------*/
+
+p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 20px;
+
+  span {
+    font-size: 18px;
+  }
+
+  input {
+    position: absolute;
+    top: -100px;
+  }
+
+  label {
+    float: right;
+    color: #333;
+
+    &:hover {
+      color: #dd4;
+
+      ~ label {
+        color: #dd4;
+      }
+    }
+  }
+
+  input:checked ~ label {
+    color: #dd4;
+  }
+}
 /*--------------------------------------------------------------
 # Seccion Perfil (DATOS USUARIO)
 --------------------------------------------------------------*/
@@ -610,7 +647,7 @@ transition: 0.3s ease-in-out;
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 10px;
-      color: $secondary;
+      color: $darken; 
       
     } 
     h4{

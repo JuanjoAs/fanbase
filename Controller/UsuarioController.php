@@ -192,14 +192,6 @@ class UsuarioController
         return $success;
     }
 
-    public static function queryPush($c,$sql){
-        
-        try {
-            $query = $c->query($sql);
-        } catch (PDOException $ex) {
-            return false;
-        }
-        return true;
-    }
+
 
 }

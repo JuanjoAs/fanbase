@@ -13,7 +13,6 @@
     } else { ?>
         <main class="container">
             <section class="datos-usuario section-bg wow fadeInUp pt-5 mt-5 align-items-center">
-
                 <div class="row">
                     <div class="col-9">
                         <div class="row">
