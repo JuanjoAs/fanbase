@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
@@ -71,7 +71,8 @@ CREATE TABLE `usuario` (
   `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL,
   `texto` text COLLATE utf8_spanish_ci NOT NULL,
   `activo` tinyint(1) NOT NULL,
-  `imagen` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL
+  `imagen` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL,
+  `google_id` longtext COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
