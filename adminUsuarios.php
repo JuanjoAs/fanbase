@@ -116,7 +116,7 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
               <div id="juegos">
                 <div class="row">
                   <div class="col-lg-9">
-                    <span class="mt-3"><?php echo $usuario->nombre; ?></span>
+                    <span class="mt-3 <?php if($usuario->activo == 0) echo 'text-white'; ?>"><?php echo $usuario->nombre; ?></span>
                   </div>
                   <div class="col-lg-3">
                     <form class="d-inline" method="POST" action=""><button name="edit" class="btn btn-success m-2" value="<?php echo $usuario->id;?>">Editar</button></form>
