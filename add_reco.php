@@ -23,9 +23,17 @@ $PAGE_TITLE = "FanBase - Añadir recomendacion";
 </head>
 <?php
 if(isset($_REQUEST['btnguardar'])){
-  if(recomendacionController::insertarRecomendacion($_REQUEST['nombre'],$_REQUEST['descripcion'],$_REQUEST['imagen'],$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
-    header("Location:panelrecomendaciones.php?addreco=success");
-  }
+  if(is_uploaded_file($_FILES['file']['tmp_name'])){
+    $fich_unico=time()."-".$_FILES['file']['name'];
+    $ruta="assets/img/recomendaciones/".$fich_unico;
+    move_uploaded_file($_FILES['file']['tmp_name'], $ruta);
+    if(recomendacionController::insertarRecomendacion($_REQUEST['nombre'],$_REQUEST['descripcion'],$ruta,$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
+      header("Location:panelrecomendaciones.php?addreco=success");
+    }
+}else{
+    return false;
+}
+ 
 }
 
 ?>
@@ -44,12 +52,12 @@ if(isset($_REQUEST['btnguardar'])){
         <h2>Añadir recomendación</h2>
       </div>
       <div class="justify-content-center">
-      <form method="post">
+      <form method="post" enctype="multipart/form-data">
  
         <input name="id" hidden type="text" class="form-control">
         Nombre: <input name="nombre" type="text" class="form-control">
         Descripción: <textarea rows="5" class="form-control" name="descripcion"></textarea>
-        Imagen: <img class="d-block border cartelrecos" src="">
+        Imagen: <div><input type="file" name="file"></div>
         <input name="imagen" hidden type="text" class="form-control">
         Tipo:<select name="tipo" class="form-control"> 
         <option value="juego">Juego</option>
@@ -58,9 +66,9 @@ if(isset($_REQUEST['btnguardar'])){
         Plataforma 1:<select name="plataforma1" class="form-control"> 
         <option value="">----</option>
         <option value="pc">PC</option>
-        <option value="gog">>GoG</option>
+        <option value="gog">GoG</option>
         <option value="steam">Steam</option>
-        <option value="microsoft">>Microsoft</option>
+        <option value="microsoft">Microsoft</option>
         <option value="google">Google Play Store</option>
         <option value="apple">App Store Apple</option>
         <option value="imdb">IMDB</option>
@@ -70,7 +78,7 @@ if(isset($_REQUEST['btnguardar'])){
           <option value="pc">>PC</option>
           <option value="gog">GoG</option>
           <option value="steam">>Steam</option>
-          <option value="microsoft">>Microsoft</option>
+          <option value="microsoft">Microsoft</option>
           <option value="google">>Google Play Store</option>
           <option value="apple">>App Store Apple</option>
           <option value="imdb">IMDB</option>

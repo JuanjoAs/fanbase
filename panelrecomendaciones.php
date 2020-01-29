@@ -8,60 +8,68 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 <html lang="es">
 
 <head>
-  <?php 
-  include("includes/head-tag-contents.php"); 
-      if ($_SESSION['usuario']->rango!='admin'){
-        if ($_SESSION['usuario']->rango!='editor'){
-          header('Location: ./index.php');
-        }
-      }
+  <?php
+  include("includes/head-tag-contents.php");
+  if ($_SESSION['usuario']->rango != 'admin') {
+    if ($_SESSION['usuario']->rango != 'editor') {
+      header('Location: ./index.php');
+    }
+  }
   ?>
 </head>
 
 <body>
 
-  <?php 
-  include("includes/navbar.php"); 
-  if(isset($_REQUEST['btnborrar'])){
-    if(recomendacionController::borrarRecomendacion($_REQUEST['btnborrar'])){
-        ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Borrrado',
-                text: 'Recomendación borrada correctamente.',
-            });
-        </script>
-        <?php
+  <?php
+  include("includes/navbar.php");
+  if (isset($_REQUEST['btnborrar'])) {
+    if (recomendacionController::borrarRecomendacion($_REQUEST['btnborrar'])) {
+  ?>
+      <script type="text/javascript">
+        window.location = "./panelrecomendaciones.php?delete=success";
+      </script>
+    <?php
     }
-
   }
-  if(isset($_GET['edit'])){
-      if($_GET['edit']=="success"){
-          ?>
-          <script>
-          Swal.fire(
-              'Actualizado!',
-              'Recomendación actualizada correctamente.',
-              'success'
-          );
-          </script>
-        <?php
-      }
+  if (isset($_GET['delete'])) {
+    if ($_GET['delete'] == "success") {
+    ?>
+      <script>
+        Swal.fire({
+          icon: 'error',
+          title: 'Borrrado',
+          text: 'Recomendación borrada correctamente.',
+        });
+      </script>
+    <?php
+    }
   }
-  if(isset($_GET['addreco'])){
-    if($_GET['addreco']=="success"){
-        ?>
-        <script>
+  if (isset($_GET['edit'])) {
+    if ($_GET['edit'] == "success") {
+    ?>
+      <script>
         Swal.fire(
-            'Añadida!',
-            'Recomendación añadida correctamente.',
-            'success'
+          'Actualizado!',
+          'Recomendación actualizada correctamente.',
+          'success'
         );
-        </script>
-      <?php
+      </script>
+    <?php
     }
-}
+  }
+  if (isset($_GET['addreco'])) {
+    if ($_GET['addreco'] == "success") {
+    ?>
+      <script>
+        Swal.fire(
+          'Añadida!',
+          'Recomendación añadida correctamente.',
+          'success'
+        );
+      </script>
+  <?php
+    }
+  }
   ?>
 
   <main class="container">
@@ -88,8 +96,8 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
                   </div>
                   <div class="col-lg-3">
-                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id;?>">Editar</button></form>
-                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id;?>">Borrar</button></form>
+                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
+                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button></form>
                   </div>
                 </div>
               </div>
@@ -99,10 +107,10 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           ?>
         </ul>
       </div>
-        <div class="section-header">
-          <h2>Administrar Series</h2>
-        </div>
-        <div class="justify-content-center">
+      <div class="section-header">
+        <h2>Administrar Series</h2>
+      </div>
+      <div class="justify-content-center">
         <ul class="recomendaciones-list">
           <?php
           $recomendaciones = recomendacionController::recuperarTodosSeries();
@@ -117,8 +125,8 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
                     <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
                   </div>
                   <div class="col-lg-3">
-                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id;?>">Editar</button></form>
-                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id;?>">Borrar</button></form>
+                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
+                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button></form>
                   </div>
                 </div>
               </div>
