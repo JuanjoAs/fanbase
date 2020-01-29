@@ -1,5 +1,6 @@
 <?php require_once 'Model/Valoracion.php' ?>
 <?php require_once 'Controller/ValoracionController.php' ?>
+<?php require_once 'Controller/UsuarioController.php' ?>
 <?php include("includes/a_config.php");?>
 
 <!DOCTYPE html>
