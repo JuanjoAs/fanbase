@@ -103,7 +103,32 @@ class UsuarioController
 
         return false;
     }
+    public static function usuarioExiste($usuario)
+    {
+        $error = false;
 
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+
+        $sql = "SELECT * FROM usuario WHERE email='$usuario'";
+
+        try {
+            $usuario = $c->query($sql);
+        } catch (Exception $ex) {
+            $error = true;
+        }
+
+        unset($c);
+
+        if (!$error && $usuario->rowCount() != 0) {
+            return true;
+        }
+        return false;
+    }
     public static function insert($usuario)
     {
         $success = true;
