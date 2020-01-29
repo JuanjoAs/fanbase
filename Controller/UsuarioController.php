@@ -115,7 +115,7 @@ class UsuarioController
             die('Error fatal, imposible conectar con la base de datos.');
         }
 
-        $sql = "INSERT INTO usuario (usuario, nombre, email, password, rango) VALUES('$usuario->usuario', '$usuario->nombre', '$usuario->email','" . md5($usuario->password) . "', '$usuario->rango')";
+        $sql = "INSERT INTO usuario (usuario, nombre, email, password, rango,texto,activo) VALUES('$usuario->usuario', '$usuario->nombre', '$usuario->email','" . md5($usuario->password) . "', '$usuario->rango','$usuario->texto','$usuario->rango')";
 
         try {
             $query = $c->query($sql);
@@ -192,14 +192,6 @@ class UsuarioController
         return $success;
     }
 
-    public static function queryPush($c,$sql){
-        
-        try {
-            $query = $c->query($sql);
-        } catch (PDOException $ex) {
-            return false;
-        }
-        return true;
-    }
+
 
 }

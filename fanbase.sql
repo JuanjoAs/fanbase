@@ -1,11 +1,11 @@
--- phpMyAdmin SQL Dump
--- version 4.9.2
+﻿-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-01-2020 a las 13:28:33
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.1
+-- Tiempo de generación: 27-01-2020 a las 11:20:57
+-- Versión del servidor: 10.4.6-MariaDB
+-- Versión de PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -70,17 +70,19 @@ CREATE TABLE `usuario` (
   `password` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
   `rango` set('admin','user','editor','') COLLATE utf8_spanish_ci NOT NULL,
   `texto` text COLLATE utf8_spanish_ci NOT NULL,
-  `activo` tinyint(1) NOT NULL
+  `activo` tinyint(1) NOT NULL,
+  `imagen` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL,
+  `google_id` longtext COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`, `texto`, `activo`) VALUES
-(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', 'hola', 1),
-(2, 'rafa', 'Rafael', 'rafa@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1),
-(3, 'juanjo', 'Juanjo', 'juanjo@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1);
+INSERT INTO `usuario` (`id`, `usuario`, `nombre`, `email`, `password`, `rango`, `texto`, `activo`, `imagen`) VALUES
+(1, 'admin', 'SysAdmin', 'admin@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin', '#DandoKlambre Contrataciones kikoriveramanagement@Gmail.com Disponible mi nuevo single en todas las plataformas #amorprohibido\r\n', 1, ''),
+(2, 'rafa', 'Rafael', 'rafa@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1, ''),
+(3, 'juanjo', 'Juanjo', 'juanjo@fanbase.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user', '', 1, '');
 
 -- --------------------------------------------------------
 
