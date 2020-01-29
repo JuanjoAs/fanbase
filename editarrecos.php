@@ -23,10 +23,17 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
 </head>
 <?php
 if(isset($_REQUEST['btnguardar'])){
-  if(recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$_REQUEST['imagen'],$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
-    header("Location:panelrecomendaciones.php?edit=success");
-  }
-  
+  if(is_uploaded_file($_FILES['file']['tmp_name'])){
+    $fich_unico=time()."-".$_FILES['file']['name'];
+    $ruta="assets/img/recomendaciones/".$fich_unico;
+    move_uploaded_file($_FILES['file']['tmp_name'], $ruta);
+    if(recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$ruta,$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
+      header("Location:panelrecomendaciones.php?addreco=success");
+    }
+}else{
+    return false;
+}
+ 
 }
 
 ?>
@@ -45,14 +52,14 @@ if(isset($_REQUEST['btnguardar'])){
         <h2>Editar recomendación</h2>
       </div>
       <div class="justify-content-center">
-      <form method="post">
+      <form method="post" enctype="multipart/form-data">
         <?php
           $recomendacion=recomendacionController::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
         <input name="id" hidden type="text" class="form-control" value="<?php echo $recomendacion->id;?>">
         Nombre: <input name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: <textarea rows="5" class="form-control" name="descripcion"><?php echo $recomendacion->descripcion;?></textarea>
-        Imagen: <img class="d-block border cartelrecos" src="<?php echo $recomendacion->imagen;?>">
+        Imagen: <img class="d-block border cartelrecos" src="<?php echo $recomendacion->imagen;?>"><div><input type="file" name="file"></div>
         <input name="imagen" hidden type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
         Tipo:<select name="tipo" class="form-control"> 
         <option value="juego">Juego</option>
