@@ -26,7 +26,8 @@ class UsuarioController
                 $obj->password,
                 $obj->rango,
                 $obj->texto,
-                $obj->activo
+                $obj->activo,
+                $obj->imagen
             );
             $u->id = $obj->id;
             $coleccion[] = $u;
@@ -67,7 +68,8 @@ class UsuarioController
                 $obj->password,
                 $obj->rango,
                 $obj->texto,
-                $obj->activo
+                $obj->activo,
+                $obj->imagen
             );
         }
 
@@ -96,7 +98,7 @@ class UsuarioController
 
         if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo,$obj->imagen);
             $usuario->id = $obj->id;
             return $usuario;
         }

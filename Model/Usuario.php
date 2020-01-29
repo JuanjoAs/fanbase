@@ -10,8 +10,9 @@ class Usuario {
     private $rango;
     private $texto;
     private $activo;
+    private $imagen;
 
-    public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo) {
+    public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo,$imagen) {
         $this->usuario = $usuario;
         $this->nombre = $nombre;
         $this->email = $email;
@@ -19,6 +20,7 @@ class Usuario {
         $this->rango = $rango;
         $this->texto = $texto;
         $this->activo = $activo;
+        $this->imagen=$imagen;
     }
 
     public function __get($name) {

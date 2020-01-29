@@ -9,18 +9,18 @@
 <body>
   <?php include("includes/navbar.php"); ?>
   <main class="container">
-    <section class="registro section-bg wow fadeInUp pt-5 mt-5 align-items-center">
+    <section class="registro section-bg wow fadeInUp pt-5 mt-5 mb-5 align-items-center">
       <div class="row justify-content-left align-content-center">
         <div class="form col-md-6">
           <h2> ¡BIENVENIDOS A FANBASE!</h2>
           <form action="sesionUsuario.php" method="post" class="" role="form" class="registro form">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input required type="text" name="name" class="form-control" id="name" placeholder="Nombre" minlength="5"  pattern="[a-zA-Z ]{5,254}" data-msg="Introduce al menos 4 letras" />
+                <input required type="text" name="name" class="form-control" id="name" placeholder="Nombre" minlength="3"  pattern="[a-zA-Z ]{3,254}" data-msg="Introduce al menos 4 letras" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input required type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario" minlength="5" data-msg="Introduce al menos 4 letras" />
+                <input required type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario" minlength="3" data-msg="Introduce al menos 4 letras" />
                 <div class="validation"></div>
               </div>
             </div>

@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST['registro'])) {
     include_once 'Controller/UsuarioController.php';
     if( UsuarioController::usuarioExiste($_POST['mail'])==false){
-        $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible",1);
+        $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible",1,"");
         if (UsuarioController::insert($u)) {
             $_SESSION['usuario'] = $u;
             setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
@@ -38,9 +38,8 @@ if (isset($_POST['inicioSesion'])) {
     header("Location:index.php");
 }
 if (isset($_POST['cambioDatos'])) {
-    $_SESSION['usuario']->usuario=$_POST['cambioUsuario'];
-    $_SESSION['usuario']->nombre=$_POST['cambioNombre'];
-    $_SESSION['usuario']->email=$_POST['cambioEmail'];
-    $_SESSION['usuario']->texto=$_POST['cambioDescripcion'];
-    UsuarioController::update($_SESSION['usuario']);
+    include_once 'Controller/UsuarioController.php';
+    $u = new Usuario($_POST['cambioUsuario'],$_POST['cambioNombre'], $_POST['cambioEmail'], $_SESSION['usuario']->password, $_SESSION['usuario']->rango, $_POST['cambioDescripcion'],$_SESSION['usuario']->activo,$_SESSION['usuario']->imagen);
+    UsuarioController::update($u);
+    header("Location:perfil.php");
 }
