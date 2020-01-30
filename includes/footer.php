@@ -16,10 +16,12 @@
           <li><i class="fas fa-angle-right"></i> <a href="trailers.php">Tráilers</a></li>
           <li><i class="fas fa-angle-right"></i> <a href="#">Zona Interactiva</a></li>
           <li><i class="fas fa-angle-right"></i> <a href="recomendaciones.php">Recomendaciones</a></li>
-          <li><ul>
+          <li>
+            <ul>
               <li><i class="fas fa-angle-right"></i> <a href="nosotros.php">Sobre Nosotros</a></li>
               <li><i class="fas fa-angle-right"></i> <a href="contactar.php">Contáctanos</a></li>
-          </ul></li>
+            </ul>
+          </li>
 
           <li><i class="fas fa-angle-right"></i> <a href="registro.php">Regístrate</a></li>
         </ul>
@@ -55,6 +57,73 @@
           Purchase the pro version with working PHP/AJAX contact form.
         -->
     Some assets taken from <a href="https://bootstrapmade.com/">BootstrapMade</a>.
+  </div>
+</div>
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesión</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="sesionUsuario.php" method="POST">
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5 row">
+            <div class="col-1">
+              <i class="fas fa-envelope fa-2x prefix grey-text"></i>
+
+            </div>
+            <div class="col-11">
+              <input name="mail" type="email" id="defaultForm-email" class="form-control validate" placeholder="Introduce tu correo">
+              <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
+            </div>
+          </div>
+          <div class="md-form mb-4 row">
+            <div class="col-1">
+              <i class="fas fa-lock fa-2x prefix grey-text"></i>
+            </div>
+            <div class="col-11">
+              <input name="password" type="password" id="defaultForm-pass" class="form-control validate" placeholder="Introduce tu contraseña">
+              <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <div class="options mt-1 row">
+            <div class="col-8">
+              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
+            </div>
+            <div class="col-4">
+
+                <?php
+
+                    //requerimientos para funcionar google
+                    require_once 'assets/Composer/vendor/autoload.php';
+
+                    // Configuracion del cliente de google
+                    $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
+                    $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
+                    $redirectUri = 'http://localhost/fanbase/sesionUsuario.php';
+
+                    // creando el cliente con los datos necesarios
+                    $client = new Google_Client();
+                    $client->setClientId($clientID);
+                    $client->setClientSecret($clientSecret);
+                    $client->setRedirectUri($redirectUri);
+                    $client->addScope("email");
+                    $client->addScope("profile");
+
+                ?>
+                <a class="btn btn-success" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i></a>
+                <button class="btn btn-success" name="inicioSesion">Login</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 

@@ -144,49 +144,54 @@
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
-}
+  li{
+    border-bottom: 1px solid #ddd;
+    padding-left: 25px;
+  }
+  a{
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: $darken;
+      &:hover{
+        color:$primary;
+      }
+  }
 
-.recomendaciones .recomendaciones-list li {
-  border-bottom: 1px solid #ddd;
-  padding-left: 25px;
-}
+  span{
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: $darken;
+  }
 
-.recomendaciones .recomendaciones-list a {
-  margin:18px 0;
-  display: block;
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  padding-right: 20px;
-  color: $darken;
-    &:hover{
-      color:$primary;
+  i{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+  a.collapse{
+    color: $primary;
+  }
+  a.collapsed{
+    color: #000;
+    i::before{
+      content: "\f055" !important;
     }
-}
-
-.recomendaciones .recomendaciones-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  padding-right: 20px;
-}
-
-.recomendaciones .recomendaciones-list p {
-  margin-bottom: 20px;
-}
-
-.recomendaciones .recomendaciones-list a.collapse {
-  color: $primary;
-}
-
-.recomendaciones .recomendaciones-list a.collapsed {
-  color: #000;
-}
-
-.recomendaciones .recomendaciones-list a.collapsed i::before {
-  content: "\f055" !important;
+  }
 }
 
 .storesbotones img{
@@ -590,3 +595,74 @@ transition: 0.3s ease-in-out;
 .volume-bar {
   width: 60px;
 }
+
+/*--------------------------------------------------------------
+# Seccion Video
+--------------------------------------------------------------*/
+
+p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 20px;
+
+  span {
+    font-size: 18px;
+  }
+
+  input {
+    position: absolute;
+    top: -100px;
+  }
+
+  label {
+    float: right;
+    color: #333;
+
+    &:hover {
+      color: #dd4;
+
+      ~ label {
+        color: #dd4;
+      }
+    }
+  }
+
+  input:checked ~ label {
+    color: #dd4;
+  }
+}
+/*--------------------------------------------------------------
+# Seccion Perfil (DATOS USUARIO)
+--------------------------------------------------------------*/
+.datos-usuario{
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $secondary;
+    }
+    h5 {
+      @include body-font;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $darken; 
+      
+    } 
+    h4{
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $secondary;
+      span{
+        @include body-font;
+      }
+    }
+    p {
+      @include body-font;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color:$secondary;
+    }
+  }
