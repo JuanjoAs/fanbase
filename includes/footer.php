@@ -93,11 +93,12 @@
         </div>
         <div class="modal-footer">
           <div class="options mt-1 row">
-            <div class="col-9">
+            <div class="col-8">
               <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
             </div>
-            <div class="col-3">
-              <button class="btn btn-success" name="inicioSesion">Login</button>
+            <div class="col-4">
+                <button class="btn btn-success" name="inicioGoogle"><i class="text-danger fab fa-google"></i></button>
+                <button class="btn btn-success" name="inicioSesion">Login</button>
             </div>
           </div>
         </div>
