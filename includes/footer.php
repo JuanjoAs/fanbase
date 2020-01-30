@@ -97,7 +97,27 @@
               <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
             </div>
             <div class="col-4">
-                <button class="btn btn-success" name="inicioGoogle"><i class="text-danger fab fa-google"></i></button>
+
+                <?php
+
+                    //requerimientos para funcionar google
+                    require_once 'assets/Composer/vendor/autoload.php';
+
+                    // Configuracion del cliente de google
+                    $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
+                    $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
+                    $redirectUri = 'http://localhost/fanbase/sesionUsuario.php';
+
+                    // creando el cliente con los datos necesarios
+                    $client = new Google_Client();
+                    $client->setClientId($clientID);
+                    $client->setClientSecret($clientSecret);
+                    $client->setRedirectUri($redirectUri);
+                    $client->addScope("email");
+                    $client->addScope("profile");
+
+                ?>
+                <a class="btn btn-success" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i></a>
                 <button class="btn btn-success" name="inicioSesion">Login</button>
             </div>
           </div>
