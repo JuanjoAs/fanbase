@@ -6,7 +6,7 @@ if (isset($_POST['registro'])) {
     if( UsuarioController::usuarioExiste($_POST['mail'])==false){
         $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible",1,"");
         if (UsuarioController::insert($u)) {
-            $_SESSION['usuario'] = $u;
+            $_SESSION['usuario'] = UsuarioController::login($u->email, $u->password);
             setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
         }
         
@@ -42,4 +42,12 @@ if (isset($_POST['cambioDatos'])) {
     $u = new Usuario($_POST['cambioUsuario'],$_POST['cambioNombre'], $_POST['cambioEmail'], $_SESSION['usuario']->password, $_SESSION['usuario']->rango, $_POST['cambioDescripcion'],$_SESSION['usuario']->activo,$_SESSION['usuario']->imagen);
     UsuarioController::update($u);
     header("Location:perfil.php");
+}
+
+if (isset($_POST['inicioGoogle'])){
+
+
+
+
+
 }

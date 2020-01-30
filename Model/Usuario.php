@@ -11,6 +11,7 @@ class Usuario {
     private $texto;
     private $activo;
     private $imagen;
+    private $idadmob;
 
     public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo,$imagen) {
         $this->usuario = $usuario;
@@ -21,6 +22,14 @@ class Usuario {
         $this->texto = $texto;
         $this->activo = $activo;
         $this->imagen=$imagen;
+    }
+
+    public function setAdmob($admob){
+        $this->idadmob = $admob;
+    }
+
+    public function getAdmob(){
+        return $this->idadmob;
     }
 
     public function __get($name) {

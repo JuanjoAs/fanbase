@@ -98,13 +98,13 @@ if(isset($_REQUEST['delete'])) {
                                     foreach ($valoraciones as $valoracion) {
                                     ?>
                                         <div class="row">
-                                            <div class="col-lg-2">
+                                            <div class="col-lg-2 pt-2">
                                                 <p><?php echo $valoracion->idvideo; ?></p>
                                             </div>
-                                            <div class="col-lg-5">
+                                            <div class="col-lg-5 pt-2">
                                                 <p><?php echo $valoracion->comentario; ?></p>
                                             </div>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 pt-2">
                                                 <p>
                                                     <?php echo $valoracion->valoracion; ?>
                                                 </p>

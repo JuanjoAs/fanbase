@@ -94,8 +94,17 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                                 <div class="row">
                                                     <form class="col-12">
                                                         <textarea class="form-control" name="comentario"></textarea>
-                                                        <button type="submit" class="btn btn-success mt-2" >Comentar</button>
-                                                    </form>
+                                                        <?php
+                                                        if (isset($_SESSION["usuario"]) && $_SESSION["usuario"] != null){
+                                                            ?> <button type="submit" class="btn btn-success mt-2" >Comentar</button> <?php
+                                                        } else {
+                                                            ?></form> <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalLoginForm">
+                                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button></a> <?php
+                                                        }
+
+                                                        ?>
+
+
                                                 </div>
                                             </div>
                                         </div>

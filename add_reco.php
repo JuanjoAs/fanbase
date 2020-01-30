@@ -75,7 +75,7 @@ if(isset($_REQUEST['btnguardar'])){
         </select>
         Plataforma 2:<select name="plataforma2" class="form-control"> 
         <option value="">----</option>
-          <option value="pc">>PC</option>
+          <option value="pc">PC</option>
           <option value="gog">GoG</option>
           <option value="steam">>Steam</option>
           <option value="microsoft">Microsoft</option>
@@ -85,7 +85,7 @@ if(isset($_REQUEST['btnguardar'])){
         </select>
         Plataforma 3:<select name="plataforma3" class="form-control"> 
         <option value="">----</option>
-          <option value="pc">>PC</option>
+          <option value="pc">PC</option>
           <option value="gog">GoG</option>
           <option value="steam">Steam</option>
           <option value="microsoft">Microsoft</option>
@@ -95,7 +95,7 @@ if(isset($_REQUEST['btnguardar'])){
         </select>
         Plataforma 4:<select name="plataforma4" class="form-control"> 
         <option value="">----</option>
-          <option value="pc">>PC</option>
+          <option value="pc">PC</option>
           <option value="gog">GoG</option>
           <option value="steam">Steam</option>
           <option value="microsoft">Microsoft</option>
