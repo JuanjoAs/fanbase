@@ -42,15 +42,15 @@
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="assets/img/favicon.png" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="assets/img/logoPerfil.png" height="250px" class="d-none d-lg-block"></div>
                         </div>
-                        <div class="row justify-content-center">
+                        <!--<div class="row justify-content-center">
                             <div class="contacto col-12">
                                 <div class="form text-center mb-3">
                                     <button type="submit">Modificar Imagen</button>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                 </div>

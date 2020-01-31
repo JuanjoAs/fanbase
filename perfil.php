@@ -48,7 +48,7 @@ if(isset($_REQUEST['delete'])) {
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="assets/img/favicon.png" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="assets/img/logoPerfil.png"  height="250px" class="d-none d-lg-block"></div>
                         </div>
 
                     </div>
