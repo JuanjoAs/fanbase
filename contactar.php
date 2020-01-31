@@ -25,22 +25,22 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="name">Introduce tu nombre:</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
+                    <input type="text" name="name" class="form-control" required pattern="[a-zA-Z ]{3,254}" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
 
                   </div>
                   <div class="form-group col-md-6">
                     <label for="email">Introduce tu email:</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Introduce un correo valido" />
+                    <input type="email" class="form-control" name="email" required id="email" placeholder="Correo" data-rule="email" data-msg="Introduce un correo valido" />
 
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="asunto">Introduce el asunto de tu mensaje:</label>
-                  <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
+                  <input type="text" class="form-control" name="asunto" required id="asunto" placeholder="Asunto" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
                 </div>
                 <div class="form-group">
                   <label for="mensaje">Introduce tu mensaje:</label>
-                  <textarea class="form-control" name="mensaje" id="mensaje" rows="5" data-rule="required" data-msg="Introduce su mensaje" placeholder="Mensaje"></textarea>
+                  <textarea class="form-control" name="mensaje" id="mensaje" required rows="5" data-rule="required" data-msg="Introduce su mensaje" placeholder="Mensaje"></textarea>
                 </div>
                 <div class="text-center mb-3"><button type="submit">Enviar Mensaje</button></div>
               </form>
