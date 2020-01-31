@@ -163,7 +163,11 @@ class recomendacionController {
         } catch (Exception $ex) {
             die('Error fatal, imposible conectar con la base de datos.');
         }
-        $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4' WHERE id=$id";
+        if($imagen==''){
+            $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4' WHERE id=$id";
+        }else{
+            $sql = "UPDATE recomendacion SET nombre='$nombre', descripcion='$descripcion', imagen='$imagen',tipo='$tipo',plataforma1='$plataforma1', plataforma2='$plataforma2',plataforma3='$plataforma3',plataforma4='$plataforma4',linkplataforma1='$linkplataforma1',linkplataforma2='$linkplataforma2',linkplataforma3='$linkplataforma3',linkplataforma4='$linkplataforma4' WHERE id=$id";
+        }
         try {
             $query = $c->query($sql);
             echo "run sql";
