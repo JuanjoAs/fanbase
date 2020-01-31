@@ -48,7 +48,7 @@ if(isset($_REQUEST['delete'])) {
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="assets/img/favicon.png" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="assets/img/logoPerfil.png"  height="250px" class="d-none d-lg-block"></div>
                         </div>
 
                     </div>
@@ -98,13 +98,13 @@ if(isset($_REQUEST['delete'])) {
                                     foreach ($valoraciones as $valoracion) {
                                     ?>
                                         <div class="row">
-                                            <div class="col-lg-2">
+                                            <div class="col-lg-2 pt-2">
                                                 <p><?php echo $valoracion->idvideo; ?></p>
                                             </div>
-                                            <div class="col-lg-5">
+                                            <div class="col-lg-5 pt-2">
                                                 <p><?php echo $valoracion->comentario; ?></p>
                                             </div>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-3 pt-2">
                                                 <p>
                                                     <?php echo $valoracion->valoracion; ?>
                                                 </p>

@@ -124,6 +124,20 @@
   <?php
   unset($_SESSION['errorContraseña']);
   } ?>
+   <!-- Error Usuario existe -->
+   <?php if (isset($_SESSION['errorUsuarioExiste'])) {
+  ?>
+    <script>
+      Swal.fire({
+        title: 'Error!',
+        text: '<?php echo $_SESSION['errorUsuarioExiste']?>',
+        icon: 'error',
+        confirmButtonText: 'Continuar'
+      })
+    </script>
+  <?php
+  unset($_SESSION['errorUsuarioExiste']);
+  } ?>
   <!-- Error usuario no activo -->
   <?php if (isset($_SESSION['errorActivo'])) {
   ?>
