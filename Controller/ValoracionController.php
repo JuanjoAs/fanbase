@@ -16,7 +16,7 @@ class ValoracionController {
         }
 
         $sql = "INSERT INTO fanbase.valoracion (id_video, id_usuario, comentario, valoracion) VALUES ('".$valoracion->idvideo."', ".$valoracion->idusuario.", '".$valoracion->comentario."', ".$valoracion->valoracion.");";
-
+        echo $sql;
         try {
             $query = $c->query($sql);
         } catch(PDOException $ex) {
