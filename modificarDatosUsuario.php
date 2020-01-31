@@ -34,7 +34,13 @@
                                 <h2>Datos Personales</h2>
                                 <h4>Usuario: <span><input type="text" name="cambioUsuario" value=" <?php echo $_SESSION['usuario']->usuario; ?>" /></span></h4>
                                 <h4>Nombre: <span> <input type="text" name="cambioNombre" value="<?php echo $_SESSION['usuario']->nombre; ?>" /></span></h4>
-                                <h4>Mail: <span> <input type="text" name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4>
+                                <?php if ($_SESSION['usuario']->idg == "") {
+                                ?><h4>Mail: <span> <input type="text" name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4>
+                                <?php
+                                } else {
+                                ?> <input type="hidden" name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4><?php
+                                                                                                                                            }
+                                                                                                                                                ?>
 
                             </div>
                         </div>
@@ -54,15 +60,14 @@
                     </div>
 
                 </div>
-                <?php if ($_SESSION['usuario']->idg == "") {
-                    echo '<div class="row justify-content-center">
+
+                <div class="row justify-content-center">
                     <div class="contacto col-12">
                         <div class="form text-center mb-3">
                             <button type="submit" name="cambioDatos">Realizar Cambios</button>
                         </div>
                     </div>
-                </div>';
-                } ?>
+                </div>
                 </form>
             </section>
         </main>
