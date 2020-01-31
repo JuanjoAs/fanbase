@@ -39,8 +39,8 @@
                                 <?php
                                 } else {
                                 ?> <input type="hidden" name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4><?php
-                                                                                                                                            }
-                                                                                                                                                ?>
+                                                                                                                                        }
+                                                                                                                                            ?>
 
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="assets/img/logoPerfil.png" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="<?php ($_SESSION['usuario']->imagen=="")?print "assets/img/logoPerfil.png":print $_SESSION['usuario']->imagen;?>" height="250px" class="d-none d-lg-block"></div>
                         </div>
                         <!--<div class="row justify-content-center">
                             <div class="contacto col-12">

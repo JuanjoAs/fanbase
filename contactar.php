@@ -25,12 +25,12 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="name">Introduce tu nombre:</label>
-                    <input type="text" name="name" class="form-control" required pattern="[a-zA-Z ]{3,254}" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" />
+                    <input type="text" name="name" class="form-control" required pattern="[a-zA-Z ]{3,254}" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Introduce al menos 4 letras" value="<?php (isset($_SESSION['usuario']))?print $_SESSION['usuario']->nombre.'" disabled="':print '';?>""/>
 
                   </div>
                   <div class="form-group col-md-6">
                     <label for="email">Introduce tu email:</label>
-                    <input type="email" class="form-control" name="email" required id="email" placeholder="Correo" data-rule="email" data-msg="Introduce un correo valido" />
+                    <input type="email" class="form-control" name="email" required id="email" placeholder="Correo" data-rule="email" data-msg="Introduce un correo valido" value="<?php (isset($_SESSION['usuario']))?print $_SESSION['usuario']->email.'" disabled="':print '';?>""/>
 
                   </div>
                 </div>
