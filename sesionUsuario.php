@@ -62,6 +62,7 @@ if (isset($_POST['cambioDatos'])) {
     $u = new Usuario($_POST['cambioUsuario'], $_POST['cambioNombre'], $_POST['cambioEmail'], $_SESSION['usuario']->password, $_SESSION['usuario']->rango, $_POST['cambioDescripcion'], $_SESSION['usuario']->activo, $_SESSION['usuario']->imagen,$_SESSION['usuario']->idg);
     $u->id=$_SESSION['usuario']->id;
     UsuarioController::update($u);
+    $_SESSION['usuario']=$u;
     header("Location:perfil.php");
 }
 

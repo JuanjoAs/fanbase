@@ -54,7 +54,7 @@
                     </div>
 
                 </div>
-                <?php if ($_SESSION['usuario']->idg != "") {
+                <?php if ($_SESSION['usuario']->idg == "") {
                     echo '<div class="row justify-content-center">
                     <div class="contacto col-12">
                         <div class="form text-center mb-3">
