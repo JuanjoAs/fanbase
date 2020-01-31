@@ -10,7 +10,7 @@ session_start();
 // Configuracion del cliente de google
 $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com'; //id del cliente
 $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa'; //clave secreta del cliente
-$redirectUri = 'http://localhost/fanbase/sesionUsuario.php'; //lugar donde redirige al logearse
+$redirectUri = 'http://'.$_SERVER['HTTP_HOST'].'/fanbase/sesionUsuario.php'; //lugar donde redirige al logearse
 
 // creando el cliente con los datos necesarios
 $client = new Google_Client();
