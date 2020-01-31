@@ -128,7 +128,7 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                                 <div class="col-3 col-sm-2 col-md-2">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <img src="http://blog.aulaformativa.com/wp-content/uploads/2016/08/consideraciones-mejorar-primera-experiencia-de-usuario-aplicaciones-web-perfil-usuario.jpg" class="img-fluid" alt="Responsive image">
+                                                            <img src="<?php ($_SESSION['usuario']->imagen=="")?print "assets/img/logoPerfil.png":print $_SESSION['usuario']->imagen;?>" class="img-fluid" alt="Responsive image">
                                                         </div>
                                                     </div>
                                                 </div>
