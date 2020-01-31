@@ -24,7 +24,7 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
     isset($_REQUEST["comentario"]) && $_REQUEST["comentario"] != ""){
 
     $valorar = new Valoracion(0, $_REQUEST["video"], $_SESSION["usuario"]->id, $_REQUEST["comentario"], $_REQUEST["estrellas"]);
-
+    print_r($valorar);
     ValoracionController::insertValoracion($valorar);
 
     header("Location:video.php?titulo=".$_REQUEST["titulo"]."&video=".$_REQUEST["video"]);
@@ -128,7 +128,13 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                                 <div class="col-3 col-sm-2 col-md-2">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <img src="http://blog.aulaformativa.com/wp-content/uploads/2016/08/consideraciones-mejorar-primera-experiencia-de-usuario-aplicaciones-web-perfil-usuario.jpg" class="img-fluid" alt="Responsive image">
+                                                            <img src="<?php
+
+                                                                $us = UsuarioController::find($comentario->idusuario);
+
+                                                                ($us->imagen=="")?print "assets/img/logoPerfil.png":print $us->imagen;
+
+                                                                ?>" class="img-fluid" alt="Responsive image">
                                                         </div>
                                                     </div>
                                                 </div>

@@ -27,7 +27,8 @@ class UsuarioController
                 $obj->rango,
                 $obj->texto,
                 $obj->activo,
-                $obj->imagen
+                $obj->imagen,
+                $obj->google_id
             );
             $u->id = $obj->id;
             $coleccion[] = $u;
@@ -69,7 +70,8 @@ class UsuarioController
                 $obj->rango,
                 $obj->texto,
                 $obj->activo,
-                $obj->imagen
+                $obj->imagen,
+                $obj->google_id
             );
         }
 
@@ -98,7 +100,7 @@ class UsuarioController
 
         if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo,$obj->imagen);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo,$obj->imagen,$obj->google_id);
             $usuario->id = $obj->id;
             return $usuario;
         }
@@ -213,7 +215,6 @@ class UsuarioController
         
         $sql = "UPDATE usuario SET usuario='$usuario->usuario', nombre='$usuario->nombre', email='$usuario->email', 
         rango='$usuario->rango', texto='$usuario->texto' WHERE id=$usuario->id";
-
         try {
             $query = $c->query($sql);
         } catch (PDOException $ex) {
@@ -268,7 +269,7 @@ class UsuarioController
 
         if (!$error && $usuario->rowCount() != 0) {
             $obj = $usuario->fetch(PDO::FETCH_OBJ);
-            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo,$obj->imagen);
+            $usuario = new Usuario($obj->usuario, $obj->nombre, $obj->email, $obj->password, $obj->rango,$obj->texto, $obj->activo,$obj->imagen,$obj->google_id);
             $usuario->id = $obj->id;
             return $usuario;
         }

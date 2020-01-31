@@ -36,7 +36,9 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
           "",
           $_REQUEST['rango'],
           $_REQUEST['texto'],
-          1
+          1,
+          "",
+          ""
         );
         $u1->id = $_REQUEST['id'];
         if(!UsuarioController::update($u1)) {
