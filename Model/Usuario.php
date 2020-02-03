@@ -13,7 +13,7 @@ class Usuario {
     private $imagen;
     private $idg;
 
-    public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo,$imagen) {
+    public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo,$imagen,$idg) {
         $this->usuario = $usuario;
         $this->nombre = $nombre;
         $this->email = $email;
@@ -22,12 +22,13 @@ class Usuario {
         $this->texto = $texto;
         $this->activo = $activo;
         $this->imagen = $imagen;
+        $this->idg=$idg;
     }
 
     public function setidg($idg){
         $this->idg = $idg;
     }
-
+    
     public function getidg(){
         return $this->idg;
     }

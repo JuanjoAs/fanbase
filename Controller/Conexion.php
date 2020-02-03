@@ -2,10 +2,10 @@
 
 class Conexion extends PDO {
     private $dbtype = 'mysql';
-    private $host = 'localhost';
-    private $user = 'root';
-    private $passwd = '';
-    private $dbname = 'fanbase';
+    private $host = 'localhost';//sql313.nuxhosting.com	
+    private $user = 'root';//nsite_24858324	
+    private $passwd = '';//fanbase123
+    private $dbname = 'fanbase';//nsite_24858324_fanbase	
     private $charset = 'utf8';
 
     public function __construct() {

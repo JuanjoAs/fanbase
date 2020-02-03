@@ -24,7 +24,7 @@
                 <div class="row">
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Planet%20Zoo&video=TAvzq-HrSoQ">
+                        <a href="video?titulo=Planet%20Zoo&video=TAvzq-HrSoQ">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/PlanetZoo.png" class="card-img-top h-100"
                                     alt="Tráiler Planet Zoo" title="Tráiler Planet Zoo">
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Overwatch%202&video=uIfghi773WI">
+                        <a href="video?titulo=Overwatch%202&video=uIfghi773WI">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Primer tráiler gameplay de Overwatch 2 (PC, Mac, PS4, XOne).png"
                                     class="card-img-top h-100" alt="Tráiler de Overwatch 2"
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Riverbond%20tráiler&video=iTf1K-8pL7E">
+                        <a href="video?titulo=Riverbond%20tráiler&video=iTf1K-8pL7E">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Riverbond fecha con un tráiler su lanzamiento en Nintendo Switch y presenta nuevo mundo (PC, PS.png"
                                     class="card-img-top h-100"
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Trailer%20Pokémon%20Espada%20y%20Escudo&video=_9HtaIi8Mhw">
+                        <a href="video?titulo=Trailer%20Pokémon%20Espada%20y%20Escudo&video=_9HtaIi8Mhw">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Todo lo que has de saber de Pokémon Espada y Pokémon.png"
                                     class="card-img-top h-100"
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20cinemático%20de%20anuncio%20de%20Diablo&video=7RdDpqCmjb4">
+                        <a href="video?titulo=Tráiler%20cinemático%20de%20anuncio%20de%20Diablo&video=7RdDpqCmjb4">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Tráiler cinemático de anuncio de Diablo.png"
                                     class="card-img-top h-100"
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20cinemático%20de%20anuncio%20World%20of%20Warcraft%20Shadowlands&video=pU0uaUkYus8">
+                        <a href="video?titulo=Tráiler%20cinemático%20de%20anuncio%20World%20of%20Warcraft%20Shadowlands&video=pU0uaUkYus8">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Tráiler cinemático de anuncio World of Warcraft Shadowlands.png"
                                     class="card-img-top h-100"
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20de%20anuncio%20de%20IGI%20Origins&video=UOh0VvNKXX0">
+                        <a href="video?titulo=Tráiler%20de%20anuncio%20de%20IGI%20Origins&video=UOh0VvNKXX0">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Tráiler de anuncio de IGI Origins.png"
                                     class="card-img-top h-100" alt="Tráiler de anuncio de IGI Origins"
@@ -119,7 +119,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20de%20anuncio%20de%20Vaporum%20Lockdown&video=hQzQtslotnQ">
+                        <a href="video?titulo=Tráiler%20de%20anuncio%20de%20Vaporum%20Lockdown&video=hQzQtslotnQ">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Tráiler de anuncio de Vaporum Lockdown, un dungeon crawler con estética steampunk.png"
                                     class="card-img-top h-100"
@@ -133,7 +133,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20de%20Soul%20Calibur%20VI%20que%20presenta%20a%20Hilde&video=XznU3L3uWD8">
+                        <a href="video?titulo=Tráiler%20de%20Soul%20Calibur%20VI%20que%20presenta%20a%20Hilde&video=XznU3L3uWD8">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Tráiler de Soul Calibur VI que presenta a Hilde, su nueva luchadora.png"
                                     class="card-img-top h-100"
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Trailer%20Kickstarter%20de%20The%20Hive&video=LM2w1Tu0esk">
+                        <a href="video?titulo=Trailer%20Kickstarter%20de%20The%20Hive&video=LM2w1Tu0esk">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/TrailerKickstarterdeTheHive.png"
                                     class="card-img-top h-100" alt="Trailer Kickstarter de The Hive"
@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Trailer%20Persona%205%20Scramble&video=Ik-Xl6V6AVM">
+                        <a href="video?titulo=Trailer%20Persona%205%20Scramble&video=Ik-Xl6V6AVM">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/TrailerPersona5Scramble.png"
                                     class="card-img-top h-100" alt="Trailer Persona 5 Scramble"
@@ -174,7 +174,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                        <a href="video.php?titulo=Tráiler%20español%20para%20Star%20Wars%20Jedi%20Fallen%20Order&video=lw3tTKYGwr8">
+                        <a href="video?titulo=Tráiler%20español%20para%20Star%20Wars%20Jedi%20Fallen%20Order&video=lw3tTKYGwr8">
                             <div class="card tarjeta-trailers">
                                 <img src="assets/img/trailer/Ya tenemos tráiler de lanzamiento en español para Star Wars Jedi Fallen Order.png"
                                     class="card-img-top h-100"

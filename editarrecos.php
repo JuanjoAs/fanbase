@@ -27,13 +27,14 @@ if(isset($_REQUEST['btnguardar'])){
     $fich_unico=time()."-".$_FILES['file']['name'];
     $ruta="assets/img/recomendaciones/".$fich_unico;
     move_uploaded_file($_FILES['file']['tmp_name'], $ruta);
-    if(recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$ruta,$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
-      header("Location:panelrecomendaciones.php?addreco=success");
-    }
-}else{
+  }else{
+    $ruta=$_REQUEST['imagen'];
+  }
+  if(recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$ruta,$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
+    header("Location:panelrecomendaciones.php?edit=success");
+  }else{
     return false;
-}
- 
+  }
 }
 
 ?>
@@ -60,7 +61,7 @@ if(isset($_REQUEST['btnguardar'])){
         Nombre: <input name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: <textarea rows="5" class="form-control" name="descripcion"><?php echo $recomendacion->descripcion;?></textarea>
         Imagen: <img class="d-block border cartelrecos" src="<?php echo $recomendacion->imagen;?>"><div><input type="file" name="file"></div>
-        <input name="imagen" hidden type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
+        <input name="imagen" type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
         Tipo:<select name="tipo" class="form-control"> 
         <option value="juego">Juego</option>
         <option value="seriepeli">Serie/Película</option>
