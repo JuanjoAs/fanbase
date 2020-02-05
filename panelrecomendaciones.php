@@ -163,7 +163,6 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
               .done(function(msg) {
                 $("#" + idborrar + "").remove();
               });
-            //window.location.href = "?fireborrar=" + $(this).val();
           }
         })
       });
