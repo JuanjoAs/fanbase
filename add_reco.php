@@ -8,6 +8,8 @@ $PAGE_TITLE = "FanBase - Añadir recomendacion";
 <html lang="es">
 
 <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <?php
   include("includes/head-tag-contents.php");
   if ($_SESSION['usuario']->rango != 'admin') {
@@ -104,21 +106,7 @@ if (isset($_REQUEST['btnguardar'])) {
             </div>
             <div id="editor-container"></div>
           </div>
-          <script>
-            var quill = new Quill('#editor-container', {
-              modules: {
-                formula: true,
-                syntax: true,
-                toolbar: '#toolbar-container'
-              },
-              placeholder: 'Descripción',
-              theme: 'snow'
-            });
-
-            function guardarDesc(textoarea) {
-              $("textarea[name='descripcion']").val(textoarea);
-            }
-          </script>
+          
           <button type="button" class="btn btn-primary btn-sm" aria-label="Close" onclick="JavaScript: guardarDesc(quill.root.innerHTML);">
             Guardar descripción
           </button>
@@ -183,5 +171,19 @@ if (isset($_REQUEST['btnguardar'])) {
 </body>
 <?php include("includes/footer.php"); ?>
 
+<script>
+            var quill = new Quill('#editor-container', {
+              modules: {
+                formula: true,
+                syntax: true,
+                toolbar: '#toolbar-container'
+              },
+              placeholder: 'Descripción',
+              theme: 'snow'
+            });
 
+            function guardarDesc(textoarea) {
+              $("textarea[name='descripcion']").val(textoarea);
+            }
+          </script>
 </html>
