@@ -23,8 +23,8 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
   <?php
   include("includes/navbar.php");
   if (isset($_REQUEST['fireborrar'])) {
-    if(recomendacionController::borrarRecomendacion($_REQUEST['fireborrar'])){
-      ?>
+    if (recomendacionController::borrarRecomendacion($_REQUEST['fireborrar'])) {
+  ?>
       <script>
         Swal.fire({
           icon: 'error',
@@ -34,12 +34,11 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
       </script>
     <?php
     }
-
   }
 
   if (isset($_GET['delete'])) {
     if ($_GET['delete'] == "success") {
-  ?>
+    ?>
       <script>
         Swal.fire({
           icon: 'error',
@@ -91,24 +90,26 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
         <ul class="recomendaciones-list">
           <?php
           $recomendaciones = recomendacionController::recuperarTodosJuegos();
+          if (isset($recomendaciones)) {
+            foreach ($recomendaciones as $recomendacion) {
           ?>
-          <?php
-          foreach ($recomendaciones as $recomendacion) {
-          ?>
-            <li class="border">
-              <div id="juegos">
-                <div class="row">
-                  <div class="col-lg-9">
-                    <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
-                  </div>
-                  <div class="col-lg-3">
-                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
-                    <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
+              <li class="border">
+                <div id="juegos">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
+                    </div>
+                    <div class="col-lg-3">
+                      <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
+                      <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
           <?php
+            }
+          } else {
+            echo "<li>No hay recomendaciones.</li>";
           }
           ?>
         </ul>
@@ -120,8 +121,8 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
         <ul class="recomendaciones-list">
           <?php
           $recomendaciones = recomendacionController::recuperarTodosSeries();
-          ?>
-          <?php
+          if (isset($recomendaciones)) {
+
           foreach ($recomendaciones as $recomendacion) {
           ?>
             <li class="border">
@@ -139,6 +140,9 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
             </li>
           <?php
           }
+        }else {
+          echo "<li>No hay recomendaciones.</li>";
+        }
           ?>
         </ul>
       </div>
@@ -160,9 +164,9 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           cancelButtonText: 'Cancelar',
           confirmButtonText: 'Si, bórralo'
         }).then((result) => {
-          if (result.value) {  
+          if (result.value) {
             //post('/link/link', {test: '1'});   
-            window.location.href = "?fireborrar="+$(this).val();
+            window.location.href = "?fireborrar=" + $(this).val();
           }
         })
       });
