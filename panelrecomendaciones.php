@@ -161,8 +161,8 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           confirmButtonText: 'Si, bórralo'
         }).then((result) => {
           if (result.value) {  
-            post('/link/link', {test: '1'});   
-            //window.location.href = "?fireborrar="+$(this).val();
+            //post('/link/link', {test: '1'});   
+            window.location.href = "?fireborrar="+$(this).val();
           }
         })
       });
