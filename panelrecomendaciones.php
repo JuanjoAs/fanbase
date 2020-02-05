@@ -28,7 +28,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
       <script>
         Swal.fire({
           icon: 'error',
-          title: 'Borrrado',
+          title: 'Borrado',
           text: 'Recomendación borrada correctamente.',
         });
       </script>
@@ -36,19 +36,6 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
     }
   }
 
-  if (isset($_GET['delete'])) {
-    if ($_GET['delete'] == "success") {
-    ?>
-      <script>
-        Swal.fire({
-          icon: 'error',
-          title: 'Borrrado',
-          text: 'Recomendación borrada correctamente.',
-        });
-      </script>
-    <?php
-    }
-  }
   if (isset($_GET['edit'])) {
     if ($_GET['edit'] == "success") {
     ?>
@@ -93,7 +80,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           if (isset($recomendaciones)) {
             foreach ($recomendaciones as $recomendacion) {
           ?>
-              <li class="border">
+              <li class="border" id="<?php echo $recomendacion->id; ?>">
                 <div id="juegos">
                   <div class="row">
                     <div class="col-lg-9">
@@ -123,26 +110,26 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           $recomendaciones = recomendacionController::recuperarTodosSeries();
           if (isset($recomendaciones)) {
 
-          foreach ($recomendaciones as $recomendacion) {
+            foreach ($recomendaciones as $recomendacion) {
           ?>
-            <li class="border">
-              <div id="seriepelis">
-                <div class="row">
-                  <div class="col-lg-9">
-                    <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
-                  </div>
-                  <div class="col-lg-3">
-                    <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
-                    <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
+              <li class="border" id="<?php echo $recomendacion->id; ?>">
+                <div id="seriepelis">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <span class="mt-3"><?php echo $recomendacion->nombre; ?></span>
+                    </div>
+                    <div class="col-lg-3">
+                      <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
+                      <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
           <?php
+            }
+          } else {
+            echo "<li>No hay recomendaciones.</li>";
           }
-        }else {
-          echo "<li>No hay recomendaciones.</li>";
-        }
           ?>
         </ul>
       </div>
@@ -165,8 +152,18 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
           confirmButtonText: 'Si, bórralo'
         }).then((result) => {
           if (result.value) {
-            //post('/link/link', {test: '1'});   
-            window.location.href = "?fireborrar=" + $(this).val();
+            var idborrar = $(this).val();
+            $.ajax({
+                method: "POST",
+                url: "panelrecomendaciones.php",
+                data: {
+                  fireborrar: idborrar
+                }
+              })
+              .done(function(msg) {
+                $("#" + idborrar + "").remove();
+              });
+            //window.location.href = "?fireborrar=" + $(this).val();
           }
         })
       });
