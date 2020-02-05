@@ -22,18 +22,24 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 
   <?php
   include("includes/navbar.php");
-  if (isset($_REQUEST['btnborrar'])) {
-    if (recomendacionController::borrarRecomendacion($_REQUEST['btnborrar'])) {
-  ?>
-      <script type="text/javascript">
-        window.location = "./panelrecomendaciones.php?delete=success";
+  if (isset($_REQUEST['fireborrar'])) {
+    if(recomendacionController::borrarRecomendacion($_REQUEST['fireborrar'])){
+      ?>
+      <script>
+        Swal.fire({
+          icon: 'error',
+          title: 'Borrrado',
+          text: 'Recomendación borrada correctamente.',
+        });
       </script>
     <?php
     }
+
   }
+
   if (isset($_GET['delete'])) {
     if ($_GET['delete'] == "success") {
-    ?>
+  ?>
       <script>
         Swal.fire({
           icon: 'error',
@@ -97,7 +103,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
                   </div>
                   <div class="col-lg-3">
                     <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
-                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button></form>
+                    <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
                   </div>
                 </div>
               </div>
@@ -126,7 +132,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
                   </div>
                   <div class="col-lg-3">
                     <form class="d-inline" method="POST" action="editarrecos.php"><button name="btneditar" class="btn btn-success m-2" value="<?php echo $recomendacion->id; ?>">Editar</button></form>
-                    <form class="d-inline" method="POST"><button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button></form>
+                    <button name="btnborrar" class="btn btn-danger m-2" value="<?php echo $recomendacion->id; ?>">Borrar</button>
                   </div>
                 </div>
               </div>
@@ -140,8 +146,29 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
     </section>
 
   </main>
+  <script>
+    $(function() {
 
-  <?php include("includes/footer.php"); ?>
+      $("button[name='btnborrar']").click(function() {
+        Swal.fire({
+          title: '¿Estás seguro?',
+          text: "No podrás revertir los cambios.",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          cancelButtonText: 'Cancelar',
+          confirmButtonText: 'Si, bórralo'
+        }).then((result) => {
+          if (result.value) {  
+            post('/link/link', {test: '1'});   
+            //window.location.href = "?fireborrar="+$(this).val();
+          }
+        })
+      });
+    });
+  </script>
 </body>
+<?php include("includes/footer.php"); ?>
 
 </html>

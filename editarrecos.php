@@ -31,7 +31,7 @@ if(isset($_REQUEST['btnguardar'])){
     $ruta=$_REQUEST['imagen'];
   }
   if(recomendacionController::actualizarRecomendacion($_REQUEST['id'],$_REQUEST['nombre'],$_REQUEST['descripcion'],$ruta,$_REQUEST['tipo'],$_REQUEST['plataforma1'],$_REQUEST['plataforma2'],$_REQUEST['plataforma3'],$_REQUEST['plataforma4'],$_REQUEST['linkplataforma1'],$_REQUEST['linkplataforma2'],$_REQUEST['linkplataforma3'],$_REQUEST['linkplataforma4'])){
-    header("Location:panelrecomendaciones.php?edit=success");
+    header("Location:panelrecomendaciones?edit=success");
   }else{
     return false;
   }
