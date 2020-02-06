@@ -81,7 +81,7 @@
               <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
             </div>
           </div>
-          <div class="md-form mb-4 row">
+          <div class="md-form  row">
             <div class="col-1">
               <i class="fas fa-lock fa-2x prefix grey-text"></i>
             </div>
@@ -92,12 +92,12 @@
           </div>
 
         </div>
-        <div class="modal-footer">
-          <div class="options mt-1 row">
+        <div class="modal-footer d-block">
+          <div class="options mt-1 row" style="margin-bottom:-20px;">
             <div class="col-8">
-              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
+              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text d-block">¡Regístrate!</a></p>
             </div>
-            <div class="col-4">
+            <div class="col-xs-12 col-lg-4">
 
               <?php
 
@@ -119,8 +119,8 @@
 
               ?>
               <p>
-              <button class="btn btn-success pr-4" name="inicioSesion"><img style="width:20%; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
-              <a class="btn btn-success pr-3" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
+              <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
+              <a class="btn btn-success btn-block" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
               </p>
             </div>
           </div>

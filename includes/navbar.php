@@ -61,9 +61,9 @@
       <?php
       if (isset($_SESSION['usuario'])) {
         if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
-          if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones" ||$PAGE_TITLE == "FanBase - Recomendaciones" ) {
+          if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones" || $PAGE_TITLE == "FanBase - Recomendaciones" || $PAGE_TITLE == "FanBase - Añadir recomendacion") {
       ?>
-            <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video") {
+            <li class="nav-item <?php if ($CURRENT_PAGE == "Añadir recomendacion") {
                                   echo "active";
                                 } ?>">
               <a class="nav-link" href="add_reco">Añadir recomendación</a>

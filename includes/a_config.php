@@ -75,6 +75,11 @@ $dondeEstoy = $dondeEstoy[0];
 			$PAGE_TITLE = "FanBase - Juegos";
 			break;
 			
+		case "add_reco":
+			$CURRENT_PAGE = "Añadir recomendacion"; 
+			$PAGE_TITLE = "FanBase - Añadir recomendacion";
+			break;
+			
 		default:
 			$CURRENT_PAGE = "Inicio";
 			$PAGE_TITLE = "FanBase - Home";
