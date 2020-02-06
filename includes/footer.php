@@ -99,27 +99,29 @@
             </div>
             <div class="col-4">
 
-                <?php
+              <?php
 
-                    //requerimientos para funcionar google
-                    require_once 'assets/Composer/vendor/autoload.php';
+              //requerimientos para funcionar google
+              require_once 'assets/Composer/vendor/autoload.php';
 
-                    // Configuracion del cliente de google
-                    $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
-                    $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
-                    $redirectUri = 'http://localhost/fanbase/sesionUsuario.php';
+              // Configuracion del cliente de google
+              $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
+              $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
+              $redirectUri = 'http://' . $_SERVER['HTTP_HOST'] . '/fanbase/sesionUsuario.php';
 
-                    // creando el cliente con los datos necesarios
-                    $client = new Google_Client();
-                    $client->setClientId($clientID);
-                    $client->setClientSecret($clientSecret);
-                    $client->setRedirectUri($redirectUri);
-                    $client->addScope("email");
-                    $client->addScope("profile");
+              // creando el cliente con los datos necesarios
+              $client = new Google_Client();
+              $client->setClientId($clientID);
+              $client->setClientSecret($clientSecret);
+              $client->setRedirectUri($redirectUri);
+              $client->addScope("email");
+              $client->addScope("profile");
 
-                ?>
-                <a class="btn btn-success" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i></a>
-                <button class="btn btn-success" name="inicioSesion">Login</button>
+              ?>
+              <p>
+              <button class="btn btn-success pr-4" name="inicioSesion"><img style="width:20%; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
+              <a class="btn btn-success pr-3" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
+              </p>
             </div>
           </div>
         </div>

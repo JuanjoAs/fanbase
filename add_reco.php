@@ -8,8 +8,7 @@ $PAGE_TITLE = "FanBase - Añadir recomendacion";
 <html lang="es">
 
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
   <?php
   include("includes/head-tag-contents.php");
   if ($_SESSION['usuario']->rango != 'admin') {
@@ -56,7 +55,7 @@ if (isset($_REQUEST['btnguardar'])) {
 
           <input name="id" hidden type="text" class="form-control">
           Nombre: <input name="nombre" type="text" class="form-control" required>
-          <textarea name="descripcion" id="descripcion"></textarea>
+          <textarea name="descripcion" id="descripcion" hidden></textarea>
           Descripción: <div id="editor" name="editor"></div>
           <div id="standalone-container">
             <div id="toolbar-container">
@@ -106,10 +105,6 @@ if (isset($_REQUEST['btnguardar'])) {
             </div>
             <div id="editor-container"></div>
           </div>
-          
-          <button type="button" class="btn btn-primary btn-sm" aria-label="Close" onclick="JavaScript: guardarDesc(quill.root.innerHTML);">
-            Guardar descripción
-          </button>
           Imagen: <div><input type="file" name="file" required></div>
           <input name="imagen" hidden type="text" class="form-control">
           Tipo:<select name="tipo" class="form-control">
@@ -160,7 +155,7 @@ if (isset($_REQUEST['btnguardar'])) {
           Enlace plataforma 2: <input type="text" name="linkplataforma2" class="form-control" value="">
           Enlace plataforma 3: <input type="text" name="linkplataforma3" class="form-control" value="">
           Enlace plataforma 4: <input type="text" name="linkplataforma4" class="form-control" value="">
-          <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar" onclick="JavaScript: alert(quill.root.innerHTML);"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
+          <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
         </form>
       </div>
 
@@ -172,18 +167,27 @@ if (isset($_REQUEST['btnguardar'])) {
 <?php include("includes/footer.php"); ?>
 
 <script>
-            var quill = new Quill('#editor-container', {
-              modules: {
-                formula: true,
-                syntax: true,
-                toolbar: '#toolbar-container'
-              },
-              placeholder: 'Descripción',
-              theme: 'snow'
-            });
+  var quill = new Quill('#editor-container', {
+    modules: {
+      formula: true,
+      syntax: true,
+      toolbar: '#toolbar-container'
+    },
+    placeholder: 'Descripción',
+    theme: 'snow'
+  });
 
-            function guardarDesc(textoarea) {
-              $("textarea[name='descripcion']").val(textoarea);
-            }
-          </script>
+  function guardarDesc(textoarea) {
+    $("textarea[name='descripcion']").val(textoarea);
+  }
+  quill.on('text-change', function(delta, oldDelta, source) {
+    if (source == 'api') {
+      guardarDesc(quill.root.innerHTML);
+    } else if (source == 'user') {
+      guardarDesc(quill.root.innerHTML);
+
+    }
+  });
+</script>
+
 </html>
