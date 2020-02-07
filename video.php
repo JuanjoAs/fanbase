@@ -141,7 +141,7 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                                 <div class="col-9 col-sm-10 col-md-10">
                                                     <div class="row">
                                                         <?php
-                                                        echo UsuarioController::find($comentario->idusuario)->usuario;
+                                                        echo $us->usuario;
                                                         ?>
                                                     </div>
                                                     <div class="row">
