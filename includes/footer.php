@@ -119,8 +119,8 @@
 
               ?>
               <p>
-              <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
-              <a class="btn btn-success btn-block" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
+                <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
+                <a class="btn btn-success btn-block" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
               </p>
             </div>
           </div>
@@ -130,4 +130,10 @@
   </div>
 </div>
 
+
+ <script>
+    $(document).ready(function() {
+      $('#popRecomendaciones').modal('show');
+    });
+  </script>
 <?php include("includes/scripts.php"); ?>

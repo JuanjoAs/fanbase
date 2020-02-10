@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Conexion.php';
-require_once 'Model/Usuario.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/Conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Usuario.php';
 
 class UsuarioController
 {

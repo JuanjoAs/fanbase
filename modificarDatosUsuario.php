@@ -1,11 +1,9 @@
 <?php include("includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <?php include("includes/head-tag-contents.php"); ?>
 </head>
-
 <body>
     <?php include("includes/navbar.php"); ?>
     <?php if (!isset($_SESSION['usuario'])) {
@@ -13,7 +11,6 @@
     } else { ?>
         <main class="container">
             <section class="datos-usuario section-bg wow fadeInUp pt-5 mt-5 align-items-center">
-
                 <div class="row">
                     <div class="col-9">
                         <div class="row">
@@ -25,9 +22,7 @@
                                 </h1>
                                 <h5>
                                     <form method="post" action="sesionUsuario.php">
-                                        <textarea rows="4" cols="50" name="cambioDescripcion"><?php
-                                                                                                echo $_SESSION['usuario']->texto;
-                                                                                                ?></textarea>
+                                        <textarea rows="4" cols="50" name="cambioDescripcion"><?php echo $_SESSION['usuario']->texto; ?></textarea>
                                 </h5>
                             </div>
                             <div class="col-12 mt-5">
@@ -38,17 +33,14 @@
                                 ?><h4>Mail: <span> <input type="text" required name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4>
                                 <?php
                                 } else {
-                                ?> <input type="hidden" name="cambioEmail"value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4><?php
-                                                                                                                                        }
-                                                                                                                                            ?>
-
+                                ?> <input type="hidden" name="cambioEmail" value="<?php echo $_SESSION['usuario']->email; ?>" /></span></h4>
+                                <?php } ?>
                             </div>
                         </div>
-
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="<?php ($_SESSION['usuario']->imagen=="")?print "assets/img/logoPerfil.png":print $_SESSION['usuario']->imagen;?>" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="250px" class="d-none d-lg-block"></div>
                         </div>
                         <!--<div class="row justify-content-center">
                             <div class="contacto col-12">
@@ -58,9 +50,7 @@
                             </div>
                         </div>-->
                     </div>
-
                 </div>
-
                 <div class="row justify-content-center">
                     <div class="contacto col-12">
                         <div class="form text-center mb-3">
@@ -73,9 +63,7 @@
         </main>
     <?php
     } ?>
-
     <?php include("includes/footer.php"); ?>
-
 </body>
 
 </html>

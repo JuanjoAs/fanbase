@@ -1,7 +1,7 @@
 <?php
 include("includes/a_config.php");
-require_once 'Model/Recomendacion.php';
-require_once 'Controller/RecomendacionController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Recomendacion.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 ?>
 <!DOCTYPE html>

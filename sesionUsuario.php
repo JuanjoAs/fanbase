@@ -1,7 +1,7 @@
 <?php
 session_set_cookie_params("7200", "/");
-require_once 'assets/Composer/vendor/autoload.php';
-include_once 'Controller/UsuarioController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/assets/Composer/vendor/autoload.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/UsuarioController.php';
 session_start();
 
 //requerimientos para funcionar google

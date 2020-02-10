@@ -1,6 +1,6 @@
 <?php
- require_once 'Controller/Conexion.php';
- require_once 'Model/Recomendacion.php';
+ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/Conexion.php';
+ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Recomendacion.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -94,6 +94,27 @@ class recomendacionController {
             $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try{
                 $consulta=$conex->query("SELECT * FROM recomendacion WHERE id=$id");
+                if($consulta!=null){
+                    $productos=null;
+                    $registro=$consulta->fetch(PDO::FETCH_OBJ);
+                        $productos=new recomendacion($registro->id,$registro->nombre,$registro->descripcion,$registro->imagen,$registro->tipo,$registro->plataforma1,$registro->plataforma2,$registro->plataforma3,$registro->plataforma4,$registro->linkplataforma1,$registro->linkplataforma2,$registro->linkplataforma3,$registro->linkplataforma4);                    
+                    return $productos;
+                }
+               
+            }catch (PDOException $p) {
+                echo "Error ".$p->getMessage()."<br />";
+            }  
+
+        } catch (PDOException $p) {
+            echo "Error ".$p->getMessage()."<br />";
+        }  
+    }
+    public static function recuperarUltimaRecomendacion(){
+        try{
+            $conex=new Conexion();
+            $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try{
+                $consulta=$conex->query("SELECT * FROM recomendacion order by id desc limit 1");
                 if($consulta!=null){
                     $productos=null;
                     $registro=$consulta->fetch(PDO::FETCH_OBJ);
