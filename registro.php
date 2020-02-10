@@ -66,9 +66,10 @@
                 </div>
               </div>
             </div>
-              <div class="form-group mb-3">
-                <div class="row justify-content-center">
-                    <div class="card m-0 border border-rounder" style="width: 200px;">
+              <div class="mb-3">
+                <div class="row">
+
+                    <div class="col-3">
 
                         <?php
 
@@ -77,9 +78,11 @@
                         echo '<img class="card-img-top" src="' . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA code">';
 
                         ?>
-                        <div class="card-body">
-                            <input class="form-control m-0" type="text" name="captcha">
-                        </div>
+                    </div>
+                    <div class="col-9">
+
+                        <input class="mt-1" class="form-control w-100" type="text" name="captcha">
+
                     </div>
                 </div>
               </div>

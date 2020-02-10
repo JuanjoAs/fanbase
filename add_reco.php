@@ -60,8 +60,10 @@ if (isset($_REQUEST['btnguardar'])) {
           <div id="standalone-container">
             <div id="toolbar-container">
               <span class="ql-formats">
-                <select class="ql-font"></select>
-                <select class="ql-size">
+                <select class="ql-font">
+                  <option value="roboto" selected>Roboto</option>
+                  <option value="permanentmarker">Permanent Marker</option>
+                </select>
                 </select> </span>
               <span class="ql-formats">
                 <button class="ql-bold"></button>
@@ -167,6 +169,12 @@ if (isset($_REQUEST['btnguardar'])) {
 <?php include("includes/footer.php"); ?>
 
 <script>
+  var Font = Quill.import('formats/font');
+// We do not add Aref Ruqaa since it is the default
+Font.whitelist = ['mirza','permanentmarker',  'roboto'];
+Quill.register(Font, true);
+
+
   var quill = new Quill('#editor-container', {
     modules: {
       formula: true,
