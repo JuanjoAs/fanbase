@@ -102,5 +102,31 @@ class ValoracionController {
         return $success;
     }
 
+    /**
+     * @param $usuario
+     * @return bool
+     */
+    public static function update($valoracion)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "UPDATE valoracion SET comentario='$valoracion->comentario', valoracion=$valoracion->valoracion 
+            WHERE id_usuario=$valoracion->idusuario && id_video='$valoracion->idvideo'";
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+
+        return $success;
+    }
+
 }
 

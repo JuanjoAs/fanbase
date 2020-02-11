@@ -111,6 +111,9 @@ if(isset($_REQUEST['delete'])) {
                                             </div> 
                                             <div class="col-lg-2">
                                                 <form action="" method="POST">
+                                                    <button type="submit" name="edit" 
+                                                    class="btn btn-success"
+                                                    value="<?php echo $valoracion->id; ?>">Editar</button>
                                                     <button type="submit" name="delete" 
                                                     class="btn btn-danger"
                                                     value="<?php echo $valoracion->id; ?>">Borrar</button>
