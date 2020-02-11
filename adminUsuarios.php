@@ -28,24 +28,7 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
         }
       }
 
-      if(isset($_REQUEST['save'])) {
-        $u1 = new Usuario(
-          $_REQUEST['usuario'],
-          $_REQUEST['nombre'],
-          $_REQUEST['email'],
-          "",
-          $_REQUEST['rango'],
-          $_REQUEST['texto'],
-          1,
-          "",
-          ""
-        );
-        $u1->id = $_REQUEST['idusuario'];
-        if(!UsuarioController::update($u1)) {
-            $error = "<h1 class='mt-5'>Algo ha fallado al actualizar el usuario</h1>";
-        }
-      }
-  ?>
+      ?>
 </head>
 
 <body>
@@ -62,6 +45,44 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
       <div class="section-header">
         <h2>Administrar Usuarios</h2>
       </div>
+
+<?php
+      if(isset($_REQUEST['save'])) {
+        $u1 = new Usuario(
+          $_REQUEST['usuario'],
+          $_REQUEST['nombre'],
+          $_REQUEST['email'],
+          "",
+          $_REQUEST['rango'],
+          $_REQUEST['texto'],
+          1,
+          "",
+          ""
+        );
+        $u1->id = $_REQUEST['idusuario'];
+        if(!UsuarioController::update($u1)) {
+          ?>
+          <script>
+                Swal.fire(
+                  'Oh la la!!',
+                  'Algo ha fallado al actualualizar al usuario.',
+                  'error'
+                );
+          </script>
+        <?php
+        } else  {
+          ?>
+            <script>
+                  Swal.fire(
+                    'Correcto!',
+                    'Usuario actualizado correctamente.',
+                    'success'
+                  );
+            </script>
+          <?php
+        }
+      }
+  ?>
       <?php if(isset($_REQUEST['edit'])) { 
         $u = UsuarioController::find($_REQUEST['edit']);
       ?>
@@ -123,7 +144,6 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
                   <div class="form-group">
                     <label for="usuario">Nombre de usuario</label>
                     <input type="text" class="form-control" name="usuario" id="usuario" 
-                    
                     required>
                   </div>
                   <div class="form-group">
