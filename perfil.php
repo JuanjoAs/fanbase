@@ -1,6 +1,6 @@
 <?php include("includes/a_config.php"); 
-require_once 'Model/Valoracion.php';
-require_once 'Controller/ValoracionController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Valoracion.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/ValoracionController.php';
 
 if(isset($_REQUEST['delete'])) {
     valoracionController::delete($_REQUEST['delete']);

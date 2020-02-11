@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'Conexion.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Conexion.php';
 
 class ValoracionController {
 

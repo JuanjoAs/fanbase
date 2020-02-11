@@ -1,7 +1,7 @@
 <?php
 include("includes/a_config.php");
-require_once 'Model/Usuario.php';
-require_once 'Controller/UsuarioController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Usuario.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/UsuarioController.php';
 $PAGE_TITLE = "FanBase - Administrar Usuarios";
 ?>
 <!DOCTYPE html>

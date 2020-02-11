@@ -61,9 +61,9 @@
       <?php
       if (isset($_SESSION['usuario'])) {
         if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
-          if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones") {
+          if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones" || $PAGE_TITLE == "FanBase - Recomendaciones" || $PAGE_TITLE == "FanBase - Añadir recomendacion") {
       ?>
-            <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video") {
+            <li class="nav-item <?php if ($CURRENT_PAGE == "Añadir recomendacion") {
                                   echo "active";
                                 } ?>">
               <a class="nav-link" href="add_reco">Añadir recomendación</a>
@@ -84,7 +84,7 @@
                                         echo "active";
                                       } ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img src="<?php ($_SESSION['usuario']->imagen=="")?print "assets/img/logoPerfil.png":print $_SESSION['usuario']->imagen;?>" height="32px">
+            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="32px">
           </a>
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="perfil">Mi perfil</a>
@@ -116,27 +116,27 @@
     <script>
       Swal.fire({
         title: 'Error!',
-        text: '<?php echo $_SESSION['errorContraseña']?>',
+        text: '<?php echo $_SESSION['errorContraseña'] ?>',
         icon: 'error',
         confirmButtonText: 'Continuar'
       })
     </script>
   <?php
-  unset($_SESSION['errorContraseña']);
+    unset($_SESSION['errorContraseña']);
   } ?>
-   <!-- Error Usuario existe -->
-   <?php if (isset($_SESSION['errorUsuarioExiste'])) {
+  <!-- Error Usuario existe -->
+  <?php if (isset($_SESSION['errorUsuarioExiste'])) {
   ?>
     <script>
       Swal.fire({
         title: 'Error!',
-        text: '<?php echo $_SESSION['errorUsuarioExiste']?>',
+        text: '<?php echo $_SESSION['errorUsuarioExiste'] ?>',
         icon: 'error',
         confirmButtonText: 'Continuar'
       })
     </script>
   <?php
-  unset($_SESSION['errorUsuarioExiste']);
+    unset($_SESSION['errorUsuarioExiste']);
   } ?>
   <!-- Error usuario no activo -->
   <?php if (isset($_SESSION['errorActivo'])) {
@@ -144,14 +144,14 @@
     <script>
       Swal.fire({
         title: 'Error!',
-        text: '<?php echo $_SESSION['errorActivo']?>',
+        text: '<?php echo $_SESSION['errorActivo'] ?>',
         icon: 'error',
         confirmButtonText: 'Continuar',
         footer: '<a href="">¿Qué ha pasado?</a>'
       })
     </script>
   <?php
-  unset($_SESSION['errorActivo']);
+    unset($_SESSION['errorActivo']);
   } ?>
 
 </header>

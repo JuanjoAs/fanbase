@@ -1,6 +1,6 @@
-<?php require_once 'Model/Valoracion.php' ?>
-<?php require_once 'Controller/ValoracionController.php' ?>
-<?php require_once 'Controller/UsuarioController.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Valoracion.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/ValoracionController.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/UsuarioController.php' ?>
 <?php include("includes/a_config.php");?>
 
 <!DOCTYPE html>
@@ -141,7 +141,7 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                                 <div class="col-9 col-sm-10 col-md-10">
                                                     <div class="row">
                                                         <?php
-                                                        echo UsuarioController::find($comentario->idusuario)->usuario;
+                                                        echo $us->usuario;
                                                         ?>
                                                     </div>
                                                     <div class="row">
