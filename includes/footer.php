@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-3 col-md-6">
-        <img src="assets/img/logo.png" class="logo" alt="Logo Fanbase">
+        <img src="/fanbase/assets/img/logo.png" class="logo" alt="Logo Fanbase">
         <p>
           Donde se informan los fans de verdad
         </p>
@@ -102,7 +102,7 @@
               <?php
 
               //requerimientos para funcionar google
-              require_once 'assets/Composer/vendor/autoload.php';
+              require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/assets/Composer/vendor/autoload.php';
 
               // Configuracion del cliente de google
               $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
@@ -136,4 +136,5 @@
       $('#popRecomendaciones').modal('show');
     });
   </script>
-<?php include("includes/scripts.php"); ?>
+<?php 
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/includes/scripts.php'; ?>
