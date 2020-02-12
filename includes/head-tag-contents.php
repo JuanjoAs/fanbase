@@ -57,7 +57,7 @@
       <?php 
       include_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionController.php';
     
-      echo " <a href='recomendaciones'> <img src='".(recomendacionController::recuperarUltimaRecomendacion())->imagen."' alt='Ultima recomendación'></a>";
+      echo " <a href='recomendaciones'> <img src='".(recomendacionController::recuperarUltimaRecomendacion())->imagen."' height='25%' alt='Ultima recomendación'></a>";
       setcookie('avisoNews','true',time()+2592000000,'/');
       ?>
       </div>
