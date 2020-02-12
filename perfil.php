@@ -1,10 +1,6 @@
 <?php include("includes/a_config.php"); 
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Valoracion.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/ValoracionController.php';
-
-if(isset($_REQUEST['delete'])) {
-    valoracionController::delete($_REQUEST['delete']);
-}
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +60,67 @@ if(isset($_REQUEST['delete'])) {
                     </div>
                 </div>
 
+                <?php
+                    if(isset($_REQUEST['save'])) {
+                        $v1 = new Valoracion(
+                          $_REQUEST['idvaloracion'],
+                          $_REQUEST['idusuario'],
+                          $_REQUEST['idvideo'],
+                          $_REQUEST['comentario'],
+                          $_REQUEST['valoracion'],
+                        );
+                        if(!ValoracionController::update($v1)) {
+                            $error = "<h1 class='mt-5'>Algo ha fallado al actualizar la valoración</h1>";
+                        } else {
+                            ?>
+                                <script>
+                                    Swal.fire(
+                                        'Correcto!',
+                                        'Valoración actualizada correctamente.',
+                                        'success'
+                                    );
+                                </script>
+                            <?php
+                        }
+                    }
+
+                    if(isset($_REQUEST['fireborrar'])) {
+                        valoracionController::delete($_REQUEST['fireborrar']);
+                        header('refresh:1');
+                    }
+                ?>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edición de valoración</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                    <input type="text" id="idvaloracion" name="idvaloracion">
+                    <input type="text" id="idusuario" name="idusuario">
+                    <input type="text" id="idvideo" name="idvideo">
+                    <div class="form-group">
+                        <label for="comentario">Comentario</label>
+                        <textarea name="comentario" id="comentario" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="valoracion">Valoración</label>
+                        <input type="number" min="0" max="5" class="form-control" name="valoracion" id="valoracion" 
+                        required>
+                    </div>
+                    <button type="submit" name="save" class="btn btn-primary btn-block">Guardar</button>
+                    </form>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+
                 <section class="recomendaciones wow fadeInUp">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
@@ -111,7 +168,10 @@ if(isset($_REQUEST['delete'])) {
                                             </div> 
                                             <div class="col-lg-2">
                                                 <form action="" method="POST">
-                                                    <button type="submit" name="delete" 
+                                                    <button type="button" name="edit" 
+                                                    class="btn btn-success" data-toggle="modal" data-target="#exampleModal"
+                                                    value="<?php echo $valoracion->id; ?>">Editar</button>
+                                                    <button type="button" name="delete" 
                                                     class="btn btn-danger"
                                                     value="<?php echo $valoracion->id; ?>">Borrar</button>
                                                 <form>
@@ -133,6 +193,60 @@ if(isset($_REQUEST['delete'])) {
         </main>
     <?php
     } ?>
+
+<script>
+    $(function() {
+        $("button[name='delete']").click(function() {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "No podrás revertir los cambios.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Si, bórralo'
+            }).then((result) => {
+                if (result.value) {
+                    console.log('ok');
+                    let idborrar = $(this).val();
+                    $.ajax({
+                        method: "POST",
+                        url: "perfil.php",
+                        data: {
+                            fireborrar: idborrar
+                        }
+                    })
+                }
+            })
+        });
+    });
+</script>
+
+<script>
+    $("button[name='edit']").click(function() {
+      $("#idvaloracion").val($("button[name='edit']").val());
+      let id = $(this).val();
+
+      $.ajax({
+        type: 'POST',
+        url: 'data_val.php',
+        data: { idvaloracion: id },
+        success: function(res) {
+          //console.log(res);
+          let valoracion = JSON.parse(res);
+          $("#idvaloracion").val(valoracion.id);
+          $("#idusuario").val(valoracion.idusuario);
+          $("#idvideo").val(valoracion.idvideo);
+          $("#comentario").val(valoracion.comentario);
+          $("#valoracion").val(valoracion.valoracion);
+        },
+        error: function() {
+              console.log("No se ha podido obtener la información");
+        }
+      });
+    })
+  </script>
 
     <?php include("includes/footer.php"); ?>
 

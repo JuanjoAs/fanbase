@@ -63,6 +63,7 @@ class UsuarioController
         }
         return false;
     }
+    
     public static function login($usuario, $password)
     {
         $error = false;

@@ -3,11 +3,11 @@
 
 class Valoracion {
 
-    private $id; //id de la valoracion
-    private $idvideo;   //id del video
-    private $idusuario;     //id del usuario
-    private $comentario;    //comentario del usuario
-    private $valoracion;
+    public $id; //id de la valoracion
+    public $idvideo;   //id del video
+    public $idusuario;     //id del usuario
+    public $comentario;    //comentario del usuario
+    public $valoracion;
 
     /**
      * Valoracion constructor.

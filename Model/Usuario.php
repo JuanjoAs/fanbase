@@ -2,16 +2,16 @@
 
 
 class Usuario {
-    private $id;
+    public $id;
     public $usuario;
-    private $nombre;
-    private $email;
-    private $password;
-    private $rango;
-    private $texto;
-    private $activo;
-    private $imagen;
-    private $idg;
+    public $nombre;
+    public $email;
+    public $password;
+    public $rango;
+    public $texto;
+    public $activo;
+    public $imagen;
+    public $idg;
 
     public function __construct($usuario, $nombre, $email, $password, $rango, $texto, $activo,$imagen,$idg) {
         $this->usuario = $usuario;
