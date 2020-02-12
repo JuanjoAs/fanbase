@@ -1,5 +1,5 @@
 <?php
-include("includes/a_config.php");
+include("../includes/a_config.php");
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Recomendacion.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Añadir recomendacion";
@@ -10,13 +10,13 @@ $PAGE_TITLE = "FanBase - Añadir recomendacion";
 <head>
 
   <?php
-  include("includes/head-tag-contents.php");
+  include("../includes/head-tag-contents.php");
   if ($_SESSION['usuario']->rango != 'admin') {
     if ($_SESSION['usuario']->rango != 'editor') {
       header('Location: ./index.php');
     }
   }
-  include("includes/quilleditor.php");
+  include("../includes/quilleditor.php");
   ?>
 
 </head>
@@ -24,22 +24,21 @@ $PAGE_TITLE = "FanBase - Añadir recomendacion";
 if (isset($_REQUEST['btnguardar'])) {
   if (is_uploaded_file($_FILES['file']['tmp_name'])) {
     $fich_unico = time() . "-" . $_FILES['file']['name'];
-    $ruta = "assets/img/recomendaciones/" . $fich_unico;
+    $ruta =  $_SERVER['DOCUMENT_ROOT']."/fanbase/assets/img/recomendaciones/" . $fich_unico;
+    $rutaprint='/fanbase/assets/img/recomendaciones/'. $fich_unico;
     move_uploaded_file($_FILES['file']['tmp_name'], $ruta);
-    if (recomendacionController::insertarRecomendacion($_REQUEST['nombre'], $_REQUEST['descripcion'], $ruta, $_REQUEST['tipo'], $_REQUEST['plataforma1'], $_REQUEST['plataforma2'], $_REQUEST['plataforma3'], $_REQUEST['plataforma4'], $_REQUEST['linkplataforma1'], $_REQUEST['linkplataforma2'], $_REQUEST['linkplataforma3'], $_REQUEST['linkplataforma4'])) {
+    if (recomendacionController::insertarRecomendacion($_REQUEST['nombre'], $_REQUEST['descripcion'], $rutaprint, $_REQUEST['tipo'], $_REQUEST['plataforma1'], $_REQUEST['plataforma2'], $_REQUEST['plataforma3'], $_REQUEST['plataforma4'], $_REQUEST['linkplataforma1'], $_REQUEST['linkplataforma2'], $_REQUEST['linkplataforma3'], $_REQUEST['linkplataforma4'])) {
       header("Location:panelrecomendaciones.php?addreco=success");
     }
   } else {
     return false;
   }
 }
+   include("../includes/navbar.php");
 
 ?>
 
 <body>
-
-  <?php include("includes/navbar.php");
-  ?>
 
   <main class="container">
 
@@ -166,7 +165,7 @@ if (isset($_REQUEST['btnguardar'])) {
 
   </main>
 </body>
-<?php include("includes/footer.php"); ?>
+
 
 <script>
   var Font = Quill.import('formats/font');
@@ -197,5 +196,6 @@ Quill.register(Font, true);
     }
   });
 </script>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/includes/footer.php'; ?>
 
 </html>

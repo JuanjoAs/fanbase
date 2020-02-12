@@ -75,7 +75,7 @@ $dondeEstoy = $dondeEstoy[0];
 			$PAGE_TITLE = "FanBase - Juegos";
 			break;
 			
-		case "add_reco":
+		case "/fb-admin/add_reco":
 			$CURRENT_PAGE = "Añadir recomendacion"; 
 			$PAGE_TITLE = "FanBase - Añadir recomendacion";
 			break;

@@ -32,5 +32,5 @@
 <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
 <!-- Theme included stylesheets -->
-<link href="assets/css/fanbase.snow.css" rel="stylesheet">
+<link href="/fanbase/assets/css/fanbase.snow.css" rel="stylesheet">
 <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">

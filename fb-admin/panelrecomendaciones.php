@@ -1,5 +1,5 @@
 <?php
-include("includes/a_config.php");
+include("../includes/a_config.php");
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Model/Recomendacion.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionController.php';
 $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
@@ -9,7 +9,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 
 <head>
   <?php
-  include("includes/head-tag-contents.php");
+  include("../includes/head-tag-contents.php");
   if ($_SESSION['usuario']->rango != 'admin') {
     if ($_SESSION['usuario']->rango != 'editor') {
       header('Location: ./index.php');
@@ -21,7 +21,7 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
 <body>
 
   <?php
-  include("includes/navbar.php");
+  include("../includes/navbar.php");
   if (isset($_REQUEST['fireborrar'])) {
     if (recomendacionController::borrarRecomendacion($_REQUEST['fireborrar'])) {
   ?>
@@ -169,6 +169,6 @@ $PAGE_TITLE = "FanBase - Administrar Recomendaciones";
     });
   </script>
 </body>
-<?php include("includes/footer.php"); ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/includes/footer.php'; ?>
 
 </html>

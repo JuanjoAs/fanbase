@@ -3,8 +3,8 @@
 ============================-->
 
 <header class="navbar navbar-expand-lg bg-secondary fixed-top">
-  <a class="navbar-brand" href="index">
-    <img src="assets/img/logo.png" alt="Logo Fanbase">
+  <a class="navbar-brand" href="/fanbase/index">
+    <img src="/fanbase/assets/img/logo.png" alt="Logo Fanbase">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"> <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
@@ -16,17 +16,17 @@
       <li class="nav-item <?php if ($CURRENT_PAGE == "Inicio") {
                             echo "active";
                           } ?>">
-        <a class="nav-link" href="index">Inicio <span class="sr-only"></span></a>
+        <a class="nav-link" href="/fanbase/index">Inicio <span class="sr-only"></span></a>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Juegos" || $CURRENT_PAGE == "Informacion Juego") {
                             echo "active";
                           } ?>">
-        <a class="nav-link" href="juegos">Juegos</a>
+        <a class="nav-link" href="/fanbase/juegos">Juegos</a>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Trailer" || $CURRENT_PAGE == "Video") {
                             echo "active";
                           } ?>">
-        <a class="nav-link" href="trailers">Tráilers</a>
+        <a class="nav-link" href="/fanbase/trailers">Tráilers</a>
       </li>
       <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Zona interactiva") {
                                       echo "active";
@@ -35,16 +35,16 @@
           Zona Interactiva
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="pkmclicker">Pokemon Clicker</a>
-          <a class="dropdown-item" href="findTreasure">Busca el tesoro</a>
-          <a class="dropdown-item" href="flappybird">Flappy Bird</a>
-          <a class="dropdown-item" href="pkmonrun">Pokemon Run</a>
+          <a class="dropdown-item" href="/fanbase/pkmclicker">Pokemon Clicker</a>
+          <a class="dropdown-item" href="/fanbase/findTreasure">Busca el tesoro</a>
+          <a class="dropdown-item" href="/fanbase/flappybird">Flappy Bird</a>
+          <a class="dropdown-item" href="/fanbase/pkmonrun">Pokemon Run</a>
         </div>
       </li>
       <li class="nav-item <?php if ($CURRENT_PAGE == "Recomendaciones") {
                             echo "active";
                           } ?>">
-        <a class="nav-link" href="recomendaciones">Recomendaciones</a>
+        <a class="nav-link" href="/fanbase/recomendaciones">Recomendaciones</a>
       </li>
       <li class="nav-item dropdown <?php if ($CURRENT_PAGE == "Nosotros" || $CURRENT_PAGE == "Contactar" || $CURRENT_PAGE == "Terminos Legales") {
                                       echo "active";
@@ -53,9 +53,9 @@
           Contacto
         </a>
         <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="nosotros">Sobre nosotros</a>
-          <a class="dropdown-item" href="contactar">Contactanos</a>
-          <a class="dropdown-item" href="terminoslegales">Terminos Legales</a>
+          <a class="dropdown-item" href="/fanbase/nosotros">Sobre nosotros</a>
+          <a class="dropdown-item" href="/fanbase/contactar">Contactanos</a>
+          <a class="dropdown-item" href="/fanbase/terminoslegales">Terminos Legales</a>
         </div>
       </li>
       <?php
@@ -66,7 +66,7 @@
             <li class="nav-item <?php if ($CURRENT_PAGE == "Añadir recomendacion") {
                                   echo "active";
                                 } ?>">
-              <a class="nav-link" href="add_reco">Añadir recomendación</a>
+              <a class="nav-link" href="/fanbase/fb-admin/add_reco">Añadir recomendación</a>
             </li>
       <?php
           }
@@ -76,7 +76,7 @@
     </ul>
     <?php
     if (isset($_SESSION['usuario'])) {
-      include_once 'Controller/UsuarioController.php';
+      include_once $_SERVER['DOCUMENT_ROOT'] . '/fanbase/Controller/UsuarioController.php';
     ?>
 
       <ul class="navbar-nav mr-5">
@@ -84,19 +84,19 @@
                                         echo "active";
                                       } ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="32px">
+            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "/fanbase/assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="32px">
           </a>
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="perfil">Mi perfil</a>
+            <a class="dropdown-item" href="/fanbase/perfil">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango == 'admin') {
-              echo "<a class='dropdown-item' href='adminUsuarios'>Usuarios</a>";
+              echo "<a class='dropdown-item' href='adminUsuarios'>ADM Usuarios</a>";
             }
             ?>
             <?php if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
-              echo "<a class='dropdown-item' href='panelrecomendaciones'>Recomendaciones</a>";
+              echo "<a class='dropdown-item' href='/fanbase/fb-admin/panelrecomendaciones'>ADM Recomendaciones</a>";
             }
             ?>
-            <a class="dropdown-item" href="logoff">Cerrar sesión</a>
+            <a class="dropdown-item" href="/fanbase/logoff">Cerrar sesión</a>
           </div>
         </li>
       </ul>
