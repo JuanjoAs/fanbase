@@ -156,7 +156,7 @@ class ValoracionController {
                 $obj->id_video,
                 $obj->id_usuario,
                 $obj->comentario,
-                $obj->valoracion,
+                $obj->valoracion
             );
         }
 
