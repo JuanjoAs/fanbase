@@ -15,11 +15,10 @@ $PAGE_TITLE = "FanBase - Editar Recomendaciones";
           header('Location: ./index.php');
         }
       }
+      include("../includes/quilleditor.php");
+
   ?>
-  <script type="text/javascript" src="/fanbase/assets/js/nicedit/nicEdit.js"></script>
-<script type="text/javascript">
-	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-</script>
+
 </head>
 <?php
 if(isset($_REQUEST['btnguardar'])){
@@ -60,7 +59,57 @@ if(isset($_REQUEST['btnguardar'])){
         ?>
         <input name="id" hidden type="text" class="form-control" value="<?php echo $recomendacion->id;?>">
         Nombre: <input name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
-        Descripción: <textarea rows="5" class="form-control" name="descripcion"><?php echo $recomendacion->descripcion;?></textarea>
+        Descripción: 
+        <div id="standalone-container">
+            <div id="toolbar-container">
+              <span class="ql-formats">
+                <select class="ql-font">
+                  <option value="roboto" selected>Roboto</option>
+                  <option value="permanentmarker">Permanent Marker</option>
+                </select>
+                </select> </span>
+              <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-strike"></button>
+              </span>
+              <span class="ql-formats">
+                <select class="ql-color"></select>
+                <select class="ql-background"></select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-script" value="sub"></button>
+                <button class="ql-script" value="super"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-header" value="1"></button>
+                <button class="ql-header" value="2"></button>
+                <button class="ql-blockquote"></button>
+                <button class="ql-code-block"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+                <button class="ql-indent" value="-1"></button>
+                <button class="ql-indent" value="+1"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-direction" value="rtl"></button>
+                <select class="ql-align"></select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-link"></button>
+                <button class="ql-image"></button>
+                <button class="ql-video"></button>
+                <button class="ql-formula"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-clean"></button>
+              </span>
+            </div>
+            <div id="editor-container"><?php echo $recomendacion->descripcion;?></div>
+          </div>
         Imagen: <img class="d-block border cartelrecos" src="/fanbase/<?php echo $recomendacion->imagen;?>"><div><input type="file" name="file"></div>
         <input name="imagen" type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
         Tipo:<select name="tipo" class="form-control"> 
@@ -119,8 +168,36 @@ if(isset($_REQUEST['btnguardar'])){
     </section>
 
   </main>
-
-  <?php include("../includes/footer.php"); ?>
 </body>
+<script>
+  var Font = Quill.import('formats/font');
+// We do not add Aref Ruqaa since it is the default
+Font.whitelist = ['mirza','permanentmarker',  'roboto'];
+Quill.register(Font, true);
+
+
+  var quill = new Quill('#editor-container', {
+    modules: {
+      formula: true,
+      syntax: true,
+      toolbar: '#toolbar-container'
+    },
+    placeholder: 'Descripción',
+    theme: 'snow'
+  });
+
+  function guardarDesc(textoarea) {
+    $("textarea[name='descripcion']").val(textoarea);
+  }
+  quill.on('text-change', function(delta, oldDelta, source) {
+    if (source == 'api') {
+      guardarDesc(quill.root.innerHTML);
+    } else if (source == 'user') {
+      guardarDesc(quill.root.innerHTML);
+
+    }
+  });
+</script>
+  <?php include("../includes/footer.php"); ?>
 
 </html>
