@@ -89,7 +89,7 @@
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/fanbase/perfil">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango == 'admin') {
-              echo "<a class='dropdown-item' href='adminUsuarios'>ADM Usuarios</a>";
+              echo "<a class='dropdown-item' href='/fanbase/adminUsuarios'>ADM Usuarios</a>";
             }
             ?>
             <?php if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
