@@ -1,7 +1,7 @@
 <?php
 session_set_cookie_params("7200", "/");
-require_once 'assets/Composer/vendor/autoload.php';
-include_once 'Controller/UsuarioController.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/assets/Composer/vendor/autoload.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/UsuarioController.php';
 session_start();
 
 //requerimientos para funcionar google
@@ -26,12 +26,14 @@ $client->addScope("profile");
 
 if (isset($_POST['registro'])) {
     
-    if (UsuarioController::usuarioExiste($_POST['mail']) == false) {
+    if (UsuarioController::usuarioExiste($_POST['mail']) == false && $_SESSION['captcha']['code'] === $_REQUEST["captcha"]) {
         $u = new Usuario($_POST['usuario'], $_POST['name'], $_POST['mail'], $_POST['password'], "user", "Texto no disponible", 1, "","");
         if (UsuarioController::insert($u)) {
             $_SESSION['usuario'] = UsuarioController::login($u->email, $u->password);
             setcookie("PHPSESSID", $_COOKIE["PHPSESSID"], time() + time(), "/");
         }
+    } elseif ($_SESSION['captcha']['code'] != $_REQUEST["captcha"]){
+        $_SESSION['errorUsuarioExiste'] = "Error, el captcha no concuerda";
     } else {
         $_SESSION['errorUsuarioExiste'] = "Error al iniciar sesion el mail ya esta siendo utilizado";
     }

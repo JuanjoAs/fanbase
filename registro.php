@@ -58,6 +58,7 @@
                 </div>
               </div>
             </div>
+
             <div class="form-row">
               <div id="errorPs" class="form-group col-md-12 text-center d-none text-danger">
                 <div class="validation">
@@ -65,7 +66,26 @@
                 </div>
               </div>
             </div>
+              <div class="mb-3">
+                <div class="row">
 
+                    <div class="col-3">
+
+                        <?php
+
+                        include("assets/Composer/captcha.php");
+                        $_SESSION['captcha'] = simple_php_captcha();
+                        echo '<img class="card-img-top" src="' . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA code">';
+
+                        ?>
+                    </div>
+                    <div class="col-9">
+
+                        <input class="mt-1" class="form-control w-100" type="text" name="captcha">
+
+                    </div>
+                </div>
+              </div>
             <div class="text-center"><button type="submit" id="btnRegistro" name="registro">Registrarse</button></div>
           </form>
         </div>

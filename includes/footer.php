@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-3 col-md-6">
-        <img src="assets/img/logo.png" class="logo" alt="Logo Fanbase">
+        <img src="/fanbase/assets/img/logo.png" class="logo" alt="Logo Fanbase">
         <p>
           Donde se informan los fans de verdad
         </p>
@@ -59,6 +59,7 @@
     Some assets taken from <a href="https://bootstrapmade.com/">BootstrapMade</a>.
   </div>
 </div>
+
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog " role="document">
     <div class="modal-content">
@@ -80,7 +81,7 @@
               <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
             </div>
           </div>
-          <div class="md-form mb-4 row">
+          <div class="md-form  row">
             <div class="col-1">
               <i class="fas fa-lock fa-2x prefix grey-text"></i>
             </div>
@@ -91,34 +92,36 @@
           </div>
 
         </div>
-        <div class="modal-footer">
-          <div class="options mt-1 row">
+        <div class="modal-footer d-block">
+          <div class="options mt-1 row" style="margin-bottom:-20px;">
             <div class="col-8">
-              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text">¡Regístrate!</a></p>
+              <p>¿Aún no te has registrado? <a href="registro.php" class="text-primary blue-text d-block">¡Regístrate!</a></p>
             </div>
-            <div class="col-4">
+            <div class="col-xs-12 col-lg-4">
 
-                <?php
+              <?php
 
-                    //requerimientos para funcionar google
-                    require_once 'assets/Composer/vendor/autoload.php';
+              //requerimientos para funcionar google
+              require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/assets/Composer/vendor/autoload.php';
 
-                    // Configuracion del cliente de google
-                    $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
-                    $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
-                    $redirectUri = 'http://localhost/fanbase/sesionUsuario.php';
+              // Configuracion del cliente de google
+              $clientID = '839427167234-tcs6jo32qrvoal8vhcbiqnf6iati1eh5.apps.googleusercontent.com';
+              $clientSecret = 'FDO7u7RpvTG_hVDPUN5J0Lxa';
+              $redirectUri = 'http://' . $_SERVER['HTTP_HOST'] . '/fanbase/sesionUsuario.php';
 
-                    // creando el cliente con los datos necesarios
-                    $client = new Google_Client();
-                    $client->setClientId($clientID);
-                    $client->setClientSecret($clientSecret);
-                    $client->setRedirectUri($redirectUri);
-                    $client->addScope("email");
-                    $client->addScope("profile");
+              // creando el cliente con los datos necesarios
+              $client = new Google_Client();
+              $client->setClientId($clientID);
+              $client->setClientSecret($clientSecret);
+              $client->setRedirectUri($redirectUri);
+              $client->addScope("email");
+              $client->addScope("profile");
 
-                ?>
-                <a class="btn btn-success" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i></a>
-                <button class="btn btn-success" name="inicioSesion">Login</button>
+              ?>
+              <p>
+                <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
+                <a class="btn btn-success btn-block" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
+              </p>
             </div>
           </div>
         </div>
@@ -127,4 +130,11 @@
   </div>
 </div>
 
-<?php include("includes/scripts.php"); ?>
+
+ <script>
+    $(document).ready(function() {
+      $('#popRecomendaciones').modal('show');
+    });
+  </script>
+<?php 
+require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/includes/scripts.php'; ?>

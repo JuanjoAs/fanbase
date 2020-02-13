@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'Conexion.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/Conexion.php';
 
 class ValoracionController {
 
@@ -100,6 +100,67 @@ class ValoracionController {
         }
 
         return $success;
+    }
+
+    /**
+     * @param $usuario
+     * @return bool
+     */
+    public static function update($valoracion)
+    {
+        $success = true;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+        
+        $sql = "UPDATE valoracion SET comentario='$valoracion->comentario', valoracion=$valoracion->valoracion 
+            WHERE id=$valoracion->id";
+        try {
+            $query = $c->query($sql);
+        } catch (PDOException $ex) {
+            $success = false;
+        }
+
+        return $success;
+    }
+
+    public static function find($cod)
+    {
+        $error = false;
+
+        try {
+            $c = new Conexion();
+            $c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (Exception $ex) {
+            die('Error fatal, imposible conectar con la base de datos.');
+        }
+
+        $sql = "SELECT * FROM valoracion WHERE id='$cod'";
+
+        try {
+            $valoracion = $c->query($sql);
+        } catch (Exception $ex) {
+            $error = true;
+        }
+
+        unset($c);
+
+        if (!$error && $valoracion->rowCount()) {
+            $obj = $valoracion->fetch(PDO::FETCH_OBJ);
+            return new Valoracion(
+                $obj->id,
+                $obj->id_video,
+                $obj->id_usuario,
+                $obj->comentario,
+                $obj->valoracion
+            );
+        }
+
+        return false;
     }
 
 }
