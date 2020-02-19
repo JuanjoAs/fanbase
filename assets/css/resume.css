@@ -410,6 +410,12 @@ a:hover, a:focus, a:active {
   left: 0;
   right: 0;
 }
+.add_reco-list{
+  color:#000000;
+}
+.add_reco-list:hover{
+  color: #2AB09C;
+}
 .intro .intro-container {
   position: absolute;
   bottom: 0;
