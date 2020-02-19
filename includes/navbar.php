@@ -59,19 +59,7 @@
         </div>
       </li>
       <?php
-      if (isset($_SESSION['usuario'])) {
-        if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
-          if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones" || $PAGE_TITLE == "FanBase - Recomendaciones" || $PAGE_TITLE == "FanBase - Añadir recomendacion") {
-      ?>
-            <li class="nav-item <?php if ($CURRENT_PAGE == "Añadir recomendacion") {
-                                  echo "active";
-                                } ?>">
-              <a class="nav-link" href="/fanbase/fb-admin/add_reco">Añadir recomendación</a>
-            </li>
-      <?php
-          }
-        }
-      }
+
       ?>
     </ul>
     <?php
@@ -89,7 +77,7 @@
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/fanbase/perfil">Mi perfil</a>
             <?php if ($_SESSION['usuario']->rango == 'admin') {
-              echo "<a class='dropdown-item' href='adminUsuarios'>ADM Usuarios</a>";
+              echo "<a class='dropdown-item' href='/fanbase/adminUsuarios'>ADM Usuarios</a>";
             }
             ?>
             <?php if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {

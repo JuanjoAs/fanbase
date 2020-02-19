@@ -53,11 +53,11 @@
       <div class="modal-body">
         Los profesionales de FANBASE tienen nuevas recomendaciones para tí, ¡NO PIERDAS TIEMPO Y VE A VERLAS!
       </div>
-      <div class="modal-footer justify-content-center">
+      <div class="modal-footer justify-content-center text-center">
       <?php 
       include_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionController.php';
     
-      echo " <a href='recomendaciones'> <img src='".(recomendacionController::recuperarUltimaRecomendacion())->imagen."' height='25%' alt='Ultima recomendación'></a>";
+      echo " <a href='recomendaciones'> <img src='".(recomendacionController::recuperarUltimaRecomendacion())->imagen."' width='80%' alt='Ultima recomendación'></a>";
       setcookie('avisoNews','true',time()+2592000000,'/');
       ?>
       </div>
