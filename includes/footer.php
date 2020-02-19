@@ -39,10 +39,10 @@
       </div>
       <div class="col-lg-3 col-md-6 social-links">
         <h4 class="text-white border-bottom border-primary pb-2">Redes Sociales</h4>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <i class="fab fa-twitter"></i>
+                      <i class="fab fa-facebook-square"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-linkedin"></i>
       </div>
     </div>
   </div>
@@ -60,12 +60,12 @@
   </div>
 </div>
 
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog " role="document">
+<div class="modal fade" id="modalLoginForm" tabindex="-1"  aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesión</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -77,8 +77,8 @@
 
             </div>
             <div class="col-11">
+            <label class="d-none" for="defaultForm-email">Correo Electronico</label>
               <input name="mail" type="email" id="defaultForm-email" class="form-control validate" placeholder="Introduce tu correo">
-              <label class="d-none" data-error="wrong" data-success="right" for="defaultForm-email"></label>
             </div>
           </div>
           <div class="md-form  row">
@@ -86,8 +86,9 @@
               <i class="fas fa-lock fa-2x prefix grey-text"></i>
             </div>
             <div class="col-11">
+            <label class="d-none" for="defaultForm-pass">Contraseña</label>
               <input name="password" type="password" id="defaultForm-pass" class="form-control validate" placeholder="Introduce tu contraseña">
-              <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
+             
             </div>
           </div>
 
@@ -119,7 +120,7 @@
 
               ?>
               <p>
-                <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico"> Iniciar sesión</button>
+                <button class="btn btn-success btn-block" name="inicioSesion"><img style="width:25px; margin-left:-5px;" src="favicon.ico" alt="logo web"> Iniciar sesión</button>
                 <a class="btn btn-success btn-block" href="<?php echo $client->createAuthUrl(); ?>"><i class="text-danger fab fa-google"></i> Usar Google</a>
               </p>
             </div>

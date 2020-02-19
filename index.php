@@ -19,7 +19,7 @@
 
       <p class="mb-4 pb-0">Tu web de información referente</p>
 
-      <button type="button" class="btn play-btn mb-4" data-toggle="modal" data-target="#exampleModalCenter"></button>      
+      <button type="button" class="btn play-btn mb-4" data-toggle="modal" data-target="#exampleModalCenter"><span class="d-none">PLAY</span></button>      
       <a href="./nosotros.php" class="about-btn scrollto">Sobre nosotros</a>
     </div>
   </section>

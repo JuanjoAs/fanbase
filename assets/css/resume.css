@@ -81,7 +81,7 @@ h6 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #9195a2;
+  color: #50535E;
 }
 
 .section-with-bg {
@@ -277,6 +277,9 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 # Seccion Sobre nosotros
 --------------------------------------------------------------*/
+.nosotros .section-header .p {
+  color: #50535E;
+}
 .nosotros .personal {
   position: relative;
   overflow: hidden;
@@ -327,6 +330,14 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 # Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
+.add_reco-list {
+  color: #000000;
+}
+
+.add_reco-list:hover {
+  color: #2AB09C;
+}
+
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
