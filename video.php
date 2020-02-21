@@ -7,7 +7,6 @@
 <html lang="es">
 <head>
 	<?php include("includes/head-tag-contents.php");?>
-
 </head>
 <body>
 
@@ -64,8 +63,10 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                     <div class="row">
                         <div class="col-12">
                             <form method="post">
-                                <input type="text" name="titulo" value="<?php if (isset($_REQUEST["titulo"])) echo $_REQUEST["titulo"];  ?>" hidden>
-                                <input type="text" name="video" value="<?php if (isset($_REQUEST["video"])) echo $_REQUEST["video"]; ?>" hidden>
+                                <label for="titulo" id="radio1" class="fas fa-star warning" hidden><span hidden>Una estrella</span></label>
+                                <input for="titulo" type="text" id="radio1" name="titulo" value="<?php if (isset($_REQUEST["titulo"])) echo $_REQUEST["titulo"]; ?>" hidden>
+                                <label for="video" id="radio2" class="fas fa-star warning" hidden><span hidden>Una estrella</span></label>
+                                <input for="video" type="text" id="radio2" name="video" value="<?php if (isset($_REQUEST["video"])) echo $_REQUEST["video"]; ?>" hidden>
 
                                 <div class="row p-3 ml-0 mr-0 mt-4 border">
                                     <!--Interior comentar-->
@@ -73,16 +74,16 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                         <div class="row">
                                             <div class="col-12">
                                                 <p class="clasificacion">
-                                                    <input id="radio1" type="radio" name="estrellas" value="5">
-                                                    <label for="radio1" class="fas fa-star warning"></label>
-                                                    <input id="radio2" type="radio" name="estrellas" value="4">
-                                                    <label for="radio2" class="fas fa-star"></label>
-                                                    <input id="radio3" type="radio" name="estrellas" value="3">
-                                                    <label for="radio3" class="fas fa-star"></label>
-                                                    <input id="radio4" type="radio" name="estrellas" value="2">
-                                                    <label for="radio4" class="fas fa-star"></label>
-                                                    <input id="radio5" type="radio" name="estrellas" checked value="1">
-                                                    <label for="radio5" class="fas fa-star"></label>
+                                                    <input for="radio1" id="radio1" type="radio" name="estrellas" value="5">
+                                                    <label for="radio1" class="fas fa-star warning"><span hidden>Una estrella</span></label>
+                                                    <input for="radio2" id="radio2" type="radio" name="estrellas" value="4">
+                                                    <label for="radio2" class="fas fa-star"><span hidden>Dos estrella</span></label>
+                                                    <input for="radio3" id="radio3" type="radio" name="estrellas" value="3">
+                                                    <label for="radio3" class="fas fa-star"><span hidden>Tres estrella</span></label>
+                                                    <input for="radio4" id="radio4" type="radio" name="estrellas" value="2">
+                                                    <label for="radio4" class="fas fa-star"><span hidden>Cuatro estrella</span></label>
+                                                    <input for="radio5" id="radio5" type="radio" name="estrellas" checked value="1">
+                                                    <label for="radio5" class="fas fa-star"><span hidden>Cinco estrella</span></label>
                                                 </p>
                                             </div>
                                         </div>
@@ -93,13 +94,15 @@ if (isset($_REQUEST["video"]) && $_REQUEST["video"] != "" &&
                                             <div class="col-12">
                                                 <div class="row">
                                                     <form class="col-12">
-                                                        <textarea class="form-control" name="comentario"></textarea>
+                                                        <label id="comentario" for="comentario">Comentar</label>
+                                                        <textarea class="form-control" name="comentario" id="comentario" for="comentario"></textarea>
                                                         <?php
                                                         if (isset($_SESSION["usuario"]) && $_SESSION["usuario"] != null){
-                                                            ?> <button type="submit" class="btn btn-success mt-2" >Comentar</button> <?php
+                                                            ?> 
+                                                            <button type="submit" class="btn btn-secondary mt-2" >Comentar</button> <?php
                                                         } else {
                                                             ?></form> <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalLoginForm">
-                                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar sesión</button></a> <?php
+                                                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Iniciar sesión</button></a> <?php
                                                         }
 
                                                         ?>
