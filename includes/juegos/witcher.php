@@ -1,5 +1,5 @@
-<h1 class="text-center text-primary">Personajes principales</h1>
-
+<html lang="es">
+<h1 class="text-center text-secondary">Personajes principales</h1>
 <div class="mb-3">
     <div class="row justify-content-center mb-2">
         <div class="col-3 bg-secondary">
