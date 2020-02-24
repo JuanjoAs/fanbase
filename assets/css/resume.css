@@ -137,7 +137,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-outline-success {
-  color: #2ab09c;
+  color: white;
   border-color: #2ab09c;
 }
 .btn-outline-success:hover {
@@ -420,12 +420,6 @@ a:hover, a:focus, a:active {
   top: 0;
   left: 0;
   right: 0;
-}
-.add_reco-list{
-  color:#000000;
-}
-.add_reco-list:hover{
-  color: #2AB09C;
 }
 .intro .intro-container {
   position: absolute;
@@ -817,9 +811,8 @@ p.clasificacion input:checked ~ label {
   opacity: 1 !important;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
+.carousel-control-next-icon:after {
+  content: ">";
   position: relative;
   top: 10px;
   font-size: 55px;
@@ -827,7 +820,7 @@ p.clasificacion input:checked ~ label {
 }
 
 .carousel-control-prev-icon:after {
-  content: '<';
+  content: "<";
   position: relative;
   top: 10px;
   font-size: 55px;
