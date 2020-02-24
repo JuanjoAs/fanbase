@@ -72,7 +72,7 @@
                                         echo "active";
                                       } ?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "/fanbase/assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="32px">
+            <?php echo ucfirst($_SESSION['usuario']->usuario); ?> <img alt="Imagen Usuario" src="<?php ($_SESSION['usuario']->imagen == "") ? print "/fanbase/assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="32px">
           </a>
           <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/fanbase/perfil">Mi perfil</a>
