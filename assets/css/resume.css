@@ -177,6 +177,10 @@ a:hover, a:focus, a:active {
   margin: 0;
 }
 
+.form-control {
+  border-color: #8e8e8e;
+}
+
 /*--------------------------------------------------------------
 # Estilos para barra de navegación
 --------------------------------------------------------------*/
