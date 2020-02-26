@@ -51,8 +51,6 @@ if (isset($_REQUEST['btnguardar'])) {
       </div>
       <div class="justify-content-center">
         <form method="post" enctype="multipart/form-data">
-
-          <input name="id" hidden type="text" class="form-control">
           Nombre: <input name="nombre" type="text" class="form-control" required>
           <textarea name="descripcion" id="descripcion" hidden></textarea>
           Descripción: <div id="editor" name="editor"></div>

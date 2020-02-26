@@ -31,9 +31,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>Sobre Fanbase</h2>
-            <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-              accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-              est ut optio sequi unde.</p>
+            <p>En Fanbase encontrarás los fans más aférrimos para informarse y compartir su conocimiento. Los foros cada vez son menos usados y hay menos sitios web donde informarse de nuestras series y juegos favoritos. En recomendaciones puedes encontrar los mejores ;). Únete como editor para añadir más.</p>
           </div>
           <div class="col-lg-3">
             <h3>¿Para quién es?</h3>
