@@ -52,7 +52,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionControl
                 <div id="juegos<?php echo $i; ?>" class="collapse">
                   <div class="row">
                     <div class="col-lg-3">
-                      <img class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
+                      <img alt="Foto cartel recomendacion" class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
                     </div>
                     <div class="col-lg-6">
                       <p>
@@ -101,7 +101,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionControl
                 <div id="series<?php echo $i; ?>" class="collapse">
                   <div class="row">
                     <div class="col-lg-3">
-                      <img class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
+                      <img alt="Foto cartel recomendacion" class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
                     </div>
                     <div class="col-lg-6">
                       <p>

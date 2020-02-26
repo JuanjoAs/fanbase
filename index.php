@@ -47,7 +47,7 @@
 </main>
 
 <!-- Modal Video -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,12 +69,12 @@
             </p>
           </video>
           <!-- Video Controls -->
-          <div id="video-controls" class="video-controls">
+          <div id="video-controls" class="video-controls"><label hidden for="seek-bar"><span hidden>barra deslizante</span></label><label hidden for="volume-bar"><span hidden>barra volumen</span></label>
             <button type="button" class="btn btn-primary" id="play-pause" class="play">Reproducir</button>
-            <input type="range" class="seek-bar" id="seek-bar" value="0">
-            <button type="button" class="btn-primary fas fa-volume-mute" id="mute"></button>
+            <input type="range" class="seek-bar" id="seek-bar" alt="Barra deslizador reproductor" value="0">
+            <button type="button" class="btn-primary" id="mute"><span hidden>boton mutear</span><i class="fas fa-volume-mute"></i></button>
             <input type="range" class="volume-bar" id="volume-bar" min="0" max="1" step="0.1" value="1">
-            <button type="button" class="full-screen fas fa-expand" id="full-screen"></button>
+            <button type="button" class="full-screen fas fa-expand" id="full-screen"><span hidden>boton pantalla completa</span></button>
           </div>
         </div>
 
