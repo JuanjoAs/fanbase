@@ -153,10 +153,10 @@ if (isset($_REQUEST['btnguardar'])) {
             <option value="apple">>App Store Apple</option>
             <option value="imdb">IMDB</option>
           </select>
-            <label for="enlaceplataforma1">Enlace plataforma 1:</label> <input id="enlaceplataforma1" type="text" name="linkplataforma1" class="form-control" value="">
-            <label for="enlaceplataforma2">Enlace plataforma 2:</label>  <input id="enlaceplataforma2" type="text" name="linkplataforma2" class="form-control" value="">
-            <label for="enlaceplataforma3">Enlace plataforma 3:</label>  <input id="enlaceplataforma3" type="text" name="linkplataforma3" class="form-control" value="">
-            <label for="enlaceplataforma4">Enlace plataforma 4:</label>  <input id="enlaceplataforma4" type="text" name="linkplataforma4" class="form-control" value="">
+            <label for="enlaceplataforma1">Enlace plataforma 1:</label><input id="enlaceplataforma1" type="text" name="linkplataforma1" class="form-control" value="">
+            <label for="enlaceplataforma2">Enlace plataforma 2:</label><input id="enlaceplataforma2" type="text" name="linkplataforma2" class="form-control" value="">
+            <label for="enlaceplataforma3">Enlace plataforma 3:</label><input id="enlaceplataforma3" type="text" name="linkplataforma3" class="form-control" value="">
+            <label for="enlaceplataforma4">Enlace plataforma 4:</label><input id="enlaceplataforma4" type="text" name="linkplataforma4" class="form-control" value="">
           <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
         </form>
       </div>
