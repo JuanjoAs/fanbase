@@ -195,7 +195,7 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
                   </div>
                   <div class="col-lg-3">
                     <form class="d-inline" method="POST" action=""></form>
-                    <button name="edit" class="btn btn-success m-2" data-toggle="modal" data-target="#exampleModal" value="<?php echo $usuario->id;?>">Editar</button>
+                    <button name="edit" class="btn btn-secondary m-2" data-toggle="modal" data-target="#exampleModal" value="<?php echo $usuario->id;?>">Editar</button>
                     <?php if($usuario->activo == 1) { ?>
                       <form class="d-inline" method="POST" action=""><button name="disable" class="btn btn-danger m-2" value="<?php echo $usuario->id;?>">Desactivar</button></form>
                     <?php } else { ?>
