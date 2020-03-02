@@ -86,7 +86,7 @@
           </div>
           <div class="col-md-3">
             <div class="card">
-              <img src="assets/img/contacto/fotoGrupal.jpg" class="card-img-top h-100">
+              <img src="assets/img/contacto/fotoGrupal.jpg" alt="Foto Grupal" class="card-img-top h-100">
               <div class="card-body">
                 <h5 class="card-title">Se uno más</h5>
                 <p class="card-text">Si tienes alguna duda o recomendacion para la pagina no dudes en mandarnosla.</p>
