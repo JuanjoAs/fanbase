@@ -170,7 +170,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/fanbase/Controller/ValoracionControll
                                                     </div>
                                                     <div class="col-lg-2">
                                                         <form action="" method="POST">
-                                                            <button type="button" name="edit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" value="<?php echo $valoracion->id; ?>">Editar</button>
+                                                            <button type="button" name="edit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" value="<?php echo $valoracion->id; ?>">Editar</button>
                                                             <button type="button" name="delete" class="btn btn-danger" value="<?php echo $valoracion->id; ?>">Borrar</button>
                                                             <form>
                                                     </div>

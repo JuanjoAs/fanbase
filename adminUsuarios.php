@@ -83,49 +83,7 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
         }
       }
   ?>
-      <?php if(isset($_REQUEST['edit'])) { 
-        $u = UsuarioController::find($_REQUEST['edit']);
-      ?>
-        <div class="row justify-content-center mb-1">
-        <div class="col-5">
-        <form action="" method="POST">
-            <div class="form-group">
-              <label for="usuario">Nombre de usuario</label>
-              <input type="text" class="form-control" name="usuario" id="usuario" 
-              value="<?php echo $u->usuario; ?>"
-              required>
-            </div>
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" name="nombre" id="nombre" 
-              value="<?php echo $u->nombre; ?>"
-              required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" id="email" 
-              value="<?php echo $u->email; ?>"
-              required>
-            </div>
-            <div class="form-group">
-              <label for="rango">Rango</label>
-              <select class="form-control" name="rango" id="rango">
-                <option value="user" <?php if($u->rango == "user") echo "selected"; ?>>Soldado raso</option>
-                <option value="editor" <?php if($u->rango == "editor") echo "selected"; ?>>Teniente</option>
-                <option value="admin" <?php if($u->rango == "admin") echo "selected"; ?>>General</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="texto">Descripción</label>
-              <textarea name="texto" id="texto" cols="30" rows="5" class="form-control"
-              ><?php echo $u->texto; ?></textarea>
-            </div>
-            <input type="hidden" name="id" value="<?php echo $_REQUEST['edit']; ?>">
-            <button type="submit" name="save" class="btn btn-primary btn-block">Guardar</button>
-          </form>
-        </div>
-        </div>
-      <?php } ?>
+   
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -171,7 +129,7 @@ $PAGE_TITLE = "FanBase - Administrar Usuarios";
                     <textarea name="texto" id="texto" cols="30" rows="5" class="form-control"
                     ><?php //echo $u->texto; ?></textarea>
                   </div>
-                  <button type="submit" name="save" class="btn btn-primary btn-block">Guardar</button>
+                  <button type="submit" name="save" class="btn btn-secondary btn-block">Guardar</button>
                 </form>
             </div>
           </div>
