@@ -38,7 +38,7 @@ a {
 }
 
 .btn-outline-success{
-    color:$primary;
+    color:white;
     border-color: $primary;
     &:hover {
         background-color: $primary;
@@ -77,4 +77,8 @@ a {
             margin: 0;
         }
     }
+}
+
+.form-control{
+    border-color:#8e8e8e;
 }

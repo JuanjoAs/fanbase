@@ -23,8 +23,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionControl
     <section class="recomendaciones wow fadeInUp">
       <div class="section-header">
         <h2>Juegos</h2>
+        <?php
+            if (isset($_SESSION['usuario'])) {
+              if ($_SESSION['usuario']->rango == 'admin' || $_SESSION['usuario']->rango == 'editor') {
+                if ($PAGE_TITLE == "FanBase - Administrar Recomendaciones" || $PAGE_TITLE == "FanBase - Recomendaciones" || $PAGE_TITLE == "FanBase - Añadir recomendacion") {
+            ?>
+                    <h4><a class="add_reco-list" href="/fanbase/fb-admin/add_reco" style="">Añadir recomendación</a>   </h4>
+            <?php
+                }
+              }
+            }
+      ?>
       </div>
       <div class="row justify-content-center">
+
         <div class="col-lg-12">
           <ul class="recomendaciones-list">
             <?php
@@ -40,7 +52,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionControl
                 <div id="juegos<?php echo $i; ?>" class="collapse">
                   <div class="row">
                     <div class="col-lg-3">
-                      <img class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
+                      <img alt="Foto cartel recomendacion" class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
                     </div>
                     <div class="col-lg-6">
                       <p>
@@ -89,7 +101,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/fanbase/Controller/RecomendacionControl
                 <div id="series<?php echo $i; ?>" class="collapse">
                   <div class="row">
                     <div class="col-lg-3">
-                      <img class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
+                      <img alt="Foto cartel recomendacion" class="border cartelrecos" src='<?php echo $recomendacion->imagen; ?>'>
                     </div>
                     <div class="col-lg-6">
                       <p>

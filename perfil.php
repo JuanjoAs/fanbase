@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/fanbase/Controller/ValoracionControll
                     </div>
                     <div class="col-3">
                         <div class="row">
-                            <div class="col-12"> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="250px" class="d-none d-lg-block"></div>
+                            <div class="col-12"> <img src="<?php ($_SESSION['usuario']->imagen == "") ? print "assets/img/logoPerfil.png" : print $_SESSION['usuario']->imagen; ?>" height="250px" class="d-none d-lg-block" alt="Imagen perfil" /></div>
                         </div>
 
                     </div>
@@ -101,8 +101,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/fanbase/Controller/ValoracionControll
                             </div>
                             <div class="modal-body">
                                 <form action="" method="POST">
+                                    <label for="idvaloracion" class="d-none">idvaloracion</label>
                                     <input type="text" id="idvaloracion" name="idvaloracion">
+                                    <label for="idusuario" class="d-none">idusuario</label>
                                     <input type="text" id="idusuario" name="idusuario">
+                                    <label for="idvideo" class="d-none">idvideo</label>
                                     <input type="text" id="idvideo" name="idvideo">
                                     <div class="form-group">
                                         <label for="comentario">Comentario</label>
@@ -167,7 +170,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/fanbase/Controller/ValoracionControll
                                                     </div>
                                                     <div class="col-lg-2">
                                                         <form action="" method="POST">
-                                                            <button type="button" name="edit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" value="<?php echo $valoracion->id; ?>">Editar</button>
+                                                            <button type="button" name="edit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" value="<?php echo $valoracion->id; ?>">Editar</button>
                                                             <button type="button" name="delete" class="btn btn-danger" value="<?php echo $valoracion->id; ?>">Borrar</button>
                                                             <form>
                                                     </div>

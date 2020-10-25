@@ -57,17 +57,20 @@ if(isset($_REQUEST['btnguardar'])){
         <?php
           $recomendacion=recomendacionController::recuperarRecomendacion($_REQUEST['btneditar']);
         ?>
-        <input name="id" hidden type="text" class="form-control" value="<?php echo $recomendacion->id;?>">
-        Nombre: <input name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
+
+          <label for="oculto" hidden>oculto:</label><input id="oculto" name="id" hidden type="text" class="form-control" value="<?php echo $recomendacion->id;?>">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre"name="nombre" type="text" class="form-control" value="<?php echo $recomendacion->nombre;?>">
         Descripción: 
         <div id="standalone-container">
             <div id="toolbar-container">
               <span class="ql-formats">
-                <select class="ql-font">
+                  <label for="editoropcion1" hidden>Opcion1</label>
+                <select id="editoropcion1" class="ql-font">
                   <option value="roboto" selected>Roboto</option>
                   <option value="permanentmarker">Permanent Marker</option>
                 </select>
-                </select> </span>
+              </span>
               <span class="ql-formats">
                 <button class="ql-bold"></button>
                 <button class="ql-italic"></button>
@@ -75,8 +78,10 @@ if(isset($_REQUEST['btnguardar'])){
                 <button class="ql-strike"></button>
               </span>
               <span class="ql-formats">
-                <select class="ql-color"></select>
-                <select class="ql-background"></select>
+                <label for="editoropcion2" hidden>Opcion1</label>
+                <select id="editoropcion2" class="ql-color"></select>
+                <label for="editoropcion3" hidden>Opcion1</label>
+                <select id="editoropcion3" class="ql-background"></select>
               </span>
               <span class="ql-formats">
                 <button class="ql-script" value="sub"></button>
@@ -110,13 +115,14 @@ if(isset($_REQUEST['btnguardar'])){
             </div>
             <div id="editor-container"><?php echo $recomendacion->descripcion;?></div>
           </div>
-        Imagen: <img class="d-block border cartelrecos" src="/fanbase/<?php echo $recomendacion->imagen;?>"><div><input type="file" name="file"></div>
-        <input name="imagen" type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
-        Tipo:<select name="tipo" class="form-control"> 
+          <img alt="Imagen Recomendacion" class="d-block border cartelrecos" src="/fanbase/<?php echo $recomendacion->imagen;?>">
+          <label for="imagen">Imagen:</label><div><input id="imagen" type="file" name="file"></div>
+          <label for="imagen2">Direccion Imagen:</label><input id="imagen2" name="imagen" type="text" class="form-control" value="<?php echo $recomendacion->imagen;?>">
+          <label for="tipo">Tipo:</label><select id="tipo" name="tipo" class="form-control">
         <option value="juego">Juego</option>
         <option value="seriepeli">Serie/Película</option>
         </select>
-        Plataforma 1:<select name="plataforma1" class="form-control"> 
+          <label for="plataforma1">Plataforma 1:</label><select id="plataforma1" name="plataforma1" class="form-control">
         <option value="">----</option>
         <option value="pc"<?php if($recomendacion->plataforma1=="pc"){echo "selected";}?>>PC</option>
         <option value="gog"<?php if($recomendacion->plataforma1=="gog"){echo "selected";}?>>GoG</option>
@@ -126,7 +132,7 @@ if(isset($_REQUEST['btnguardar'])){
         <option value="apple"<?php if($recomendacion->plataforma1=="apple"){echo "selected";}?>>App Store Apple</option>
         <option value="imdb"<?php if($recomendacion->plataforma1=="imdb"){echo "selected";}?>>IMDB</option>
         </select>
-        Plataforma 2:<select name="plataforma2" class="form-control"> 
+          <label for="plataforma2">Plataforma 2:</label><select id="plataforma2" name="plataforma2" class="form-control">
         <option value="">----</option>
           <option value="pc"<?php if($recomendacion->plataforma2=="pc"){echo "selected";}?>>PC</option>
           <option value="gog"<?php if($recomendacion->plataforma2=="gog"){echo "selected";}?>>GoG</option>
@@ -136,7 +142,7 @@ if(isset($_REQUEST['btnguardar'])){
           <option value="apple"<?php if($recomendacion->plataforma2=="apple"){echo "selected";}?>>App Store Apple</option>
           <option value="imdb"<?php if($recomendacion->plataforma2=="imdb"){echo "selected";}?>>IMDB</option>
         </select>
-        Plataforma 3:<select name="plataforma3" class="form-control"> 
+          <label for="plataforma3">Plataforma 3:</label><select id="plataforma3" name="plataforma3" class="form-control">
         <option value="">----</option>
           <option value="pc"<?php if($recomendacion->plataforma3=="pc"){echo "selected";}?>>PC</option>
           <option value="gog"<?php if($recomendacion->plataforma3=="gog"){echo "selected";}?>>GoG</option>
@@ -146,7 +152,7 @@ if(isset($_REQUEST['btnguardar'])){
           <option value="apple"<?php if($recomendacion->plataforma3=="apple"){echo "selected";}?>>App Store Apple</option>
           <option value="imdb"<?php if($recomendacion->plataforma3=="imdb"){echo "selected";}?>>IMDB</option>
         </select>
-        Plataforma 4:<select name="plataforma4" class="form-control"> 
+          <label for="plataforma4">Plataforma 4:</label><select id="plataforma4" name="plataforma4" class="form-control">
         <option value="">----</option>
           <option value="pc"<?php if($recomendacion->plataforma4=="pc"){echo "selected";}?>>PC</option>
           <option value="gog"<?php if($recomendacion->plataforma4=="gog"){echo "selected";}?>>GoG</option>
@@ -156,10 +162,10 @@ if(isset($_REQUEST['btnguardar'])){
           <option value="apple"<?php if($recomendacion->plataforma4=="apple"){echo "selected";}?>>App Store Apple</option>
           <option value="imdb"<?php if($recomendacion->plataforma4=="imdb"){echo "selected";}?>>IMDB</option>
         </select>
-        Enlace plataforma 1: <input type="text" name="linkplataforma1" class="form-control" value="<?php echo $recomendacion->linkplataforma1;?>">
-        Enlace plataforma 2: <input type="text" name="linkplataforma2" class="form-control" value="<?php echo $recomendacion->linkplataforma2;?>">
-        Enlace plataforma 3: <input type="text" name="linkplataforma3" class="form-control" value="<?php echo $recomendacion->linkplataforma3;?>">
-        Enlace plataforma 4: <input type="text" name="linkplataforma4" class="form-control" value="<?php echo $recomendacion->linkplataforma4;?>">
+          <label for="enlaceplataforma1">Enlace plataforma 1:</label><input id="enlaceplataforma1" type="text" name="linkplataforma1" class="form-control" value="<?php echo $recomendacion->linkplataforma1;?>">
+          <label for="enlaceplataforma2">Enlace plataforma 2:</label><input id="enlaceplataforma2" type="text" name="linkplataforma2" class="form-control" value="<?php echo $recomendacion->linkplataforma2;?>">
+          <label for="enlaceplataforma3">Enlace plataforma 3:</label><input id="enlaceplataforma3" type="text" name="linkplataforma3" class="form-control" value="<?php echo $recomendacion->linkplataforma3;?>">
+          <label for="enlaceplataforma4">Enlace plataforma 4:</label><input id="enlaceplataforma4" type="text" name="linkplataforma4" class="form-control" value="<?php echo $recomendacion->linkplataforma4;?>">
         <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
         </form>
       </div>

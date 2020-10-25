@@ -20,7 +20,7 @@
 
         button {
             
-            background: $primary;
+            background: $dark-blue;
             border: 0;
             padding: 10px 40px;
             color: $white;
@@ -72,7 +72,9 @@
 --------------------------------------------------------------*/
 
 .nosotros {
-
+  .section-header .p{
+    color:$gray-contrast;
+  }
   .personal {
     position: relative;
     overflow: hidden;
@@ -140,7 +142,12 @@
 /*--------------------------------------------------------------
 # Seccion Recomendaciones Juegos y Series
 --------------------------------------------------------------*/
-
+.add_reco-list{
+  color: #000000;
+}
+.add_reco-list:hover{
+  color:#2AB09C;
+}
 .recomendaciones .recomendaciones-list {
   padding: 0;
   list-style: none;
@@ -666,3 +673,34 @@ p.clasificacion {
       color:$secondary;
     }
   }
+
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white !important;
+  height: 100px;
+  width: 100px;
+  outline: white;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-image: none;
+  opacity: 1 !important;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  position: relative;
+  top: 10px;
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  position: relative;
+  top: 10px;
+  font-size: 55px;
+  color: black;
+}
+

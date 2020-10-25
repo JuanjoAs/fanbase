@@ -19,7 +19,7 @@
 
       <p class="mb-4 pb-0">Tu web de información referente</p>
 
-      <button type="button" class="btn play-btn mb-4" data-toggle="modal" data-target="#exampleModalCenter"></button>      
+      <button type="button" class="btn play-btn mb-4" data-toggle="modal" data-target="#exampleModalCenter"><span class="d-none">PLAY</span></button>      
       <a href="./nosotros.php" class="about-btn scrollto">Sobre nosotros</a>
     </div>
   </section>
@@ -31,9 +31,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>Sobre Fanbase</h2>
-            <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-              accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-              est ut optio sequi unde.</p>
+            <p>En Fanbase encontrarás los fans más aférrimos para informarse y compartir su conocimiento. Los foros cada vez son menos usados y hay menos sitios web donde informarse de nuestras series y juegos favoritos. En recomendaciones puedes encontrar los mejores ;). Únete como editor para añadir más.</p>
           </div>
           <div class="col-lg-3">
             <h3>¿Para quién es?</h3>
@@ -49,7 +47,7 @@
 </main>
 
 <!-- Modal Video -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,12 +69,12 @@
             </p>
           </video>
           <!-- Video Controls -->
-          <div id="video-controls" class="video-controls">
+          <div id="video-controls" class="video-controls"><label hidden for="seek-bar"><span hidden>barra deslizante</span></label><label hidden for="volume-bar"><span hidden>barra volumen</span></label>
             <button type="button" class="btn btn-primary" id="play-pause" class="play">Reproducir</button>
-            <input type="range" class="seek-bar" id="seek-bar" value="0">
-            <button type="button" class="btn-primary fas fa-volume-mute" id="mute"></button>
+            <input type="range" class="seek-bar" id="seek-bar" alt="Barra deslizador reproductor" value="0">
+            <button type="button" class="btn-primary" id="mute"><span hidden>boton mutear</span><i class="fas fa-volume-mute"></i></button>
             <input type="range" class="volume-bar" id="volume-bar" min="0" max="1" step="0.1" value="1">
-            <button type="button" class="full-screen fas fa-expand" id="full-screen"></button>
+            <button type="button" class="full-screen fas fa-expand" id="full-screen"><span hidden>boton pantalla completa</span></button>
           </div>
         </div>
 

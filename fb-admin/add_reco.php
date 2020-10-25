@@ -51,15 +51,16 @@ if (isset($_REQUEST['btnguardar'])) {
       </div>
       <div class="justify-content-center">
         <form method="post" enctype="multipart/form-data">
-
-          <input name="id" hidden type="text" class="form-control">
-          Nombre: <input name="nombre" type="text" class="form-control" required>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" class="form-control" required>
+            <label for="descripcion">Descripción:</label>
           <textarea name="descripcion" id="descripcion" hidden></textarea>
-          Descripción: <div id="editor" name="editor"></div>
+           <div id="editor" name="editor"></div>
           <div id="standalone-container">
             <div id="toolbar-container">
               <span class="ql-formats">
-                <select class="ql-font">
+                  <label for="editoropcion1" hidden>Opcion1</label>
+                <select id="editoropcion1" class="ql-font">
                   <option value="roboto" selected>Roboto</option>
                   <option value="permanentmarker">Permanent Marker</option>
                 </select>
@@ -106,13 +107,13 @@ if (isset($_REQUEST['btnguardar'])) {
             </div>
             <div id="editor-container"></div>
           </div>
-          Imagen: <div><input type="file" name="file" required></div>
-          <input name="imagen" hidden type="text" class="form-control">
-          Tipo:<select name="tipo" class="form-control">
+          <label for="imagen">Imagen:</label> <div><input id="imagen" type="file" name="file" required></div>
+            <label for="imagen2" hidden>Imagen:</label><input id="imagen2" name="imagen" hidden type="text" class="form-control">
+            <label for="tipo">Tipo:</label><select id="tipo" name="tipo" class="form-control">
             <option value="juego">Juego</option>
             <option value="seriepeli">Serie/Película</option>
           </select>
-          Plataforma 1:<select name="plataforma1" class="form-control">
+          <label for="plataforma1">Plataforma 1:</label><select id="plataforma1" name="plataforma1" class="form-control">
             <option value="">----</option>
             <option value="pc">PC</option>
             <option value="gog">GoG</option>
@@ -122,7 +123,7 @@ if (isset($_REQUEST['btnguardar'])) {
             <option value="apple">App Store Apple</option>
             <option value="imdb">IMDB</option>
           </select>
-          Plataforma 2:<select name="plataforma2" class="form-control">
+            <label for="plataforma2">Plataforma 2:</label><select id="plataforma2" name="plataforma2" class="form-control">
             <option value="">----</option>
             <option value="pc">PC</option>
             <option value="gog">GoG</option>
@@ -132,7 +133,7 @@ if (isset($_REQUEST['btnguardar'])) {
             <option value="apple">>App Store Apple</option>
             <option value="imdb">IMDB</option>
           </select>
-          Plataforma 3:<select name="plataforma3" class="form-control">
+            <label for="plataforma3">Plataforma 3:</label><select id="plataforma3" name="plataforma3" class="form-control">
             <option value="">----</option>
             <option value="pc">PC</option>
             <option value="gog">GoG</option>
@@ -142,7 +143,7 @@ if (isset($_REQUEST['btnguardar'])) {
             <option value="apple">>App Store Apple</option>
             <option value="imdb">IMDB</option>
           </select>
-          Plataforma 4:<select name="plataforma4" class="form-control">
+            <label for="plataforma4">Plataforma 4:</label><select id="plataforma4" name="plataforma4" class="form-control">
             <option value="">----</option>
             <option value="pc">PC</option>
             <option value="gog">GoG</option>
@@ -152,10 +153,10 @@ if (isset($_REQUEST['btnguardar'])) {
             <option value="apple">>App Store Apple</option>
             <option value="imdb">IMDB</option>
           </select>
-          Enlace plataforma 1: <input type="text" name="linkplataforma1" class="form-control" value="">
-          Enlace plataforma 2: <input type="text" name="linkplataforma2" class="form-control" value="">
-          Enlace plataforma 3: <input type="text" name="linkplataforma3" class="form-control" value="">
-          Enlace plataforma 4: <input type="text" name="linkplataforma4" class="form-control" value="">
+            <label for="enlaceplataforma1">Enlace plataforma 1:</label><input id="enlaceplataforma1" type="text" name="linkplataforma1" class="form-control" value="">
+            <label for="enlaceplataforma2">Enlace plataforma 2:</label><input id="enlaceplataforma2" type="text" name="linkplataforma2" class="form-control" value="">
+            <label for="enlaceplataforma3">Enlace plataforma 3:</label><input id="enlaceplataforma3" type="text" name="linkplataforma3" class="form-control" value="">
+            <label for="enlaceplataforma4">Enlace plataforma 4:</label><input id="enlaceplataforma4" type="text" name="linkplataforma4" class="form-control" value="">
           <input type="submit" name="btnguardar" class="btn btn-success mb-4 mt-3 mr-2 align-middle" value="Guardar"><a href="panelrecomendaciones.php" class="btn btn-secondary mb-4 mt-3 align-middle">Atrás</a>
         </form>
       </div>

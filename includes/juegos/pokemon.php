@@ -1,4 +1,5 @@
-<h1 class="text-center text-primary mt-1">Pokemons iniciales de cada región</h1>
+<html lang="es">
+<h1 class="text-center text-secondary mt-1">Pokemons iniciales de cada región</h1>
 <ul class="list-group">
     <li class="list-group-item bg-secondary">
         <div class="w-100 justify-content-center">
